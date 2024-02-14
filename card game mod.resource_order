@@ -40,6 +40,7 @@
     {"name":"send_card_sound","order":3,"path":"sounds/send_card_sound/send_card_sound.yy",},
     {"name":"obj_eye","order":2,"path":"objects/obj_eye/obj_eye.yy",},
     {"name":"spr_eye_angry","order":9,"path":"sprites/spr_eye_angry/spr_eye_angry.yy",},
+    {"name":"Object6","order":5,"path":"objects/Object6/Object6.yy",},
     {"name":"spr2346","order":8,"path":"sprites/spr2346/spr2346.yy",},
   ],
 }

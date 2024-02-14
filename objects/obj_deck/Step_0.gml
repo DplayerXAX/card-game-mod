@@ -215,6 +215,7 @@ case state.Discard:
 	
 	
 	if(discard_finish){
+		
 		card_wait=0;
 		discard_finish=false;
 		iAmJudge=false;
