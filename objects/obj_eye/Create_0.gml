@@ -13,8 +13,11 @@ globalvar eyeCount;
 bonus=5;
 
 globalvar rage;
+globalvar eyeWideOpen;
+
 rage=false;
 eyeWideOpen=true;
+
 randomBlinkTime=room_speed*0.2;
 randomWaitTime=room_speed*0.2;
 timer_happy=room_speed*0.4;

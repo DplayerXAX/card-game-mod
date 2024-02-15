@@ -5,8 +5,11 @@ var card=instance_create_layer(30,350+num*4,0,obj_card);
 	ds_list_add(card_deck,card);
 	card.type=cardType;
 }
-//when one side uses "destroy" card, discard opponent's tap card if existed.
 
+//shake the screen!!!
+
+
+//when one side uses "destroy" card, discard opponent's tap card if existed.
 //after the turn, decide player and enemy's cards' effect
 function decide_effect(card_type,num){
 	
@@ -82,7 +85,18 @@ function decide_effect(card_type,num){
 	case "destroy":
 	
 	if(num==0){
-	if(ds_list_size(enemy_tap_deck)>0){}
+	if(ds_list_size(enemy_tap_deck)>0){
+	var tapForDiscard =ds_list_find_value(enemy_tap_deck,0);
+	ds_list_add(discard_deck,tapForDiscard);
+	tapForDiscard.sendCardToEnemy=false;
+	tapForDiscard.iBelong="discard";
+	tapForDiscard.sendCardToDiscard=true;
+	tapForDiscard.image_angle=0;
+	tapForDiscard.depth=-ds_list_size(discard_deck);
+	tapForDiscard.devi=ds_list_size(discard_deck);
+	ds_list_delete(enemy_tap_deck,0);
+	enemy_tap=false;
+	}
 	}
 	else if(num==1){
 	if(ds_list_size(player_tap_deck)>0){

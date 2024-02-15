@@ -7,7 +7,7 @@ if(current_state==state.Turn && select_player=false && player_card_decide=false 
 	player_card_decide=true;
 }
 
-if(current_state==state.Turn && select_player=false && player_card_decide=false && iBelong="enemy"){
+if(current_state==state.Turn && select_player=false && player_card_decide=false && (iBelong="enemy" || (iBelong="tap" && devi=1))){
 	isReveal=!isReveal;
 }
 

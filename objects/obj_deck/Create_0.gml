@@ -34,7 +34,8 @@ iAmJudge=false;
 dontFlyIt=false;
 littleCard=41;
 lastTurn= false;
-foundIt=false;
+foundItPlayer=false;
+foundItEnemy=false;
 
 globalvar player_score;
 globalvar enemy_score;

@@ -6,20 +6,30 @@
 
 if(eyeWideOpen&&current_state=state.Turn&&player_card_decide=false){
 	
-for(var i=0;i<3;i++)
+for(var i=0;i<ds_list_size(enemy_deck);i++)
 {
 	var search_card=ds_list_find_value(enemy_deck,i);
 	if(search_card.isReveal=true){
 	player_HP=player_HP-8;
 	rage=true;
+	shakeScreen=true;
 	search_card.isReveal=false;
 	}	
+}
+if(ds_list_size(enemy_tap_deck)>0){
+	var search_card=ds_list_find_value(enemy_tap_deck,0);
+	if(search_card.isReveal=true){
+	player_HP=player_HP-8;
+	rage=true;
+	shakeScreen=true;
+	search_card.isReveal=false;
+	}
 }
 
 if(randomWaitTime>0){randomWaitTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
-	 randomWaitTime=room_speed*(irandom(4)+1)*0.1;
+	 randomWaitTime=room_speed*(irandom(4)+1)*0.2;
 	}
 
 }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "eyeIcon",
+  "name": "obj_eyeIcon",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],

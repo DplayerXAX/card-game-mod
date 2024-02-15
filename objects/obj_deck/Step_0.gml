@@ -83,23 +83,50 @@ case state.Dealing:
 	break;
 	
 
-	
-case state.Turn:
 //send enemy cards, then player's
-//enemy select a card, wait the player to select a card
+//enemy select a card, wait the player to select a card	
+case state.Turn:
+//stop player cards from getting back to preset position
 if(!dontFlyIt){
 for(var i=0;i<ds_list_size(player_deck);i++){
 var notFlyCard= ds_list_find_value(player_deck,i);
 notFlyCard.sendCardToPlayer=false;
 }
 }
+//enemy waits for some times, then select a card, it might tap a card if
+//it doesn't have one
 if(!enemy_card_decide){
 	if(timer_4>0){timer_4--;}else{
+	if(ds_list_size(enemy_tap_deck)>0){
 	enemy_card_index=irandom(2);
 	enemy_card=ds_list_find_value(enemy_deck,enemy_card_index);
 	enemy_card.sendCardToEnemy=false;
 	enemy_card.select_enemy=true;
 	enemy_card_decide=true;
+	}else {
+	var gamble=irandom(1);
+	if(gamble==0){
+	enemy_card_index=irandom(2);
+	enemy_card=ds_list_find_value(enemy_deck,enemy_card_index);
+	enemy_card.sendCardToEnemy=false;
+	enemy_card.select_enemy=true;
+	enemy_card_decide=true;
+	}
+	else{
+	enemy_card_index=irandom(2);
+	enemy_card=ds_list_find_value(enemy_deck,enemy_card_index);
+	enemy_card.isTap=true;
+	enemy_tap=true;
+	ds_list_add(enemy_tap_deck,enemy_card);
+	enemy_card.iBelong="tap";
+	ds_list_delete(enemy_deck,enemy_card_index);
+	enemy_card.devi=1;
+	enemy_card.sendCardToEnemy=false;
+	enemy_card.select_enemy=true;
+	enemy_card_decide=true;
+	enemy_card.enemyTap=true;
+	}
+	}
 	timer_4=room_speed*0.4;
 	}
 }
@@ -114,10 +141,10 @@ if(!player_card_decide){
 	if(ds_list_find_value(player_deck,i).select_player=true){
 	player_card=ds_list_find_value(player_deck,i);
 	player_card_index=i;
-	foundIt=true;
+	foundItPlayer=true;
 		}
 	}
-	if(!foundIt){
+	if(!foundItPlayer){
 	if(ds_list_find_value(player_tap_deck,0).select_player=true){
 	player_card=ds_list_find_value(player_tap_deck,0);
 
@@ -126,7 +153,7 @@ if(!player_card_decide){
 	}
 	if(enemy_card_decide && player_card_decide){
 		turnCount++;
-		foundIt=false;
+		foundItPlayer=false;
 		if(timer_5>0){timer_5--;}else{
 		current_state=state.Discard;
 		timer_5=room_speed*0.3;
@@ -140,17 +167,22 @@ case state.Discard:
 	player_card_decide=false;
 	enemy_card_finish=false;
 	player_card_finish=false;
-	enemy_card.isReveal=true;
+	if(enemy_card.iBelong!="tap"){enemy_card.isReveal=true;}
 	player_card.select_player=false;
 	player_card.isTap=false;
+	enemy_card.select_enemy=false;
+	enemy_card.isTap=false;
 	bonus=5;
 	
 	if(!iAmJudge){
-		
+		shakeScreen=true;
 		decide_effect(player_card.type,0);
 		decide_effect(enemy_card.type,1);
 		if(ds_list_size(player_tap_deck)>0){
 		decide_effect(ds_list_find_value(player_tap_deck,0).type,0);
+		}
+		if(ds_list_size(enemy_tap_deck)>0){
+		decide_effect(ds_list_find_value(enemy_tap_deck,0).type,1);
 		}
 
 		iAmJudge=true;
@@ -160,7 +192,7 @@ case state.Discard:
 	if(card_wait==0){
 		//discard enemy selected card
 	if(timer_1>0){timer_1--;}else{
-	if(!enemy_tap){
+	if(!enemy_card.enemyTap){
 	ds_list_add(discard_deck,enemy_card);
 	enemy_card.select_enemy=false;
 	enemy_card.iBelong="discard";
@@ -193,6 +225,7 @@ case state.Discard:
 	}else if(card_wait==2 && lastTurn){
 		if(timer_1>0){timer_1--;}else{
 			//discard enemy no use cards
+			if(!player_card.playerTap){	
 		rest_card=ds_list_find_value(enemy_deck,iAmOne);
 		ds_list_add(discard_deck,rest_card);
 		rest_card.sendCardToEnemy=false;
@@ -203,6 +236,7 @@ case state.Discard:
 		rest_card.sendCardToDiscard=true;
 		rest_card.depth=-ds_list_size(discard_deck);
 		rest_card.devi=ds_list_size(discard_deck);
+			}
 		timer_1=room_speed*0.2;
 		iAmOne--;
 		
@@ -244,6 +278,19 @@ case state.Discard:
 		ds_list_delete(player_tap_deck,0);
 		player_tap=false;
 		}
+		if(ds_list_size(enemy_tap_deck)>0){
+		var tapForDiscard=ds_list_find_value(enemy_tap_deck,0);
+		ds_list_add(discard_deck,tapForDiscard);
+		tapForDiscard.sendCardToEnemy=false;
+		tapForDiscard.iBelong="discard";
+		tapForDiscard.sendCardToDiscard=true;
+		tapForDiscard.image_angle=0;
+		tapForDiscard.depth=-ds_list_size(discard_deck);
+		tapForDiscard.devi=ds_list_size(discard_deck);
+		ds_list_delete(enemy_tap_deck,0);
+		enemy_tap=false;
+		}
+		
 		discard_finish=true;
 		}
 	 else{discard_finish=true;}
@@ -273,11 +320,11 @@ case state.SpecialDealing:
 	if(timer_1>0){timer_1--;}else{
 	var draw_card= ds_list_find_value(card_deck,0);
 	ds_list_insert(enemy_deck,enemy_card_index,draw_card);
-	draw_card.code=enemy_card_index;
 	draw_card.iBelong="enemy";
+	draw_card.code=enemy_card_index;
+	draw_card.devi=enemy_card_index;
 	draw_card.sendCardToDeck=false;
 	audio_play_sound(send_card_sound,1,false);
-	draw_card.devi=enemy_card_index;
 	draw_card.sendCardToEnemy=true;
 	ds_list_delete(card_deck,0);
 	timer_1=room_speed*0.2;

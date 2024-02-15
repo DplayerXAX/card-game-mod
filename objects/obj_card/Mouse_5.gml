@@ -3,11 +3,16 @@
 
 
 if(current_state==state.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy"){
+	
+	if(eyeWideOpen){
+	player_HP=player_HP-8;
+	rage=true;
+	shakeScreen=true;
+	}else{	
  for(var i=0;i<3;i++){
 	 var exchange_enemy=ds_list_find_value(enemy_deck,i);
 	 var exchange_player=ds_list_find_value(player_deck,i);
- if(exchange_enemy.code==code)
- {
+ if(exchange_enemy.code==code){
 	 
 	 ds_list_insert(player_deck,i,exchange_enemy);
 	 ds_list_insert(enemy_deck,i,exchange_player);
@@ -23,9 +28,10 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
 	 ds_list_delete(player_deck,i+1);
 	 ds_list_delete(enemy_deck,i+1);
 		break; 
- }
+			}
  
- }
+		}
+	}
 }
 
 
