@@ -72,5 +72,12 @@ if(select_player){
 	
 }
 
-if(sendCardToTap){}
+if(isTap){
+	_x=x;
+	_y=y;
+	image_angle=90;
+	x=lerp(_x,50+devi*200,0.1);
+	y=lerp(_y,1000,0.1);
+
+}
 

@@ -28,11 +28,18 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
  }
 }
 
-if(current_state==state.Turn && player_card_decide=false && iBelong="player"){
+if(current_state==state.Turn && player_card_decide=false &&!player_tap && iBelong="player"){
 	isTap=true;
 	player_tap=true;
+	player_card_index=devi;
+	var tapCard=ds_list_find_value(player_deck,devi);
+	ds_list_add(player_tap_deck,tapCard);
+	ds_list_delete(player_deck,devi);
+	devi=0;
 	sendCardToPlayer=false;
-	sendCardToTap=true;
+	player_card_decide=true;
+	select_player=true;
+	playerTap=true;
 	
 
 }

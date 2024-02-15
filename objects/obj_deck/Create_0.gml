@@ -6,7 +6,7 @@ globalvar number;
 globalvar type_index;
 globalvar count;
 count=0;
-
+turnCount=0;
 number=42;
 type_index=3;
 all_type=["eye","heart","mouth"];
@@ -34,6 +34,7 @@ iAmJudge=false;
 dontFlyIt=false;
 littleCard=41;
 lastTurn= false;
+foundIt=false;
 
 globalvar player_score;
 globalvar enemy_score;
@@ -67,9 +68,9 @@ enemy_eyes=0;
 enemy_hearts=0;
 
 var enemy_card;
-var enemy_card_index;
+globalvar enemy_card_index;
 var player_card;
-var player_card_index;
+globalvar player_card_index;
 var rest_card;
 enum state{
 Start,
@@ -84,9 +85,12 @@ globalvar current_state;
 current_state=state.Start;
 globalvar enemy_deck;
 globalvar player_deck;
- card_deck=ds_list_create();
- discard_deck=ds_list_create();
- player_deck=ds_list_create();
- enemy_deck=ds_list_create();
- tap_deck=ds_list_create();
+globalvar player_tap_deck;
+globalvar enemy_tap_deck;
+player_deck=ds_list_create();
+enemy_deck=ds_list_create();
+card_deck=ds_list_create();
+discard_deck=ds_list_create();
+player_tap_deck=ds_list_create();
+enemy_tap_deck=ds_list_create();
  

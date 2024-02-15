@@ -88,7 +88,7 @@ case state.Turn:
 //send enemy cards, then player's
 //enemy select a card, wait the player to select a card
 if(!dontFlyIt){
-for(var i=0;i<3;i++){
+for(var i=0;i<ds_list_size(player_deck);i++){
 var notFlyCard= ds_list_find_value(player_deck,i);
 notFlyCard.sendCardToPlayer=false;
 }
@@ -114,10 +114,19 @@ if(!player_card_decide){
 	if(ds_list_find_value(player_deck,i).select_player=true){
 	player_card=ds_list_find_value(player_deck,i);
 	player_card_index=i;
+	foundIt=true;
 		}
 	}
+	if(!foundIt){
+	if(ds_list_find_value(player_tap_deck,0).select_player=true){
+	player_card=ds_list_find_value(player_tap_deck,0);
+
+			}
+				}
 	}
 	if(enemy_card_decide && player_card_decide){
+		turnCount++;
+		foundIt=false;
 		if(timer_5>0){timer_5--;}else{
 		current_state=state.Discard;
 		timer_5=room_speed*0.3;
@@ -132,6 +141,8 @@ case state.Discard:
 	enemy_card_finish=false;
 	player_card_finish=false;
 	enemy_card.isReveal=true;
+	player_card.select_player=false;
+	player_card.isTap=false;
 	bonus=5;
 	
 	if(!iAmJudge){
@@ -145,6 +156,7 @@ case state.Discard:
 	if(card_wait==0){
 		//discard enemy selected card
 	if(timer_1>0){timer_1--;}else{
+	if(!enemy_tap){
 	ds_list_add(discard_deck,enemy_card);
 	enemy_card.select_enemy=false;
 	enemy_card.iBelong="discard";
@@ -153,13 +165,15 @@ case state.Discard:
 	enemy_card.sendCardToDiscard=true;
 	enemy_card.depth=-ds_list_size(discard_deck);
 	enemy_card.devi=ds_list_size(discard_deck);
+	}
 	timer_1=room_speed*0.2;
 	card_wait++;
 			}
 			
 	}else if(card_wait==1){
 		//discard player selected card
-			if(timer_1>0){timer_1--;}else{
+		if(timer_1>0){timer_1--;}else{
+		if(!player_card.playerTap){	
 	ds_list_add(discard_deck,player_card);
 	player_card.select_player=false;
 	player_card.iBelong="discard";
@@ -168,6 +182,7 @@ case state.Discard:
 	player_card.sendCardToDiscard=true;
 	player_card.depth=-ds_list_size(discard_deck);
 	player_card.devi=ds_list_size(discard_deck);
+		}
 	timer_1=room_speed*0.2;
 	card_wait++;
 			}
@@ -222,6 +237,7 @@ case state.Discard:
 		card_wait=0;
 		discard_finish=false;
 		iAmJudge=false;
+		player_card.playerTap=false;
 	if(!lastTurn){
 		rage=false;
 	current_state=state.SpecialDealing;
@@ -278,7 +294,7 @@ case state.Reshuffle:
 if(!send_finish){
 if(timer_2>0){timer_2--;}else{
 	var back_card_1=ds_list_find_value(discard_deck,littleCard);
-	var back_card_2=ds_list_find_value(discard_deck,number-littleCard);
+	var back_card_2=ds_list_find_value(discard_deck,number-littleCard-1);
 	back_card_1.isReveal=false;
 	back_card_2.isReveal=false;
 	audio_play_sound(send_card_sound,1,false);

@@ -18,5 +18,7 @@ devi=0;
 var _x,_y;
 isReveal=false;
 isTap=false;
+playerTap=false;
+tapCount=0;
 
 timer_exchanging=room_speed*1;
