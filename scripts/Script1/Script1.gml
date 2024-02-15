@@ -1,10 +1,13 @@
 // v2.3.0的脚本资产已更改，请参见\ n // https://help.yoyogames.com/hc/en-us/articles/360005277377
+//create cards, set them to places, and give them a type.
 function create_card(cardType,num){
 var card=instance_create_layer(30,350+num*4,0,obj_card);
 	ds_list_add(card_deck,card);
 	card.type=cardType;
 }
+//when one side uses "destroy" card, discard opponent's tap card if existed.
 
+//after the turn, decide player and enemy's cards' effect
 function decide_effect(card_type,num){
 	
 	switch(card_type){
@@ -78,6 +81,24 @@ function decide_effect(card_type,num){
 	
 	case "destroy":
 	
+	if(num==0){
+	if(ds_list_size(enemy_tap_deck)>0){}
+	}
+	else if(num==1){
+	if(ds_list_size(player_tap_deck)>0){
+	var tapForDiscard =ds_list_find_value(player_tap_deck,0);
+	ds_list_add(discard_deck,tapForDiscard);
+	tapForDiscard.sendCardToPlayer=false;
+	tapForDiscard.iBelong="discard";
+	tapForDiscard.sendCardToDiscard=true;
+	tapForDiscard.image_angle=0;
+	tapForDiscard.depth=-ds_list_size(discard_deck);
+	tapForDiscard.devi=ds_list_size(discard_deck);
+	ds_list_delete(player_tap_deck,0);
+	player_tap=false;
+		}
+	}
+	
 	break;
 	
 	case "stealHeart":
@@ -115,52 +136,5 @@ function decide_effect(card_type,num){
 	
 	}
 
-		
-	
-	//original code down there
-	/*
-if(enemy_type=="rock"){
-	if(player_type="rock"){}
-	else if(player_type="paper"){
-		player_score++;
-		player_HP=player_HP+12+bonus;
-		audio_play_sound(player_get_score_sound, 1, false);
-		}
-	else if(player_type="scissor"){
-		enemy_score++;
-		player_HP-=5;
-		audio_play_sound(enemy_get_score_sound,1,false);
-		}
-}
-
-else if(enemy_type=="paper"){
-	if(player_type="paper"){}
-	else if(player_type="scissor"){
-
-		player_score++;
-		player_HP=player_HP+12+bonus;
-		audio_play_sound(player_get_score_sound, 1, false);
-		}
-	else if(player_type="rock"){
-		enemy_score++;
-		player_HP-=5;
-		audio_play_sound(enemy_get_score_sound,1,false);
-		}
-}
-
-else if(enemy_type=="scissor"){
-	if(player_type="scissor"){}
-	else if(player_type="rock"){
-		player_score++;
-		player_HP=player_HP+12+bonus;
-		audio_play_sound(player_get_score_sound, 1, false);
-		}
-	else if(player_type="paper"){
-		enemy_score++;
-		player_HP-=5;
-		audio_play_sound(enemy_get_score_sound,1,false);
-		}
-}
-*/
 }
 

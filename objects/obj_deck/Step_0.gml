@@ -156,6 +156,7 @@ case state.Discard:
 		iAmJudge=true;
 	}
 	
+	
 	if(card_wait==0){
 		//discard enemy selected card
 	if(timer_1>0){timer_1--;}else{
