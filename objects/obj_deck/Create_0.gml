@@ -7,10 +7,11 @@ globalvar type_index;
 globalvar count;
 count=0;
 
-number=36;
+number=42;
 type_index=3;
 all_type=["eye","heart","mouth"];
 special_type=["ETH","HTE","HTM","destroy"];
+steal_type=["stealHeart","stealEye"];
 timer=0;
 timer_1=room_speed*0.2;
 timer_2=room_speed*0.6;
@@ -31,7 +32,8 @@ card_wait_again=0;
 iAmOne=1;
 iAmJudge=false;
 dontFlyIt=false;
-littleCard=35;
+littleCard=41;
+lastTurn= false;
 
 globalvar player_score;
 globalvar enemy_score;
@@ -72,6 +74,7 @@ var rest_card;
 enum state{
 Start,
 Dealing,
+SpecialDealing,
 Turn,
 Discard,
 Reshuffle,

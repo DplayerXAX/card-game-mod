@@ -18,6 +18,7 @@ case state.Start:
 	//create cards, put them into list, shuffle
 	for(var i=0;i<24;i++){create_card(all_type[i%3],i);}
 	for(var i=0;i<12;i++){create_card(special_type[i%4],i+23);}
+	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}
 	
 		
 	ds_list_shuffle(card_deck);
@@ -125,7 +126,7 @@ if(!player_card_decide){
 	break;
 	
 case state.Discard:
-
+	if(ds_list_size(card_deck)==0){lastTurn=true;}
 	enemy_card_decide=false;
 	player_card_decide=false;
 	enemy_card_finish=false;
@@ -133,7 +134,7 @@ case state.Discard:
 	enemy_card.isReveal=true;
 	bonus=5;
 	
-	if(!iAmJudge&&!rage){
+	if(!iAmJudge){
 		
 		decide_effect(player_card.type,0);
 		decide_effect(enemy_card.type,1);
@@ -155,6 +156,7 @@ case state.Discard:
 	timer_1=room_speed*0.2;
 	card_wait++;
 			}
+			
 	}else if(card_wait==1){
 		//discard player selected card
 			if(timer_1>0){timer_1--;}else{
@@ -169,7 +171,7 @@ case state.Discard:
 	timer_1=room_speed*0.2;
 	card_wait++;
 			}
-	}else if(card_wait==2){
+	}else if(card_wait==2 && lastTurn){
 		if(timer_1>0){timer_1--;}else{
 			//discard enemy no use cards
 		rest_card=ds_list_find_value(enemy_deck,iAmOne);
@@ -190,7 +192,7 @@ case state.Discard:
 			iAmOne=1;
 			}
 		}
-	} else if(card_wait==3){
+	} else if(card_wait==3&& lastTurn){
 		//discard player no use cards
 	if(timer_1>0){timer_1--;}else{
 	rest_card=ds_list_find_value(player_deck,iAmOne);
@@ -211,6 +213,7 @@ case state.Discard:
 			}
 	}
 	}else if(card_wait==4){discard_finish=true;}
+	 else{discard_finish=true;}
 		
 	
 	
@@ -219,28 +222,76 @@ case state.Discard:
 		card_wait=0;
 		discard_finish=false;
 		iAmJudge=false;
-	if(ds_list_size(card_deck)>0){
+	if(!lastTurn){
 		rage=false;
-	current_state=state.Dealing;
+	current_state=state.SpecialDealing;
 	}else{
 		rage=false;
+		lastTurn=false;
 		current_state=state.Reshuffle;}
 	}
+	break;
+	
+case state.SpecialDealing:
+
+//enemy get cards
+	if(!enemy_card_finish){
+	if(timer_1>0){timer_1--;}else{
+	var draw_card= ds_list_find_value(card_deck,0);
+	ds_list_insert(enemy_deck,enemy_card_index,draw_card);
+	draw_card.code=enemy_card_index;
+	draw_card.iBelong="enemy";
+	draw_card.sendCardToDeck=false;
+	audio_play_sound(send_card_sound,1,false);
+	draw_card.devi=enemy_card_index;
+	draw_card.sendCardToEnemy=true;
+	ds_list_delete(card_deck,0);
+	timer_1=room_speed*0.2;
+	enemy_card_finish=true;
+	}
+	}
+	
+	//player get cards
+	if(enemy_card_finish && !player_card_finish){
+		if(timer_1>0){timer_1--;}else{
+	var draw_card= ds_list_find_value(card_deck,0);
+	ds_list_insert(player_deck,player_card_index,draw_card);
+	draw_card.iBelong="player";
+	draw_card.code=player_card_index;
+	draw_card.devi=player_card_index;
+	draw_card.sendCardToDeck=false;
+	audio_play_sound(send_card_sound,1,false);
+	draw_card.sendCardToPlayer=true;
+	draw_card.isReveal=true;
+	ds_list_delete(card_deck,0);
+	timer_1=room_speed*0.2;
+	player_card_finish=true;
+	
+	}
+	}
+	time_limit=0.5;
+	
+	if(enemy_card_finish && player_card_finish){current_state=state.Sleeping;}
 	break;
 	
 case state.Reshuffle:
 if(!send_finish){
 if(timer_2>0){timer_2--;}else{
-	var back_card=ds_list_find_value(discard_deck,littleCard);
-	back_card.isReveal=false;
+	var back_card_1=ds_list_find_value(discard_deck,littleCard);
+	var back_card_2=ds_list_find_value(discard_deck,number-littleCard);
+	back_card_1.isReveal=false;
+	back_card_2.isReveal=false;
 	audio_play_sound(send_card_sound,1,false);
-	back_card.wonderful=true;
-	back_card.depth=littleCard;
-	back_card.sendCardToDiscard=false;
+	back_card_1.wonderful=true;
+	back_card_1.depth=littleCard;
+	back_card_1.sendCardToDiscard=false;
+	back_card_2.wonderful=true;
+	back_card_2.depth=littleCard;
+	back_card_2.sendCardToDiscard=false;
 	littleCard--;
 	timer_2=room_speed*0.1;
-	if(littleCard<0){
-		littleCard=35;
+	if(littleCard<21){
+		littleCard=number-1;
 		send_finish=true;
 		timer_2=room_speed*0.6;
 		}

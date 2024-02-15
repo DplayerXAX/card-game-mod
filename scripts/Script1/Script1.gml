@@ -78,6 +78,40 @@ function decide_effect(card_type,num){
 	
 	case "destroy":
 	
+	break;
+	
+	case "stealHeart":
+	
+	if(num==0){
+		if(enemy_hearts>0){
+			enemy_hearts--;
+			player_hearts++;
+		}
+			}
+		else if(num==1){
+		if(player_hearts>0){
+			enemy_hearts++;
+			player_hearts--;
+		}
+			}
+			break;
+			
+	case "stealEye":
+	
+		if(num==0){
+			if(enemy_eyes>0){
+			enemy_eyes--;
+			player_eyes++;
+			}
+			}
+		else if(num==1){
+			if(player_hearts>0){
+			enemy_eyes++;
+			player_eyes--;
+			}
+			}
+			break;
+			
 	
 	}
 

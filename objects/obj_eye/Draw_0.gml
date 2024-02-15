@@ -4,12 +4,12 @@
 
 draw_self();
 draw_set_font(Font2);
-draw_healthbar(850,100,880,250,enemy_HP, c_white, c_red, c_lime, 3, true, true);
-draw_healthbar(850,700,880,850,player_HP, c_white, c_red, c_lime, 3, true, true);
+draw_healthbar(80,170,110,320,enemy_HP, c_white, c_red, c_lime, 3, true, true);
+draw_healthbar(850,780,880,930,player_HP, c_white, c_red, c_lime, 3, true, true);
 
 
 if(!eyeWideOpen){
-draw_healthbar(100,100,150,150,randomBlinkTime, c_white, c_red, c_lime, 3, true, true);
+draw_healthbar(800,100,850,150,randomBlinkTime, c_white, c_red, c_lime, 3, true, true);
 }
 
 
