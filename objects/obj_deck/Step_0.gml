@@ -149,6 +149,9 @@ case state.Discard:
 		
 		decide_effect(player_card.type,0);
 		decide_effect(enemy_card.type,1);
+		if(ds_list_size(player_tap_deck)>0){
+		decide_effect(ds_list_find_value(player_tap_deck,0).type,0);
+		}
 
 		iAmJudge=true;
 	}
@@ -227,7 +230,21 @@ case state.Discard:
 			iAmOne=1;
 			}
 	}
-	}else if(card_wait==4){discard_finish=true;}
+	}else if(card_wait==4){
+		if(ds_list_size(player_tap_deck)>0){
+		var tapForDiscard=ds_list_find_value(player_tap_deck,0);
+		ds_list_add(discard_deck,tapForDiscard);
+		tapForDiscard.sendCardToPlayer=false;
+		tapForDiscard.iBelong="discard";
+		tapForDiscard.sendCardToDiscard=true;
+		tapForDiscard.image_angle=0;
+		tapForDiscard.depth=-ds_list_size(discard_deck);
+		tapForDiscard.devi=ds_list_size(discard_deck);
+		ds_list_delete(player_tap_deck,0);
+		player_tap=false;
+		}
+		discard_finish=true;
+		}
 	 else{discard_finish=true;}
 		
 	
