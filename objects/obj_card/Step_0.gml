@@ -81,3 +81,15 @@ if(isTap){
 
 }
 
+if(paintItRed){
+	image_blend=c_red;
+if(timer_paintRed>0){timer_paintRed--;}
+else{
+image_blend=c_white;
+timer_paintRed=room_speed*0.2;
+paintItRed=false;
+}
+}
+
+
+

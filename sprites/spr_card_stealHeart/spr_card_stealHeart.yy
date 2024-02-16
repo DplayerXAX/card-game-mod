@@ -32,7 +32,7 @@
   "origin": 0,
   "parent": {
     "name": "special card",
-    "path": "folders/精灵/special card.yy",
+    "path": "folders/精灵/card/special card.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

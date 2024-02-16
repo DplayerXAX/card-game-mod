@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "精灵",
-    "path": "folders/精灵.yy",
+    "name": "cardIcon",
+    "path": "folders/精灵/cardIcon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

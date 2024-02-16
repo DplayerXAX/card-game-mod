@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "精灵",
-    "path": "folders/精灵.yy",
+    "name": "button",
+    "path": "folders/精灵/button.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

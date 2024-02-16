@@ -25,13 +25,14 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fc5ee630-ed8f-40a5-a497-02ad9dc408b6","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"054b03cf-be34-4d62-81a5-6fc6fe71374e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fc5ee630-ed8f-40a5-a497-02ad9dc408b6","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fb4dbdb9-9669-40ff-ac6f-a8be0f75ef82","blendMode":0,"displayName":"REFERENCE","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"054b03cf-be34-4d62-81a5-6fc6fe71374e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "精灵",
-    "path": "folders/精灵.yy",
+    "name": "card",
+    "path": "folders/精灵/card.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

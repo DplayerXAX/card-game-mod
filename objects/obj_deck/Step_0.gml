@@ -165,7 +165,10 @@ if(!player_card_decide){
 				}
 	}
 	if(enemy_card_decide && player_card_decide){
+		
 		turnCount++;
+		enemy_card.printItsEffect=true;
+		player_card.printItsEffect=true;
 		foundItPlayer=false;
 		if(timer_5>0){timer_5--;}else{
 		current_state=state.Discard;
@@ -313,6 +316,8 @@ case state.Discard:
 		
 		card_wait=0;
 		discard_finish=false;
+		enemy_card.printItsEffect=true;
+		player_card.printItsEffect=true;
 		iAmJudge=false;
 		player_card.playerTap=false;
 	if(!lastTurn){

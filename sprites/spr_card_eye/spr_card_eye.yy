@@ -29,7 +29,7 @@
   "origin": 0,
   "parent": {
     "name": "regular card",
-    "path": "folders/精灵/regular card.yy",
+    "path": "folders/精灵/card/regular card.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

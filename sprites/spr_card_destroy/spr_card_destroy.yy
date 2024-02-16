@@ -20,7 +20,7 @@
   "height": 300,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"adeb4e30-729a-4e85-a529-37c570809f3c","blendMode":0,"displayName":"Layer 5","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6ee01677-e9d5-4f61-bfc7-2a669a8a3707","blendMode":0,"displayName":"Layer 6","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"fb5967ef-694e-40a4-a6f3-963b8f42f4f1","blendMode":0,"displayName":"Layer 4","isLocked":false,"opacity":100.0,"visible":false,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c2f4b486-fd91-4ba9-8621-8d18b33adbab","blendMode":0,"displayName":"Layer 3","isLocked":false,"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"30c33b91-ef09-4d39-95eb-91ed6bc19a38","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
@@ -31,7 +31,7 @@
   "origin": 0,
   "parent": {
     "name": "special card",
-    "path": "folders/精灵/special card.yy",
+    "path": "folders/精灵/card/special card.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

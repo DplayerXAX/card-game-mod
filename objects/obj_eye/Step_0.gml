@@ -13,6 +13,7 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	player_HP=player_HP-8;
 	rage=true;
 	shakeScreen=true;
+	search_card.paintItRed=true;
 	search_card.isReveal=false;
 	}	
 }
@@ -22,6 +23,7 @@ if(ds_list_size(enemy_tap_deck)>0){
 	player_HP=player_HP-8;
 	rage=true;
 	shakeScreen=true;
+	search_card.paintItRed=true;
 	search_card.isReveal=false;
 	}
 }

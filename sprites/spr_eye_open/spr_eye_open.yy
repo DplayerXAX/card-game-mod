@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "精灵",
-    "path": "folders/精灵.yy",
+    "name": "eye_alive",
+    "path": "folders/精灵/eye_alive.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

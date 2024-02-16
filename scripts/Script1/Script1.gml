@@ -8,6 +8,39 @@ var card=instance_create_layer(30,350+num*4,"Instances",obj_card);
 
 //shake the screen!!!
 
+function decide_print(card_type){
+switch(card_type){
+case "eye":
+	return "+1 eye(ATP)";
+	break;
+case "heart":
+	return "+1 heart and heal based on heart";
+	break;
+case "mouth":
+	return "attack!";
+	break;
+case "ETH":
+	return "transfer all eyes to hearts!";
+	break;
+case "HTE":
+	return "transfer all heart to eyes!"
+	break;
+case "HTM":
+	return "use up X your hearts to attack X times!";
+	break;
+case "destroy":
+	return "destroy opponent's tap card!";
+	break;
+case "stealHeart":
+	return "steal one heart from enemy!(if there's any)";
+	break;
+case "stealEye":
+	return "steal one eye from enemy!(if there's any)";
+	break;
+}
+
+}
+
 
 //when one side uses "destroy" card, discard opponent's tap card if existed.
 //after the turn, decide player and enemy's cards' effect

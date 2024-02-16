@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "组1",
-    "path": "folders/物体/组1.yy",
+    "name": "endingText",
+    "path": "folders/物体/endingText.yy",
   },
   "parentObjectId": null,
   "persistent": false,
