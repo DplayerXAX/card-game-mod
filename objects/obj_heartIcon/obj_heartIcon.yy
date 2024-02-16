@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr2346",
-    "path": "sprites/spr2346/spr2346.yy",
+    "name": "spr_heart",
+    "path": "sprites/spr_heart/spr_heart.yy",
   },
   "spriteMaskId": null,
   "visible": true,

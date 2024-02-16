@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr23",
-    "path": "sprites/spr23/spr23.yy",
+    "name": "spr_eye",
+    "path": "sprites/spr_eye/spr_eye.yy",
   },
   "spriteMaskId": null,
   "visible": true,

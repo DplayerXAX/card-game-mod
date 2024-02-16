@@ -17,7 +17,7 @@ timer_1=room_speed*0.2;
 timer_2=room_speed*0.6;
 timer_3=room_speed*0.6;
 timer_4=room_speed*0.4;
-timer_5=room_speed*0.3;
+timer_5=room_speed*0.6;
 timer_killing=room_speed*0.5;
 timer_bonus=room_speed*0.6;
 time_limit=3;
@@ -101,3 +101,6 @@ discard_deck=ds_list_create();
 globalvar specialDiscard;
 
 specialDiscard=false;
+
+var emptyPlayer;
+var emptyEnemy;

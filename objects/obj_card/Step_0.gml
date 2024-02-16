@@ -3,15 +3,15 @@
 
 
 if(isReveal){
-if(type="eye"){sprite_index=spr_card_eye;}
-else if(type="heart"){sprite_index=spr_card_heart;}
-else if(type="mouth"){sprite_index=spr_card_mouth;}
-else if(type="ETH"){sprite_index=spr_card_eyeToHeart;}
-else if(type="HTE"){sprite_index=spr_card_heartToEye;}
-else if(type="HTM"){sprite_index=spr_card_heartToMouth;}
-else if(type="destroy"){sprite_index=spr_card_destroy;}
-else if(type="stealHeart"){sprite_index=spr_card_stealHeart;}
-else if(type="stealEye"){sprite_index=spr_card_stealEye;}
+if(_type="eye"){sprite_index=spr_card_eye;}
+else if(_type="heart"){sprite_index=spr_card_heart;}
+else if(_type="mouth"){sprite_index=spr_card_mouth;}
+else if(_type="ETH"){sprite_index=spr_card_eyeToHeart;}
+else if(_type="HTE"){sprite_index=spr_card_heartToEye;}
+else if(_type="HTM"){sprite_index=spr_card_heartToMouth;}
+else if(_type="destroy"){sprite_index=spr_card_destroy;}
+else if(_type="stealHeart"){sprite_index=spr_card_stealHeart;}
+else if(_type="stealEye"){sprite_index=spr_card_stealEye;}
 }else{sprite_index=spr_card_back;}
 
 if(sendCardToDeck){

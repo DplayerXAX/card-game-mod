@@ -1,9 +1,9 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
 
+if(player_HP>100){player_HP=100;}
+if(enemy_HP>100){enemy_HP=100;}
 
-//switch(){
-//state=["start","dealing","turn","discard","reshuffle"];
 
 if(timer_killing>0){timer_killing--;}
 else{
@@ -19,7 +19,8 @@ case state.Start:
 	for(var i=0;i<24;i++){create_card(all_type[i%3],i);}
 	for(var i=0;i<12;i++){create_card(special_type[i%4],i+23);}
 	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}
-	
+	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
+	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
 		
 	ds_list_shuffle(card_deck);
 	audio_play_sound(shuffle_cards_sound,1,false);
@@ -120,6 +121,7 @@ if(!enemy_card_decide){
 	ds_list_add(enemy_tap_deck,enemy_card);
 	enemy_card.iBelong="tap";
 	ds_list_delete(enemy_deck,enemy_card_index);
+	ds_list_insert(enemy_deck,enemy_card_index,emptyEnemy);
 	enemy_card.devi=1;
 	enemy_card.sendCardToEnemy=false;
 	enemy_card.select_enemy=true;
@@ -156,7 +158,7 @@ if(!player_card_decide){
 		foundItPlayer=false;
 		if(timer_5>0){timer_5--;}else{
 		current_state=state.Discard;
-		timer_5=room_speed*0.3;
+		timer_5=room_speed*0.6;
 		}
 		}
 	break;
@@ -176,13 +178,13 @@ case state.Discard:
 	
 	if(!iAmJudge){
 		shakeScreen=true;
-		decide_effect(player_card.type,0);
-		decide_effect(enemy_card.type,1);
+		decide_effect(player_card._type,0);
+		decide_effect(enemy_card._type,1);
 		if(ds_list_size(player_tap_deck)>0){
-		decide_effect(ds_list_find_value(player_tap_deck,0).type,0);
+		decide_effect(ds_list_find_value(player_tap_deck,0)._type,0);
 		}
 		if(ds_list_size(enemy_tap_deck)>0){
-		decide_effect(ds_list_find_value(enemy_tap_deck,0).type,1);
+		decide_effect(ds_list_find_value(enemy_tap_deck,0)._type,1);
 		}
 
 		iAmJudge=true;
@@ -196,7 +198,6 @@ case state.Discard:
 	ds_list_add(discard_deck,enemy_card);
 	enemy_card.select_enemy=false;
 	enemy_card.iBelong="discard";
-	ds_list_delete(enemy_deck,enemy_card_index);
 	audio_play_sound(send_card_sound,1,false);
 	enemy_card.sendCardToDiscard=true;
 	enemy_card.depth=-ds_list_size(discard_deck);
@@ -319,6 +320,7 @@ case state.SpecialDealing:
 	if(!enemy_card_finish){
 	if(timer_1>0){timer_1--;}else{
 	var draw_card= ds_list_find_value(card_deck,0);
+	ds_list_delete(enemy_deck,enemy_card_index);
 	ds_list_insert(enemy_deck,enemy_card_index,draw_card);
 	draw_card.iBelong="enemy";
 	draw_card.code=enemy_card_index;
