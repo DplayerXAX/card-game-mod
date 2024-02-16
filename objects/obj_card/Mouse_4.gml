@@ -8,6 +8,7 @@ if(current_state==state.Turn && select_player=false && player_card_decide=false 
 }
 
 if(current_state==state.Turn && select_player=false && player_card_decide=false && (iBelong="enemy" || (iBelong="tap" && devi=1))){
+	cheat++;
 	isReveal=!isReveal;
 }
 

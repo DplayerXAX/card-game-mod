@@ -4,6 +4,17 @@
 if(player_HP>100){player_HP=100;}
 if(enemy_HP>100){enemy_HP=100;}
 
+if(player_HP<=0){
+	audio_stop_sound(upgrading_);
+	room_goto(Room_lose);
+	}
+else if(enemy_HP<=0){
+	audio_stop_sound(upgrading_);
+if(cheat==0){room_goto(Room_trueWin);}
+else{room_goto(Room_win);}
+
+}
+
 
 if(timer_killing>0){timer_killing--;}
 else{

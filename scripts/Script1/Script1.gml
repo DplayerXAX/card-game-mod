@@ -73,11 +73,11 @@ function decide_effect(card_type,num){
 	case "HTM":
 	
 		if(num==0){
-			enemy_HP-=3*player_hearts;
+			enemy_HP-=3*player_hearts*player_eyes;
 			player_hearts=0;
 			}
 		else if(num==1){
-			player_HP-=3*enemy_hearts;
+			player_HP-=3*enemy_hearts*enemy_eyes;
 			enemy_hearts=0;
 			}
 			break;

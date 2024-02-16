@@ -3,7 +3,7 @@
 
 
 if(current_state==state.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy"){
-	
+	cheat++;
 	if(eyeWideOpen){
 	player_HP=player_HP-8;
 	rage=true;
