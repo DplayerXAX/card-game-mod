@@ -70,9 +70,9 @@ enemy_HP=100;
 enemy_eyes=0;
 enemy_hearts=0;
 
-var enemy_card;
+globalvar enemy_card;
 globalvar enemy_card_index;
-var player_card;
+globalvar player_card;
 globalvar player_card_index;
 var rest_card;
 enum state{

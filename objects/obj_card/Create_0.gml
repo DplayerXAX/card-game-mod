@@ -8,6 +8,7 @@ sendCardToEnemy=false;
 sendCardToDiscard=false;
 sendCardToTap=false;
 strNotice="";
+
 code=0;
 flyMyCard=false;
 iBelong="deck";
@@ -26,3 +27,4 @@ tapCount=0;
 
 timer_exchanging=room_speed*1;
 timer_paintRed=room_speed*0.2;
+timer_text=0;

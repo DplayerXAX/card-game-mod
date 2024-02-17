@@ -4,24 +4,23 @@
 draw_self();
 draw_set_font(font_notice);
 
-if(printItsEffect){
+if(current_state=state.Discard){
 	
-	if(select_player){
-	draw_text_ext(680,650,"YOU " + decide_print(_type),-1,150);
-	}
-	else if(select_enemy){
-	draw_text_ext(300,300,"ENEMY " + decide_print(_type),-1,150);
-	}
-	else if(playerTap){
-	draw_text_ext(300,700,"YOUR tap card " + decide_print(_type),-1,150);
-	}
-	else if(enemyTap){
-	draw_text_ext(680,350,"ENEMY's tap card "+decide_print(_type),-1,150);
-	}
+timer_text=room_speed*1;
 	
 }
 
 
-
+if(timer_text>0){
+	draw_text_ext(650,670,"YOU " + decide_print(player_card._type),-1,190);
+	draw_text_ext(280,370,"ENEMY " + decide_print(enemy_card._type),-1,190);
+	if(ds_list_size(player_tap_deck)>0){
+	draw_text_ext(280,670,"YOUR tap card " + decide_print(ds_list_find_value(player_tap_deck,0)._type),-1,190);
+	}
+	if(ds_list_size(enemy_tap_deck)>0){
+	draw_text_ext(650,370,"ENEMY's tap card "+decide_print(ds_list_find_value(enemy_tap_deck,0)._type),-1,190);
+	}
+	timer_text--;
+}
 
 

@@ -316,8 +316,6 @@ case state.Discard:
 		
 		card_wait=0;
 		discard_finish=false;
-		enemy_card.printItsEffect=true;
-		player_card.printItsEffect=true;
 		iAmJudge=false;
 		player_card.playerTap=false;
 	if(!lastTurn){
@@ -333,6 +331,8 @@ case state.Discard:
 case state.SpecialDealing:
 
 //enemy get cards
+	enemy_card.printItsEffect=false;
+	player_card.printItsEffect=false;
 	if(!enemy_card_finish){
 	if(timer_1>0){timer_1--;}else{
 	var draw_card= ds_list_find_value(card_deck,0);
