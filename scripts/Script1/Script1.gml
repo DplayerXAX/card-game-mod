@@ -179,7 +179,7 @@ function decide_effect(card_type,num){
 			}
 			}
 		else if(num==1){
-			if(player_hearts>0){
+			if(player_eyes>0){
 			enemy_eyes++;
 			player_eyes--;
 			}

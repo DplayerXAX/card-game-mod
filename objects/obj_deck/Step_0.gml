@@ -25,6 +25,7 @@ shakeScreen=true;
 }
 
 
+
 switch(current_state){
 	
 case state.Start:
@@ -244,7 +245,13 @@ case state.Discard:
 	card_wait++;
 			}
 	}else if(card_wait==2 && lastTurn){
+		if(!emptyClear){
+		ds_list_delete(enemy_deck,enemy_card_index);
+		emptyClear=true;
+		}
+			
 		if(timer_1>0){timer_1--;}else{
+		
 			//discard enemy no use cards
 			if(!player_card.playerTap){	
 		iAmOne=ds_list_size(enemy_deck)-1;
@@ -289,7 +296,9 @@ case state.Discard:
 		var tapForDiscard=ds_list_find_value(player_tap_deck,0);
 		ds_list_add(discard_deck,tapForDiscard);
 		tapForDiscard.sendCardToPlayer=false;
+		tapForDiscard.sendCardToTap=false;
 		tapForDiscard.iBelong="discard";
+		tapForDiscard.isReveal=true;
 		tapForDiscard.sendCardToDiscard=true;
 		tapForDiscard.image_angle=0;
 		tapForDiscard.depth=-ds_list_size(discard_deck);
@@ -300,8 +309,11 @@ case state.Discard:
 		if(ds_list_size(enemy_tap_deck)>0){
 		var tapForDiscard=ds_list_find_value(enemy_tap_deck,0);
 		ds_list_add(discard_deck,tapForDiscard);
+		show_debug_message(ds_list_size(discard_deck));
 		tapForDiscard.sendCardToEnemy=false;
+		tapForDiscard.sendCardToTap=false;
 		tapForDiscard.iBelong="discard";
+		tapForDiscard.isReveal=true;
 		tapForDiscard.sendCardToDiscard=true;
 		tapForDiscard.image_angle=0;
 		tapForDiscard.depth=-ds_list_size(discard_deck);
@@ -317,7 +329,7 @@ case state.Discard:
 	
 	
 	if(discard_finish){
-		
+		emptyClear=false;
 		card_wait=0;
 		discard_finish=false;
 		iAmJudge=false;

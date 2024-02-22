@@ -41,9 +41,11 @@ littleCard=41;
 lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;
+emptyClear=false;
 
 globalvar player_score;
 globalvar enemy_score;
+
 
 player_score=0;
 enemy_score=0;
