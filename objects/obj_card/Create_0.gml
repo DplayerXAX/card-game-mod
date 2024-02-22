@@ -8,6 +8,7 @@ sendCardToEnemy=false;
 sendCardToDiscard=false;
 sendCardToTap=false;
 strNotice="";
+noticeText=false;
 
 code=0;
 flyMyCard=false;

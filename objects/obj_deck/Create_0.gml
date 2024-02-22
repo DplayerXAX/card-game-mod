@@ -20,9 +20,12 @@ timer_2=room_speed*0.6;
 timer_3=room_speed*0.6;
 timer_4=room_speed*0.4;
 timer_5=room_speed*0.6;
-timer_killing=room_speed*0.5;
 timer_bonus=room_speed*0.6;
+
 time_limit=3;
+globalvar timer_killing;
+timer_killing=room_speed*4;
+
 enemy_card_finish=false;
 player_card_finish=false;
 discard_finish=false;

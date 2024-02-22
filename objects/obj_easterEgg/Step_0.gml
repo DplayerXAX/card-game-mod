@@ -20,4 +20,25 @@ if(shakeScreen){
 }
 
 
+if(shakeHarder){
+
+	view_xport[0]=irandom(4)+100;
+	view_yport[0]=irandom(4)+100;
+	timer_shakeHarder--;
+	if(timer_shakeHarder<room_speed*0.1&!halfShake){
+	view_xport[0]-=(irandom(4)+100);
+	view_yport[0]-=(irandom(4)+100);
+	halfShake=true;
+	}
+	if(timer_shakeHarder<0){
+	view_xport[0]=0;
+	view_yport[0]=0;
+	show_debug_message("shaking tough!");
+	timer_shakeHarder=room_speed*0.1;
+	shakeHarder=false;
+	halfShake=false;
+	}
+
+}
+
 

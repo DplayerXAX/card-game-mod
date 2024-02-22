@@ -7,6 +7,7 @@ if(current_state==state.Turn && select_player=false && !isTap && player_card_dec
 
 		y=680;
 		show_debug_message("shit");
+		noticeText=true;
 
 }
 

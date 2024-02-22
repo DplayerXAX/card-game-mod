@@ -7,6 +7,8 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
 	if(eyeWideOpen){
 	player_HP=player_HP-8;
 	rage=true;
+	attackEffect=true;
+	shakeHarder=true;
 	paintItRed=true;
 	shakeScreen=true;
 	}else{	

@@ -18,8 +18,10 @@ else{room_goto(Room_win);}
 
 if(timer_killing>0){timer_killing--;}
 else{
-player_HP--;
-timer_killing=room_speed*0.5;
+player_HP-=10;
+timer_killing=room_speed*4;
+shakeScreen=true;
+
 }
 
 
@@ -28,7 +30,11 @@ switch(current_state){
 case state.Start:
 	//create cards, put them into list, shuffle
 	for(var i=0;i<24;i++){create_card(all_type[i%3],i);}
-	for(var i=0;i<12;i++){create_card(special_type[i%4],i+23);}
+	for(var i=0;i<8;i++){create_card(special_type[i%4],i+23);}
+	create_card("destroy",i+31);
+	create_card("heart",i+32);
+	create_card("destroy",i+33);
+	create_card("heart",i+33);
 	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}
 	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
@@ -241,6 +247,7 @@ case state.Discard:
 		if(timer_1>0){timer_1--;}else{
 			//discard enemy no use cards
 			if(!player_card.playerTap){	
+		iAmOne=ds_list_size(enemy_deck)-1;
 		rest_card=ds_list_find_value(enemy_deck,iAmOne);
 		ds_list_add(discard_deck,rest_card);
 		rest_card.sendCardToEnemy=false;
@@ -253,17 +260,16 @@ case state.Discard:
 		rest_card.devi=ds_list_size(discard_deck);
 			}
 		timer_1=room_speed*0.2;
-		iAmOne--;
 		
-		if(iAmOne<0){
+		if(iAmOne==0){
 			card_wait++;
-			iAmOne=1;
 			}
 		}
 	} else if(card_wait==3&& lastTurn){
 		//discard player no use cards
 	if(timer_1>0){timer_1--;}else{
-	rest_card=ds_list_find_value(player_deck,iAmOne);
+		iAmOne=ds_list_size(player_deck)-1;
+		rest_card=ds_list_find_value(player_deck,iAmOne);
 		ds_list_add(discard_deck,rest_card);
 		rest_card.sendCardToPlayer=false;
 		rest_card.iBelong="discard";
@@ -273,11 +279,9 @@ case state.Discard:
 		rest_card.depth=-ds_list_size(discard_deck);
 		rest_card.devi=ds_list_size(discard_deck);
 		timer_1=room_speed*0.2;
-		iAmOne--;
 		
-		if(iAmOne<0){
+		if(iAmOne==0){
 			card_wait++;
-			iAmOne=1;
 			}
 	}
 	}else if(card_wait==4){

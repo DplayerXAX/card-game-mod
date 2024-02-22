@@ -74,6 +74,8 @@ function decide_effect(card_type,num){
 			}
 		else if(num==1){
 			player_HP=player_HP-3-3*enemy_eyes;
+			attackEffect=true;
+			shakeHarder=true;
 			}
 			break;
 			
@@ -112,6 +114,8 @@ function decide_effect(card_type,num){
 		else if(num==1){
 			player_HP-=3*enemy_hearts*enemy_eyes;
 			enemy_hearts=0;
+			attackEffect=true;
+			shakeHarder=true;
 			}
 			break;
 	

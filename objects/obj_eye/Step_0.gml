@@ -12,6 +12,8 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	if(search_card.isReveal=true){
 	player_HP=player_HP-8;
 	rage=true;
+	attackEffect=true;
+	shakeHarder=true;
 	shakeScreen=true;
 	search_card.paintItRed=true;
 	search_card.isReveal=false;
@@ -22,6 +24,8 @@ if(ds_list_size(enemy_tap_deck)>0){
 	if(search_card.isReveal=true){
 	player_HP=player_HP-8;
 	rage=true;
+	attackEffect=true;
+	shakeHarder=true;
 	shakeScreen=true;
 	search_card.paintItRed=true;
 	search_card.isReveal=false;
@@ -31,7 +35,7 @@ if(ds_list_size(enemy_tap_deck)>0){
 if(randomWaitTime>0){randomWaitTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
-	 randomWaitTime=room_speed*(irandom(4)+1)*0.2;
+	 randomWaitTime=room_speed*(irandom(4)+1)*frequency*0.5;
 	}
 
 }
@@ -41,7 +45,7 @@ if(!eyeWideOpen){
 if(randomBlinkTime>0){randomBlinkTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
-	randomBlinkTime=room_speed*(irandom(4)+1)*0.4;
+	randomBlinkTime=room_speed*(irandom(4)+1)*frequency;
 
 }
 
@@ -56,4 +60,28 @@ else{
 	rage=false;
 	timer_happy=room_speed*0.4;
 	}
+}
+
+if(attackEffect){
+	var backGround=layer_background_get_id("Background");
+	layer_background_blend(backGround,c_red);
+	timer_effect--;
+	if(timer_effect<0){
+	timer_effect=room_speed*0.2;
+	attackEffect=false;
+	layer_background_blend(backGround,c_black);
+	}
+}
+
+if(enemy_HP<80&&enemy_HP>60){
+	frequency=0.5;
+}
+if(enemy_HP<=60&&enemy_HP>40){
+	frequency=0.4;
+}
+if(enemy_HP<=40&&enemy_HP>20){
+	frequency=0.3;
+}
+if(enemy_HP<=20&&enemy_HP>0){
+	frequency=0.2;
 }

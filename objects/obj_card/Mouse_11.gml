@@ -5,6 +5,7 @@
 if(current_state==state.Turn && select_player=false && !isTap && player_card_decide=false && iBelong="player"){
 y=700;
 show_debug_message("help");
+noticeText=false;
 }
 
 
