@@ -13,9 +13,6 @@ globalvar attackEffect;
 attackEffect=false;
 timer_effect=room_speed*0.2;
 
-layer_set_visible("Effect_1", false);
-layer_set_visible("Effect_2", false);
-
 bonus=5;
 
 globalvar rage;

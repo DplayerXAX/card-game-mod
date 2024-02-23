@@ -4,7 +4,7 @@
 
 
 room_goto(Room_start);
-
+audio_stop_all();
 
 
 

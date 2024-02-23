@@ -18,7 +18,7 @@ else{room_goto(Room_win);}
 
 if(timer_killing>0){timer_killing--;}
 else{
-player_HP-=10;
+player_HP-=5;
 timer_killing=room_speed*4;
 shakeScreen=true;
 

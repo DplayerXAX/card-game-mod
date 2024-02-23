@@ -11,7 +11,7 @@ var card=instance_create_layer(30,350+num*4,"Instances",obj_card);
 function decide_print(card_type){
 switch(card_type){
 case "eye":
-	return "+1 eye(ATP)";
+	return "+1 eye(damage)";
 	break;
 case "heart":
 	return "+1 heart and heal based on heart";
