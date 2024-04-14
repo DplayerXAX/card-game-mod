@@ -46,6 +46,7 @@
     {"name":"obj_trueWinText","order":1,"path":"objects/obj_trueWinText/obj_trueWinText.yy",},
     {"name":"obj_winText","order":2,"path":"objects/obj_winText/obj_winText.yy",},
     {"name":"Object15","order":15,"path":"objects/Object15/Object15.yy",},
+    {"name":"Obj_InstructionManager","order":1,"path":"objects/Obj_InstructionManager/Obj_InstructionManager.yy",},
     {"name":"Room_instruction1","order":5,"path":"rooms/Room_instruction1/Room_instruction1.yy",},
     {"name":"Room_instruction2","order":6,"path":"rooms/Room_instruction2/Room_instruction2.yy",},
     {"name":"Room_Instructionhealth","order":7,"path":"rooms/Room_Instructionhealth/Room_Instructionhealth.yy",},
