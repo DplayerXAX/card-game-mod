@@ -199,6 +199,7 @@ case state.Discard:
 	
 	if(!iAmJudge){
 		shakeScreen=true;
+		gameRound++;
 		decide_effect(player_card._type,0);
 		decide_effect(enemy_card._type,1);
 		if(ds_list_size(player_tap_deck)>0){

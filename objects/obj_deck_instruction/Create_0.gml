@@ -37,7 +37,7 @@ card_wait_again=0;
 iAmOne=1;
 iAmJudge=false;
 dontFlyIt=false;
-littleCard=41;
+littleCard=11;
 lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;
@@ -67,7 +67,8 @@ globalvar player_hearts;
 globalvar enemy_HP;
 globalvar enemy_eyes;
 globalvar enemy_hearts;
-
+globalvar underInstruction;
+underInstruction=true;
 player_HP=100;
 player_eyes=0;
 player_hearts=0;
@@ -115,6 +116,7 @@ var emptyEnemy;
 //new variables
 
 //track how many rounds player plays
+globalvar gameRound;
 gameRound=0;
 
 

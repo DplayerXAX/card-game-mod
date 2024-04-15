@@ -109,5 +109,13 @@ globalvar specialDiscard;
 
 specialDiscard=false;
 
+globalvar underInstruction;
+underInstruction=false;
+
+
+globalvar gameRound;
+gameRound=0;
+
+
 var emptyPlayer;
 var emptyEnemy;

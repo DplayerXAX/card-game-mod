@@ -35,6 +35,10 @@ case state_instruction.Start:
 		create_card(all_type[i%3],i);
 		number++;
 		}
+	for(var i=0;i<6;i++){
+		create_card(all_type[i%3],i);
+		number++;
+		}
 	/*
 	for(var i=0;i<8;i++){create_card(special_type[i%4],i+23);}
 	create_card("destroy",i+31);
@@ -206,6 +210,7 @@ case state_instruction.Discard:
 	
 	if(!iAmJudge){
 		shakeScreen=true;
+		gameRound++;
 		decide_effect(player_card._type,0);
 		decide_effect(enemy_card._type,1);
 		if(ds_list_size(player_tap_deck)>0){
@@ -412,7 +417,7 @@ if(timer_2>0){timer_2--;}else{
 	back_card_2.sendCardToDiscard=false;
 	littleCard--;
 	timer_2=room_speed*0.1;
-	if(littleCard<21){
+	if(littleCard<(number/2)){
 		littleCard=number-1;
 		send_finish=true;
 		timer_2=room_speed*0.6;
