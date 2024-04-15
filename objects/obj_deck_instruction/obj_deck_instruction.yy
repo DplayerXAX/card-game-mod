@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_eye",
+  "%Name":"obj_deck_instruction",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_eye",
+  "name":"obj_deck_instruction",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/物体/enemy.yy",
+    "name":"物体",
+    "path":"folders/物体.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_eye_open",
-    "path":"sprites/spr_eye_open/spr_eye_open.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
