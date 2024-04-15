@@ -15,7 +15,8 @@ else{room_goto(Room_win);}
 
 }
 
-
+//no losing HP in instruction
+/*
 if(timer_killing>0){timer_killing--;}
 else{
 player_HP-=5;
@@ -23,35 +24,45 @@ timer_killing=room_speed*4;
 shakeScreen=true;
 
 }
-
+*/
 
 
 switch(current_state){
 	
-case state.Start:
+case state_instruction.Start:
 	//create cards, put them into list, shuffle
-	for(var i=0;i<24;i++){create_card(all_type[i%3],i);}
+	for(var i=0;i<6;i++){
+		create_card(all_type[i%3],i);
+		number++;
+		}
+	for(var i=0;i<6;i++){
+		create_card(all_type[i%3],i);
+		number++;
+		}
+	/*
 	for(var i=0;i<8;i++){create_card(special_type[i%4],i+23);}
 	create_card("destroy",i+31);
 	create_card("heart",i+32);
 	create_card("destroy",i+33);
 	create_card("heart",i+33);
-	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}
+	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}*/
+	//empty player and enemy card that stuck into player and enemy's list when tapping a card
 	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
-		
-	ds_list_shuffle(card_deck);
-	audio_play_sound(shuffle_cards_sound,1,false);
+	
+	//no shuffle in instruction to make sure player get the right card
+	//ds_list_shuffle(card_deck);
+	//audio_play_sound(shuffle_cards_sound,1,false);
 	for(var j=0;j<number;j++){
 	var shuffle_card=ds_list_find_value(card_deck,j);
 	shuffle_card.devi=j;
 	shuffle_card.depth=j;
 	shuffle_card.sendCardToDeck=true;
 	}
-	current_state=state.Dealing;
+	current_state=state_instruction.Dealing;
 	break;
 	
-case state.Dealing:
+case state_instruction.Dealing:
 	//send cards to enemy and player,player reveals his cards
 	var _x,_y;
 	//enemy get cards
@@ -98,13 +109,13 @@ case state.Dealing:
 	}
 	time_limit=0.5;
 	
-	if(enemy_card_finish && player_card_finish){current_state=state.Sleeping;}
+	if(enemy_card_finish && player_card_finish){current_state=state_instruction.Sleeping;}
 	break;
 	
 
 //send enemy cards, then player's
 //enemy select a card, wait the player to select a card	
-case state.Turn:
+case state_instruction.Turn:
 //stop player cards from getting back to preset position
 if(!dontFlyIt){
 for(var i=0;i<ds_list_size(player_deck);i++){
@@ -178,13 +189,13 @@ if(!player_card_decide){
 		player_card.printItsEffect=true;
 		foundItPlayer=false;
 		if(timer_5>0){timer_5--;}else{
-		current_state=state.Discard;
+		current_state=state_instruction.Discard;
 		timer_5=room_speed*0.6;
 		}
 		}
 	break;
 	
-case state.Discard:
+case state_instruction.Discard:
 	if(ds_list_size(card_deck)==0){lastTurn=true;}
 	enemy_card_decide=false;
 	player_card_decide=false;
@@ -337,15 +348,15 @@ case state.Discard:
 		player_card.playerTap=false;
 	if(!lastTurn){
 		rage=false;
-	current_state=state.SpecialDealing;
+	current_state=state_instruction.SpecialDealing;
 	}else{
 		rage=false;
 		lastTurn=false;
-		current_state=state.Reshuffle;}
+		current_state=state_instruction.Reshuffle;}
 	}
 	break;
 	
-case state.SpecialDealing:
+case state_instruction.SpecialDealing:
 
 //enemy get cards
 	enemy_card.printItsEffect=false;
@@ -387,10 +398,10 @@ case state.SpecialDealing:
 	}
 	time_limit=0.5;
 	
-	if(enemy_card_finish && player_card_finish){current_state=state.Sleeping;}
+	if(enemy_card_finish && player_card_finish){current_state=state_instruction.Sleeping;}
 	break;
 	
-case state.Reshuffle:
+case state_instruction.Reshuffle:
 if(!send_finish){
 if(timer_2>0){timer_2--;}else{
 	var back_card_1=ds_list_find_value(discard_deck,littleCard);
@@ -406,7 +417,7 @@ if(timer_2>0){timer_2--;}else{
 	back_card_2.sendCardToDiscard=false;
 	littleCard--;
 	timer_2=room_speed*0.1;
-	if(littleCard<21){
+	if(littleCard<(number/2)){
 		littleCard=number-1;
 		send_finish=true;
 		timer_2=room_speed*0.6;
@@ -441,17 +452,17 @@ time_limit=3;
 		shuffle_finish=false;
 		send_finish=false;
 		time_limit=0.3;
-		current_state=state.Sleeping;
+		current_state=state_instruction.Sleeping;
 		}
 	break;
 
-	case state.Sleeping:
+	case state_instruction.Sleeping:
 //wait some time for card sending
 	timer++;
 	if(timer>room_speed*time_limit){
 		
-	if(time_limit==0.5){current_state=state.Turn;}
-	else {current_state=state.Dealing;}
+	if(time_limit==0.5){current_state=state_instruction.Turn;}
+	else {current_state=state_instruction.Dealing;}
 	timer=0;
 	}
 	break;
