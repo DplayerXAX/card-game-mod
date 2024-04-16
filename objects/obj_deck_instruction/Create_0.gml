@@ -9,7 +9,7 @@ globalvar cheat;
 count=0;
 cheat=0;
 turnCount=0;
-number=42;
+number=0;
 type_index=3;
 all_type=["eye","heart","mouth"];
 special_type=["ETH","HTE","HTM","destroy"];
@@ -37,7 +37,7 @@ card_wait_again=0;
 iAmOne=1;
 iAmJudge=false;
 dontFlyIt=false;
-littleCard=41;
+littleCard=11;
 lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;
@@ -67,7 +67,8 @@ globalvar player_hearts;
 globalvar enemy_HP;
 globalvar enemy_eyes;
 globalvar enemy_hearts;
-
+globalvar underInstruction;
+underInstruction=true;
 player_HP=100;
 player_eyes=0;
 player_hearts=0;
@@ -80,7 +81,7 @@ globalvar enemy_card_index;
 globalvar player_card;
 globalvar player_card_index;
 var rest_card;
-enum state{
+enum state_instruction{
 Start,
 Dealing,
 SpecialDealing,
@@ -91,7 +92,7 @@ Sleeping,
 }
 globalvar current_state;
 
-current_state=state.Start;
+current_state=state_instruction.Start;
 
 globalvar enemy_deck;
 globalvar player_deck;
@@ -103,19 +104,20 @@ enemy_deck=ds_list_create();
 player_tap_deck=ds_list_create();
 enemy_tap_deck=ds_list_create();
 
+instruction_card_deck=ds_list_create();
 discard_deck=ds_list_create();
 
 globalvar specialDiscard;
 
 specialDiscard=false;
 
-globalvar underInstruction;
-underInstruction=false;
+var emptyPlayer;
+var emptyEnemy;
 
+//new variables
 
+//track how many rounds player plays
 globalvar gameRound;
 gameRound=0;
 
 
-var emptyPlayer;
-var emptyEnemy;
