@@ -35,10 +35,11 @@ case state_instruction.Start:
 		create_card(all_type[i%3],i);
 		number++;
 		}
-	for(var i=0;i<6;i++){
+	for(var i=0;i<12;i++){
 		create_card(all_type[i%3],i);
 		number++;
 		}
+	littleCard=number-1;
 	/*
 	for(var i=0;i<8;i++){create_card(special_type[i%4],i+23);}
 	create_card("destroy",i+31);
@@ -51,10 +52,10 @@ case state_instruction.Start:
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
 	
 	//no shuffle in instruction to make sure player get the right card
-	//ds_list_shuffle(card_deck);
+	//ds_list_shuffle(instruction_card_deck);
 	//audio_play_sound(shuffle_cards_sound,1,false);
 	for(var j=0;j<number;j++){
-	var shuffle_card=ds_list_find_value(card_deck,j);
+	var shuffle_card=ds_list_find_value(instruction_card_deck,j);
 	shuffle_card.devi=j;
 	shuffle_card.depth=j;
 	shuffle_card.sendCardToDeck=true;
@@ -68,7 +69,7 @@ case state_instruction.Dealing:
 	//enemy get cards
 	if(!enemy_card_finish){
 	if(timer_1>0){timer_1--;}else{
-	var draw_card= ds_list_find_value(card_deck,0);
+	var draw_card= ds_list_find_value(instruction_card_deck,0);
 	ds_list_add(enemy_deck,draw_card);
 	draw_card.code=count;
 	draw_card.iBelong="enemy";
@@ -76,7 +77,7 @@ case state_instruction.Dealing:
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.devi=count;
 	draw_card.sendCardToEnemy=true;
-	ds_list_delete(card_deck,0);
+	ds_list_delete(instruction_card_deck,0);
 	timer_1=room_speed*0.2;
 	count++;
 	if(count==3){
@@ -89,7 +90,7 @@ case state_instruction.Dealing:
 	//player get cards
 	if(enemy_card_finish && !player_card_finish){
 		if(timer_1>0){timer_1--;}else{
-	var draw_card= ds_list_find_value(card_deck,0);
+	var draw_card= ds_list_find_value(instruction_card_deck,0);
 	ds_list_add(player_deck,draw_card);
 	draw_card.iBelong="player";
 	draw_card.code=count;
@@ -98,7 +99,7 @@ case state_instruction.Dealing:
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToPlayer=true;
 	draw_card.isReveal=true;
-	ds_list_delete(card_deck,0);
+	ds_list_delete(instruction_card_deck,0);
 	timer_1=room_speed*0.2;
 	count++;
 	if(count==3){
@@ -196,7 +197,7 @@ if(!player_card_decide){
 	break;
 	
 case state_instruction.Discard:
-	if(ds_list_size(card_deck)==0){lastTurn=true;}
+	if(ds_list_size(instruction_card_deck)==0){lastTurn=true;}
 	enemy_card_decide=false;
 	player_card_decide=false;
 	enemy_card_finish=false;
@@ -257,6 +258,7 @@ case state_instruction.Discard:
 	card_wait++;
 			}
 	}else if(card_wait==2 && lastTurn){
+		//if there's a empty card in enemy's card, delete it
 		if(!emptyClear){
 		ds_list_delete(enemy_deck,enemy_card_index);
 		emptyClear=true;
@@ -304,6 +306,7 @@ case state_instruction.Discard:
 			}
 	}
 	}else if(card_wait==4){
+		//discard player tap cards
 		if(ds_list_size(player_tap_deck)>0){
 		var tapForDiscard=ds_list_find_value(player_tap_deck,0);
 		ds_list_add(discard_deck,tapForDiscard);
@@ -318,6 +321,7 @@ case state_instruction.Discard:
 		ds_list_delete(player_tap_deck,0);
 		player_tap=false;
 		}
+		//discard enemy tap cards
 		if(ds_list_size(enemy_tap_deck)>0){
 		var tapForDiscard=ds_list_find_value(enemy_tap_deck,0);
 		ds_list_add(discard_deck,tapForDiscard);
@@ -363,7 +367,7 @@ case state_instruction.SpecialDealing:
 	player_card.printItsEffect=false;
 	if(!enemy_card_finish){
 	if(timer_1>0){timer_1--;}else{
-	var draw_card= ds_list_find_value(card_deck,0);
+	var draw_card= ds_list_find_value(instruction_card_deck,0);
 	ds_list_delete(enemy_deck,enemy_card_index);
 	ds_list_insert(enemy_deck,enemy_card_index,draw_card);
 	draw_card.iBelong="enemy";
@@ -372,7 +376,7 @@ case state_instruction.SpecialDealing:
 	draw_card.sendCardToDeck=false;
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToEnemy=true;
-	ds_list_delete(card_deck,0);
+	ds_list_delete(instruction_card_deck,0);
 	timer_1=room_speed*0.2;
 	enemy_card_finish=true;
 	}
@@ -381,7 +385,7 @@ case state_instruction.SpecialDealing:
 	//player get cards
 	if(enemy_card_finish && !player_card_finish){
 		if(timer_1>0){timer_1--;}else{
-	var draw_card= ds_list_find_value(card_deck,0);
+	var draw_card= ds_list_find_value(instruction_card_deck,0);
 	ds_list_insert(player_deck,player_card_index,draw_card);
 	draw_card.iBelong="player";
 	draw_card.code=player_card_index;
@@ -390,7 +394,7 @@ case state_instruction.SpecialDealing:
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToPlayer=true;
 	draw_card.isReveal=true;
-	ds_list_delete(card_deck,0);
+	ds_list_delete(instruction_card_deck,0);
 	timer_1=room_speed*0.2;
 	player_card_finish=true;
 	
@@ -430,13 +434,13 @@ if(send_finish && !shuffle_finish){
 for(var i=0;i<number;i++){
 	var back_card=ds_list_find_value(discard_deck,0);
 	back_card.iBelong="deck";
-ds_list_add(card_deck,back_card);
+ds_list_add(instruction_card_deck,back_card);
 ds_list_delete(discard_deck,0);
 }
-ds_list_shuffle(card_deck);
+ds_list_shuffle(instruction_card_deck);
 audio_play_sound(shuffle_cards_sound,1,false);
 for(var i=0;i<number;i++){
-var shuffle_card=ds_list_find_value(card_deck,i);
+var shuffle_card=ds_list_find_value(instruction_card_deck,i);
 shuffle_card.wonderful=false;
 shuffle_card.devi=i;
 shuffle_card.depth=i;
