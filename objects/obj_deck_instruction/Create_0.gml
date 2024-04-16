@@ -103,7 +103,8 @@ player_deck=ds_list_create();
 enemy_deck=ds_list_create();
 player_tap_deck=ds_list_create();
 enemy_tap_deck=ds_list_create();
-card_deck=ds_list_create();
+
+instruction_card_deck=ds_list_create();
 discard_deck=ds_list_create();
 
 globalvar specialDiscard;

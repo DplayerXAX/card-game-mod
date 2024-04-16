@@ -22,7 +22,7 @@ if(current_state==state.Turn && select_player=false && player_card_decide=false 
 		select_player=true;
 		player_card_decide=true;
 	}
-	else if(gameRound>2){
+	else if(gameRound>3&&cheat>0){
 		select_player=true;
 		player_card_decide=true;
 	
@@ -33,8 +33,13 @@ if(current_state==state.Turn && select_player=false && player_card_decide=false 
 }
 
 if(current_state==state.Turn && select_player=false && player_card_decide=false && (iBelong="enemy" || (iBelong="tap" && devi=1))){
+	doIt=false;
+	if(!underInstruction){doIt=true;}
+	else if(gameRound==4){doIt=true;}
+	if(doIt){
 	cheat++;
 	isReveal=!isReveal;
+	}
 }
 
 
