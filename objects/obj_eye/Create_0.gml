@@ -27,6 +27,6 @@ timer_happy=room_speed*0.4;
 globalvar frequency;
 frequency=0.7;
 
-
+instruction_text = "Use the Heart to Heal"
 audio_play_sound(upgrading_,0,true);
 
