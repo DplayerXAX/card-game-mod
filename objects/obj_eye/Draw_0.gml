@@ -15,3 +15,15 @@ draw_healthbar(830,80,880,130,randomBlinkTime, c_white, c_red, c_lime, 3, true, 
  
 
 draw_text(300,80,"Lose HP in "+string(timer_killing/room_speed)+"second");
+if(room = room_instruction_test)
+{
+	draw_text(x-1/2*sprite_width,y+sprite_height,instruction_text);
+	if(gameRound = 1)
+	{
+		instruction_text="Use Eyeballs to increase your attack"
+	}
+		if(gameRound = 2)
+	{
+		instruction_text="Use Kiss to attack"
+	}
+}
