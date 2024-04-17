@@ -4,7 +4,7 @@
 
 
 
-if(eyeWideOpen&&current_state=state.Turn&&player_card_decide=false){
+if(eyeWideOpen&&current_state=state_instruction.Turn&&player_card_decide=false){
 	
 for(var i=0;i<ds_list_size(enemy_deck);i++)
 {
@@ -14,8 +14,9 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	{
 		if(room = room_instruction_test)
 		{
+			InstructionCheat_find = true;
 			show_debug_message("Steal Find")
-			instruction_text = "Don't try to steal under my eyes";
+			instruction_text = "Don't try to cheat under my eyes";
 			gameRound += 100;
 		}
 	player_HP=player_HP-8;

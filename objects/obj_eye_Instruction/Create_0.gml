@@ -9,6 +9,7 @@ globalvar bonus;
 globalvar heartCount;
 globalvar eyeCount;
 globalvar attackEffect;
+globalvar InstructionCheat_find;
 
 attackEffect=false;
 timer_effect=room_speed*0.2;
@@ -29,4 +30,6 @@ frequency=0.7;
 
 instruction_text = "Use the Heart to Heal"
 audio_play_sound(upgrading_,0,true);
+
+InstructionCheat_find = false;
 
