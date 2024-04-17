@@ -15,8 +15,8 @@
   "name":"obj_Instruction_Healthcard",
   "overriddenProperties":[],
   "parent":{
-    "name":"Room_Instruction",
-    "path":"folders/物体/Room_Instruction.yy",
+    "name":"Wasted",
+    "path":"folders/物体/Wasted.yy",
   },
   "parentObjectId":null,
   "persistent":false,
