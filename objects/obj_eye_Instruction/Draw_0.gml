@@ -30,7 +30,7 @@ if(room = room_instruction_test)
 	{
 		instruction_text="Use Middle Mouse to tap a card";
 	}
-	else if(gameRound = 4)
+	else if(gameRound = 4 and InstructionCheat_find = false)
 	{
 		instruction_text="Right click on my card to steal it";
 		

@@ -38,6 +38,7 @@
     {"name":"obj_deck_instruction","order":1,"path":"objects/obj_deck_instruction/obj_deck_instruction.yy",},
     {"name":"obj_deck","order":1,"path":"objects/obj_deck/obj_deck.yy",},
     {"name":"obj_easterEgg","order":5,"path":"objects/obj_easterEgg/obj_easterEgg.yy",},
+    {"name":"obj_eye_Instruction","order":2,"path":"objects/obj_eye_Instruction/obj_eye_Instruction.yy",},
     {"name":"obj_eyeIcon","order":3,"path":"objects/obj_eyeIcon/obj_eyeIcon.yy",},
     {"name":"obj_gotItButton","order":13,"path":"objects/obj_gotItButton/obj_gotItButton.yy",},
     {"name":"obj_heartIcon","order":4,"path":"objects/obj_heartIcon/obj_heartIcon.yy",},
