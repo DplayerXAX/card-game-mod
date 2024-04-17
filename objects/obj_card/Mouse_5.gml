@@ -56,7 +56,7 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
 			InstructionCheat_find = true;
 			show_debug_message("Steal find");
 			obj_eye_instruction.instruction_text = "Don't try to cheat under my eyes";
-			gameRound += 100;
+			//gameRound += 100;
 		}
 	player_HP=player_HP-8;
 	rage=true;

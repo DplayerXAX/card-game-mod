@@ -16,7 +16,7 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 		{
 			show_debug_message("Steal Find")
 			instruction_text = "Don't try to steal under my eyes";
-			gameRound += 100;
+			//gameRound += 100;
 		}
 	player_HP=player_HP-8;
 	rage=true;
