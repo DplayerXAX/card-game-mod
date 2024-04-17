@@ -5,7 +5,7 @@
 if(current_state==state.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy"){
 	doIt=false;
 	if(!underInstruction){doIt=true;}
-	else if(gameRound==4){doIt=true;}
+	else if(gameRound>=4){doIt=true;}
 	if(doIt)
 	{
 	cheat++;
@@ -43,10 +43,10 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
 	}
 	
 }
-if(current_state==state_instruction.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy"){
+if(current_state==state.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy"){
 	doIt=false;
 	if(!underInstruction){doIt=true;}
-	else if(gameRound==4){doIt=true;}
+	else if(gameRound>=4){doIt=true;}
 	if(doIt)
 	{
 	cheat++;
@@ -54,8 +54,8 @@ if(current_state==state_instruction.Turn && select_enemy=false && player_card_de
 		if(room = room_instruction_test)
 		{
 			InstructionCheat_find = true;
-			show_debug_message("Steal find")
-			obj_deck_instruction.instruction_text = "Don't try to cheat under my eyes";
+			show_debug_message("Steal find");
+			obj_eye_instruction.instruction_text = "Don't try to cheat under my eyes";
 			gameRound += 100;
 		}
 	player_HP=player_HP-8;
