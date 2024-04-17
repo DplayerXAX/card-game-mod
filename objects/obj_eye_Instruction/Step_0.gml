@@ -31,6 +31,13 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 if(ds_list_size(enemy_tap_deck)>0){
 	var search_card=ds_list_find_value(enemy_tap_deck,0);
 	if(search_card.isReveal=true){
+	if(room = room_instruction_test)
+		{
+			InstructionCheat_find = true;
+			show_debug_message("Steal Find")
+			instruction_text = "Don't try to cheat under my eyes";
+			gameRound += 100;
+		}
 	player_HP=player_HP-8;
 	rage=true;
 	attackEffect=true;
