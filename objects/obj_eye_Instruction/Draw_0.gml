@@ -35,4 +35,9 @@ if(room = room_instruction_test)
 		instruction_text="Right click on my card to steal it";
 		
 	}
+	else if(gameRound = 5)
+	{
+		instruction_text="Now Try to kill me";
+		
+	}
 }
