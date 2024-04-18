@@ -17,7 +17,7 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 			InstructionCheat_find = true;
 			show_debug_message("Steal Find")
 			instruction_text = "Don't try to cheat under my eyes";
-			gameRound += 100;
+			//gameRound += 100;
 		}
 	player_HP=player_HP-8;
 	rage=true;
@@ -36,7 +36,7 @@ if(ds_list_size(enemy_tap_deck)>0){
 			InstructionCheat_find = true;
 			show_debug_message("Steal Find")
 			instruction_text = "Don't try to cheat under my eyes";
-			gameRound += 100;
+			//gameRound += 100;
 		}
 	player_HP=player_HP-8;
 	rage=true;
