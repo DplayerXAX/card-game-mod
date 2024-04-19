@@ -13,12 +13,13 @@ if(current_state==state.Turn && player_card_decide=false &&!player_tap && iBelon
 	ds_list_add(player_tap_deck,tapCard);
 	tapCard.iBelong="tap";
 	ds_list_delete(player_deck,devi);
+	//ds_list_insert(player_deck,player_card_index,obj_deck.emptyPlayer);
 	devi=0;
 	sendCardToPlayer=false;
 	player_card_decide=true;
 	select_player=true;
 	playerTap=true;
-	}else if(gameRound=3){
+	}else if(gameRound>=3){
 	isTap=true;
 	player_tap=true;
 	player_card_index=devi;
@@ -26,6 +27,7 @@ if(current_state==state.Turn && player_card_decide=false &&!player_tap && iBelon
 	ds_list_add(player_tap_deck,tapCard);
 	tapCard.iBelong="tap";
 	ds_list_delete(player_deck,devi);
+	//ds_list_insert(player_deck,player_card_index,obj_deck_instruction.emptyPlayer);
 	devi=0;
 	sendCardToPlayer=false;
 	player_card_decide=true;

@@ -42,6 +42,7 @@ lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;
 emptyClear=false;
+oneTimeOnly=false;
 
 globalvar player_score;
 globalvar enemy_score;
@@ -70,7 +71,7 @@ globalvar enemy_hearts;
 globalvar underInstruction;
 underInstruction=true;
 player_HP=50;
-player_eyes=0;
+player_eyes=3;
 player_hearts=5;
 enemy_HP=100;
 enemy_eyes=0;

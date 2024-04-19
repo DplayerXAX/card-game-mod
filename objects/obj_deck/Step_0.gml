@@ -335,6 +335,7 @@ case state.Discard:
 		discard_finish=false;
 		iAmJudge=false;
 		player_card.playerTap=false;
+		enemy_card.enemyTap=false;
 	if(!lastTurn){
 		rage=false;
 	current_state=state.SpecialDealing;
