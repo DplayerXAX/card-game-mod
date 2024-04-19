@@ -13,7 +13,6 @@ draw_healthbar(1000,80,1050,130,randomBlinkTime, c_white, c_red, c_lime, 3, true
 }
 
  
-
 //draw_text(300,80,"Lose HP in "+string(timer_killing/room_speed)+"second");
 if(room = room_instruction_test)
 {

@@ -10,8 +10,9 @@ if(player_HP<=0){
 	}
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
-if(cheat==0){room_goto(Room_trueWin);}
-else{room_goto(Room_win);}
+	current_state=state.SelectCard;
+	/*if(cheat==0){room_goto(Room_trueWin);}
+	else{room_goto(Room_win);}*/
 
 }
 
@@ -185,7 +186,7 @@ if(!player_card_decide){
 	break;
 	
 case state.Discard:
-	if(ds_list_size(card_deck)==0){lastTurn=true;}
+	
 	enemy_card_decide=false;
 	player_card_decide=false;
 	enemy_card_finish=false;
@@ -211,7 +212,7 @@ case state.Discard:
 
 		iAmJudge=true;
 	}
-	
+	if(ds_list_size(card_deck)==0||enemyLose){lastTurn=true;}
 	
 	if(card_wait==0){
 		//discard enemy selected card
@@ -254,7 +255,7 @@ case state.Discard:
 		if(timer_1>0){timer_1--;}else{
 		
 			//discard enemy no use cards
-			if(!player_card.playerTap){	
+			if(!enemy_card.enemyTap){	
 		iAmOne=ds_list_size(enemy_deck)-1;
 		rest_card=ds_list_find_value(enemy_deck,iAmOne);
 		ds_list_add(discard_deck,rest_card);
@@ -292,7 +293,7 @@ case state.Discard:
 			card_wait++;
 			}
 	}
-	}else if(card_wait==4){
+	}else if(card_wait==4&& lastTurn){
 		if(ds_list_size(player_tap_deck)>0){
 		var tapForDiscard=ds_list_find_value(player_tap_deck,0);
 		ds_list_add(discard_deck,tapForDiscard);
@@ -323,7 +324,25 @@ case state.Discard:
 		enemy_tap=false;
 		}
 		
+		if(!enemyLose){discard_finish=true;}
+		else{
+		
+		while(ds_list_size(card_deck)!=0)
+		{
+			var cardDeckForDiscard=ds_list_find_value(card_deck,0);
+			ds_list_add(discard_deck,cardDeckForDiscard);
+			cardDeckForDiscard.sendCardToDeck=false;
+			cardDeckForDiscard.sendCardToDiscard=true;
+			cardDeckForDiscard.iBelong="discard";
+			cardDeckForDiscard.isReveal=true;
+			cardDeckForDiscard.depth=-ds_list_size(discard_deck);
+			cardDeckForDiscard.devi=ds_list_size(discard_deck);
+			ds_list_delete(card_deck,0);
+		}
 		discard_finish=true;
+		
+		}
+		
 		}
 	 else{discard_finish=true;}
 		
@@ -442,7 +461,8 @@ time_limit=3;
 		shuffle_finish=false;
 		send_finish=false;
 		time_limit=0.3;
-		current_state=state.Sleeping;
+		if(!enemyLose){current_state=state_instruction.Sleeping;}
+		else{current_state=state_instruction.SelectCard;}
 		}
 	break;
 
@@ -455,5 +475,20 @@ time_limit=3;
 	else {current_state=state.Dealing;}
 	timer=0;
 	}
+	break;
+	case state_instruction.SelectCard:
+	if(!selectCardCreate){
+	for(var i=0;i<3;i++)
+	{
+	
+	newCard=instance_create_layer(0,0,"Instances",obj_add_card);
+	newCard.devi=i;
+	newCard.selecting=true;
+	newCard.isReveal=true;
+	newCard._type=addCardType[irandom(8)];
+	selectCardCreate=true;
+	}
+	}
+	
 	break;
 }
