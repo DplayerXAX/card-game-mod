@@ -47,13 +47,17 @@ foundItPlayer=false;
 foundItEnemy=false;
 emptyClear=false;
 oneTimeOnly=false;
+enemyLose=false;
+
+addCardType=["eye","heart","mouth","ETH","HTE","HTM","destroy","stealHeart","stealEye"];
 
 globalvar player_score;
 globalvar enemy_score;
-
+globalvar cardChoosed;
 
 player_score=0;
 enemy_score=0;
+cardChoosed=false;
 
 globalvar player_card_decide;
 globalvar enemy_card_decide;
@@ -73,11 +77,14 @@ globalvar enemy_HP;
 globalvar enemy_eyes;
 globalvar enemy_hearts;
 globalvar underInstruction;
+globalvar getCardNum;
+
+getCardNum=4;
 underInstruction=true;
 player_HP=50;
 player_eyes=3;
 player_hearts=5;
-enemy_HP=100;
+enemy_HP=50;
 enemy_eyes=0;
 enemy_hearts=0;
 
@@ -94,6 +101,7 @@ Turn,
 Discard,
 Reshuffle,
 Sleeping,
+SelectCard
 }
 globalvar current_state;
 
@@ -123,6 +131,7 @@ var emptyEnemy;
 
 //track how many rounds player plays
 globalvar gameRound;
+globalvar selectCardCreate;
 gameRound=0;
-
+selectCardCreate=false;
 
