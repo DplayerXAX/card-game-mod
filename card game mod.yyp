@@ -111,6 +111,7 @@
     {"id":{"name":"atkIcon","path":"sprites/atkIcon/atkIcon.yy",},},
     {"id":{"name":"ATP","path":"sprites/ATP/ATP.yy",},},
     {"id":{"name":"attack","path":"sprites/attack/attack.yy",},},
+    {"id":{"name":"background","path":"sprites/background/background.yy",},},
     {"id":{"name":"example1","path":"sprites/example1/example1.yy",},},
     {"id":{"name":"example2","path":"sprites/example2/example2.yy",},},
     {"id":{"name":"example3","path":"sprites/example3/example3.yy",},},
@@ -170,6 +171,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"room_instruction_test","path":"rooms/room_instruction_test/room_instruction_test.yy",},},
+    {"roomId":{"name":"room_get_card","path":"rooms/room_get_card/room_get_card.yy",},},
     {"roomId":{"name":"Room_play","path":"rooms/Room_play/Room_play.yy",},},
     {"roomId":{"name":"Room_play_test","path":"rooms/Room_play_test/Room_play_test.yy",},},
     {"roomId":{"name":"Room_Instructionhealth","path":"rooms/Room_Instructionhealth/Room_Instructionhealth.yy",},},
@@ -179,7 +181,6 @@
     {"roomId":{"name":"Room_lose","path":"rooms/Room_lose/Room_lose.yy",},},
     {"roomId":{"name":"Room_instruction1","path":"rooms/Room_instruction1/Room_instruction1.yy",},},
     {"roomId":{"name":"Room_instruction2","path":"rooms/Room_instruction2/Room_instruction2.yy",},},
-    {"roomId":{"name":"room_get_card","path":"rooms/room_get_card/room_get_card.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

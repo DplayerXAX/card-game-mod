@@ -2,8 +2,7 @@
 //create cards, set them to places, and give them a type.
 function create_card(card_type,num){
 var card=instance_create_layer(30,350+num*4,"Instances",obj_card);
-	if(!underInstruction){ds_list_add(card_deck,card);}
-	else{ds_list_add(obj_deck_instruction.instruction_card_deck,card);}
+	ds_list_add(card_deck,card);
 	card._type=card_type;
 }
 
