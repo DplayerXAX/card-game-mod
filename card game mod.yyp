@@ -170,8 +170,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_get_card","path":"rooms/room_get_card/room_get_card.yy",},},
     {"roomId":{"name":"room_instruction_test","path":"rooms/room_instruction_test/room_instruction_test.yy",},},
+    {"roomId":{"name":"room_get_card","path":"rooms/room_get_card/room_get_card.yy",},},
     {"roomId":{"name":"Room_play","path":"rooms/Room_play/Room_play.yy",},},
     {"roomId":{"name":"Room_play_test","path":"rooms/Room_play_test/Room_play_test.yy",},},
     {"roomId":{"name":"Room_Instructionhealth","path":"rooms/Room_Instructionhealth/Room_Instructionhealth.yy",},},
