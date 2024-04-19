@@ -20,15 +20,19 @@ if(room = room_instruction_test)
 	draw_text_ext(x+150-1/2*sprite_width,y+sprite_height,instruction_text,50,250);
 	if(gameRound = 1)
 	{
-		instruction_text="Use Eyeballs to increase your attack";
+		instruction_text="Use Strength Card to increase your attack";
 	}
 	else if(gameRound = 2)
 	{
 		instruction_text="Use Fist to attack";
 	}
-	else if(gameRound = 3)
+	else if(gameRound = 3 and instruction_tap = false)
 	{
-		instruction_text="Use Middle Mouse to tap a card";
+		instruction_text="Middle Click a card";
+	}
+	else if(gameRound = 3 and instruction_tap = true)
+	{
+		instruction_text="Now its effect permanently stays";
 	}
 	else if(gameRound = 4 and InstructionCheat_find = false)
 	{
