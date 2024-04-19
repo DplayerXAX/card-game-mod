@@ -2,6 +2,7 @@
 // 你可以在此编辑器中写入代码 
 
 globalvar card_deck;
+globalvar deck_type;
 card_deck=ds_list_create();
 //The original deck
 	for(var i=0;i<6;i++){
