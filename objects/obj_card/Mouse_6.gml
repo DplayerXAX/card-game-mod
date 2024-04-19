@@ -33,7 +33,7 @@ if(current_state==state.Turn && player_card_decide=false &&!player_tap && iBelon
 	player_card_decide=true;
 	select_player=true;
 	playerTap=true;
-	
+	instruction_tap = true;
 	}
 
 }
