@@ -3,5 +3,4 @@
 
 
 cardChoosed=true;
-create_card(_type,);
 
