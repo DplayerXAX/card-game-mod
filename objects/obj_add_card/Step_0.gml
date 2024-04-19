@@ -13,6 +13,16 @@ else if(_type="destroy"){sprite_index=spr_card_destroy;}
 else if(_type="stealHeart"){sprite_index=spr_card_stealHeart;}
 else if(_type="stealEye"){sprite_index=spr_card_stealEye;}
 }else{sprite_index=spr_card_back;}
+
+if(selecting)
+{
+	_x=x;
+	_y=y;
+	x=lerp(_x,230+devi*200,0.1);
+	y=lerp(_y,270,0.1);
+
+
+}
 /*
 if(sendCardToDeck){
 	

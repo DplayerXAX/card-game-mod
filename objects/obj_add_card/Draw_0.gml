@@ -3,13 +3,13 @@
 
 draw_self();
 draw_set_font(font_notice);
-
+/*
 if(current_state=state.Discard){
 	
 timer_text=room_speed*1;
 noticeText=false;
 	
-}
+}*/
 /*
 
 if(timer_text>0){

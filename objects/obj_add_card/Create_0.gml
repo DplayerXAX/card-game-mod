@@ -17,17 +17,21 @@ flyMyCard=false;*/
 
 iBelong="deck";
 wonderful=false;
+/*
 select_enemy=false;
 select_player=false;
+*/
+selectPlayer=false;
 paintItRed=false;
 printItsEffect=false;
 devi=0;
 var _x,_y;
 isReveal=false;
-isTap=false;
+/*isTap=false;
 playerTap=false;
 enemyTap=false;
-tapCount=0;
+tapCount=0;*/
+selecting=false;
 
 timer_exchanging=room_speed*1;
 timer_paintRed=room_speed*0.2;
