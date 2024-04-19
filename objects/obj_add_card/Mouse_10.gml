@@ -2,11 +2,9 @@
 // 你可以在此编辑器中写入代码 
 
 
-if(current_state==state.Turn && select_player=false && !isTap && player_card_decide=false && iBelong="player"){
+if(!cardChoosed){
 
-
-		y=680;
-		show_debug_message("shit");
+		y=260;
 		noticeText=true;
 
 }
