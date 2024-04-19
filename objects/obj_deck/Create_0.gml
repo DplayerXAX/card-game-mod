@@ -88,6 +88,7 @@ Turn,
 Discard,
 Reshuffle,
 Sleeping,
+SelectCard
 }
 globalvar current_state;
 
@@ -104,7 +105,7 @@ player_tap_deck=ds_list_create();
 enemy_tap_deck=ds_list_create();
 
 discard_deck=ds_list_create();
-
+enemyLose=false;
 globalvar specialDiscard;
 
 specialDiscard=false;
@@ -114,7 +115,9 @@ underInstruction=false;
 
 
 globalvar gameRound;
+globalvar selectCardCreate;
 gameRound=0;
+selectCardCreate=false;
 
 
 var emptyPlayer;
