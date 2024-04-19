@@ -24,7 +24,7 @@ if(room = room_instruction_test)
 	}
 	else if(gameRound = 2)
 	{
-		instruction_text="Use Mouth to attack";
+		instruction_text="Use Fist to attack";
 	}
 	else if(gameRound = 3)
 	{
