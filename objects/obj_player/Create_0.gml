@@ -3,8 +3,14 @@
 
 globalvar card_deck;
 globalvar deck_type;
+
+globalvar number;
+number=0;
+globalvar littleCard;
+littleCard=0;
+
 card_deck=ds_list_create();
-//The original deck
+//The initial deck
 	for(var i=0;i<6;i++){
 		create_card(all_type[i%3],i);
 		number++;

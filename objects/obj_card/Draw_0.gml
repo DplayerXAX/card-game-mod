@@ -13,13 +13,13 @@ noticeText=false;
 
 
 if(timer_text>0){
-	draw_text_ext(700,670,"YOU " + decide_print(player_card._type),-1,190);
-	draw_text_ext(330,370,"ENEMY " + decide_print(enemy_card._type),-1,190);
+	draw_text_ext(700,620,"YOU use " + decide_print(player_card._type),-1,190);
+	draw_text_ext(330,370,"ENEMY uses " + decide_print(enemy_card._type),-1,190);
 	if(ds_list_size(player_tap_deck)>0){
-	draw_text_ext(330,670,"YOUR tap card " + decide_print(ds_list_find_value(player_tap_deck,0)._type),-1,190);
+	draw_text_ext(330,670,"YOUR tap " + decide_print(ds_list_find_value(player_tap_deck,0)._type),-1,190);
 	}
 	if(ds_list_size(enemy_tap_deck)>0){
-	draw_text_ext(700,370,"ENEMY's tap card ??????????",-1,190);
+	draw_text_ext(700,370,"ENEMY's tap " + decide_print(ds_list_find_value(enemy_tap_deck,0)._type),-1,190);
 	}
 	timer_text--;
 }
@@ -28,5 +28,5 @@ if(timer_text>0){
 /*+decide_print(ds_list_find_value(enemy_tap_deck,0)._type)*/
 draw_set_font(font_instruction);
 if(noticeText){
-draw_text_ext(350,980,"This card "+decide_print(_type),-1,750);
+draw_text_ext(300,980,decide_print(_type),-1,750);
 }
