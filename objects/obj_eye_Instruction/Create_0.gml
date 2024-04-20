@@ -33,3 +33,5 @@ audio_play_sound(upgrading_,0,true);
 
 InstructionCheat_find = false;
 
+globalvar instruction_tap;
+instruction_tap=false;
