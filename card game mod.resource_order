@@ -111,6 +111,8 @@
     {"name":"spr_card_mouth","order":2,"path":"sprites/spr_card_mouth/spr_card_mouth.yy",},
     {"name":"spr_card_stealEye","order":4,"path":"sprites/spr_card_stealEye/spr_card_stealEye.yy",},
     {"name":"spr_card_stealHeart","order":5,"path":"sprites/spr_card_stealHeart/spr_card_stealHeart.yy",},
+    {"name":"spr_enemy_arm","order":4,"path":"sprites/spr_enemy_arm/spr_enemy_arm.yy",},
+    {"name":"spr_enemy_mouth","order":5,"path":"sprites/spr_enemy_mouth/spr_enemy_mouth.yy",},
     {"name":"spr_enemy_eye","order":3,"path":"sprites/spr_enemy_eye/spr_enemy_eye.yy",},
     {"name":"spr_eye_close","order":1,"path":"sprites/spr_eye_close/spr_eye_close.yy",},
     {"name":"spr_eye_open","order":2,"path":"sprites/spr_eye_open/spr_eye_open.yy",},
