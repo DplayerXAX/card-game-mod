@@ -31,20 +31,24 @@ switch(current_state){
 	
 case state.Start:
 	//create cards, put them into list, shuffle
+	/*
 	for(var i=0;i<24;i++){create_card(all_type[i%3],i);}
 	for(var i=0;i<8;i++){create_card(special_type[i%4],i+23);}
 	create_card("destroy",i+31);
 	create_card("heart",i+32);
 	create_card("destroy",i+33);
 	create_card("heart",i+33);
-	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}
+	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}*/
+	littleCard=number-1;
 	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
 		
 	ds_list_shuffle(card_deck);
 	audio_play_sound(shuffle_cards_sound,1,false);
 	for(var j=0;j<number;j++){
+	show_debug_message(j);
 	var shuffle_card=ds_list_find_value(card_deck,j);
+	show_debug_message(shuffle_card._type);
 	shuffle_card.devi=j;
 	shuffle_card.depth=j;
 	shuffle_card.sendCardToDeck=true;

@@ -4,8 +4,12 @@
 
 draw_self();
 draw_set_font(Font2);
+if(!obj_deck_instruction.enemyLose)
+{
 draw_healthbar(300,70,930,100,enemy_HP, c_white, c_red, c_lime, 0, true, true);
 myHealthBar=draw_healthbar(300,1010,930,1040,player_HP, c_white, c_red, c_lime, 0, true, true);
+
+}
 
 
 if(!eyeWideOpen){
