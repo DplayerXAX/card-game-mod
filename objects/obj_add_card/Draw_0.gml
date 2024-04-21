@@ -28,5 +28,5 @@ if(timer_text>0){
 /*+decide_print(ds_list_find_value(enemy_tap_deck,0)._type)*/
 draw_set_font(font_instruction);
 if(noticeText){
-draw_text_ext(300,980,"This card "+decide_print(_type),-1,750);
+draw_text_ext(300,980,decide_print(_type),-1,750);
 }

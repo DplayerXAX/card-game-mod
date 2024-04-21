@@ -510,16 +510,20 @@ time_limit=3;
 	break;
 	case state_instruction.SelectCard:
 	if(!selectCardCreate){
+	if(getCardNum>0){
 	for(var i=0;i<3;i++)
 	{
-	
 	newCard=instance_create_layer(0,0,"Instances",obj_add_card);
 	newCard.devi=i;
 	newCard.selecting=true;
 	newCard.isReveal=true;
 	newCard._type=addCardType[irandom(8)];
-	selectCardCreate=true;
+	
 	}
+	}else{
+	instance_create_layer(800,800,"Instances",obj_nextButton);
+	}
+	selectCardCreate=true;
 	}
 	
 	break;

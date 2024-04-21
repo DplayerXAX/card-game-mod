@@ -2,14 +2,12 @@
 // 你可以在此编辑器中写入代码 
 randomize();
 
-globalvar number;
 globalvar type_index;
 globalvar count;
 globalvar cheat;
 count=0;
 cheat=0;
 turnCount=0;
-number=42;
 type_index=3;
 all_type=["eye","heart","mouth"];
 special_type=["ETH","HTE","HTM","destroy"];
@@ -37,7 +35,6 @@ card_wait_again=0;
 iAmOne=1;
 iAmJudge=false;
 dontFlyIt=false;
-littleCard=41;
 lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;

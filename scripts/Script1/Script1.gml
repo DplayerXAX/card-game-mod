@@ -11,31 +11,31 @@ var card=instance_create_layer(30,350+num*4,"Instances",obj_card);
 function decide_print(card_type){
 switch(card_type){
 case "eye":
-	return "+1 eye(damage)";
+	return "Strength card: +1 strength(ATP)";
 	break;
 case "heart":
-	return "+1 heart and heal based on heart";
+	return "Healing card: +1 healing point and heal based on the HTP you have.";
 	break;
 case "mouth":
-	return "attack!";
+	return "Bit card: Attack based on your strength!";
 	break;
 case "ETH":
-	return "transfer all eyes to hearts!";
+	return "Flush card: transfer all strength to healing points";
 	break;
 case "HTE":
-	return "transfer all heart to eyes!"
+	return "Excitement card: transfer all healing points to strength!"
 	break;
 case "HTM":
-	return "use up X your hearts to attack X times!";
+	return "Hungry bit card: use up X your hearts to attack X times!";
 	break;
 case "destroy":
-	return "destroy opponent's tap card!";
+	return "Stab card: destroy opponent's tap card!";
 	break;
 case "stealHeart":
-	return "steal one heart from enemy!(if there's any)";
+	return "Steal-H card: steal one healing point from enemy!(if there's any)";
 	break;
 case "stealEye":
-	return "steal one eye from enemy!(if there's any)";
+	return "Steal-S card: steal one strength from enemy!(if there's any)";
 	break;
 }
 
