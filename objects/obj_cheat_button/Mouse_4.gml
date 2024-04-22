@@ -5,6 +5,6 @@
 
 
 powerful=true;
-
+enemy_HP=1;
 
 
