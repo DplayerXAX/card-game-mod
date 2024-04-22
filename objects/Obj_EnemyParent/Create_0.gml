@@ -9,6 +9,12 @@ globalvar bonus;
 globalvar heartCount;
 globalvar eyeCount;
 globalvar attackEffect;
+globalvar enemy_HP;
+globalvar enemy_eyes;
+globalvar enemy_hearts;
+enemy_HP=100;
+enemy_eyes=0;
+enemy_hearts=0;
 
 attackEffect=false;
 timer_effect=room_speed*0.2;

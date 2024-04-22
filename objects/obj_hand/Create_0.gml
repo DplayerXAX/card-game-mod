@@ -11,6 +11,7 @@ globalvar attackEffect;
 
 attackEffect=false;
 timer_effect=room_speed*0.2;
+handGenerated=false;
 
 bonus=5;
 

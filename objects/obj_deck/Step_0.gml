@@ -1,6 +1,6 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
-
+/*
 if(player_HP>100){player_HP=100;}
 if(enemy_HP>100){enemy_HP=100;}
 
@@ -11,10 +11,10 @@ if(player_HP<=0){
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
 	current_state=state.SelectCard;
-	/*if(cheat==0){room_goto(Room_trueWin);}
-	else{room_goto(Room_win);}*/
+	if(cheat==0){room_goto(Room_trueWin);}
+	else{room_goto(Room_win);}
 
-}
+}*/
 
 
 if(timer_killing>0){timer_killing--;}
@@ -480,6 +480,7 @@ time_limit=3;
 	timer=0;
 	}
 	break;
+	
 	case state_instruction.SelectCard:
 	if(!selectCardCreate){
 	for(var i=0;i<3;i++)
