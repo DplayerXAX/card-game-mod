@@ -7,6 +7,7 @@ globalvar count;
 globalvar cheat;
 count=0;
 cheat=0;
+
 turnCount=0;
 type_index=3;
 all_type=["eye","heart","mouth"];
@@ -109,6 +110,8 @@ underInstruction=false;
 
 globalvar gameRound;
 globalvar selectCardCreate;
+globalvar getCardNum;
+getCardNum=4;
 gameRound=0;
 selectCardCreate=false;
 

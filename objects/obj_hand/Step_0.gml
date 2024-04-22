@@ -13,7 +13,6 @@ if(!handGenerated)
 	handGenerated=true;
 }
 
-
 }else if(current_state==state.Discard)
 {
 handGenerated=false;

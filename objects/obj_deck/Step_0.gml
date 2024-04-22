@@ -15,7 +15,7 @@ else if(enemy_HP<=0){
 	else{room_goto(Room_win);}
 
 }*/
-
+/*
 
 if(timer_killing>0){timer_killing--;}
 else{
@@ -24,7 +24,7 @@ timer_killing=room_speed*4;
 shakeScreen=true;
 
 }
-
+*/
 
 
 switch(current_state){
@@ -91,7 +91,7 @@ case state.Dealing:
 	draw_card.sendCardToDeck=false;
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToPlayer=true;
-	draw_card.isReveal=true;
+	//draw_card.isReveal=true;
 	ds_list_delete(card_deck,0);
 	timer_1=room_speed*0.2;
 	count++;
@@ -115,6 +115,7 @@ if(!dontFlyIt){
 for(var i=0;i<ds_list_size(player_deck);i++){
 var notFlyCard= ds_list_find_value(player_deck,i);
 notFlyCard.sendCardToPlayer=false;
+notFlyCard.isReveal=true;
 }
 }
 //enemy waits for some times, then select a card, it might tap a card if
@@ -430,7 +431,7 @@ if(timer_2>0){timer_2--;}else{
 	back_card_2.sendCardToDiscard=false;
 	littleCard--;
 	timer_2=room_speed*0.1;
-	if(littleCard<21){
+	if(littleCard<(number/2)){
 		littleCard=number-1;
 		send_finish=true;
 		timer_2=room_speed*0.6;
@@ -483,17 +484,21 @@ time_limit=3;
 	
 	case state_instruction.SelectCard:
 	if(!selectCardCreate){
+	if(getCardNum>0){
 	for(var i=0;i<3;i++)
 	{
-	
 	newCard=instance_create_layer(0,0,"Instances",obj_add_card);
 	newCard.devi=i;
 	newCard.selecting=true;
 	newCard.isReveal=true;
 	newCard._type=addCardType[irandom(8)];
+	}
+	}else{
+	instance_create_layer(800,800,"Instances",obj_nextButton);
+	}
 	selectCardCreate=true;
 	}
-	}
-	
 	break;
+	
+
 }
