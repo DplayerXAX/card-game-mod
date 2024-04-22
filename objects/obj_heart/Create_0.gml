@@ -13,6 +13,7 @@ globalvar attackEffect;
 attackEffect=false;
 timer_effect=room_speed*0.2;
 
+abilityTrigger=false;
 bonus=5;
 
 globalvar rage;
