@@ -71,6 +71,8 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			enemy_HP=enemy_HP-3-3*player_eyes;
+			var inst = instance_create_layer(obj_eye_instruction.x,obj_eye_instruction.y, "Instances", obj_damage_popup);
+			inst.damage_amount = -3-3*player_eyes;  // Pass the damage amount to the popup
 			}
 		else if(num==1){
 			player_HP=player_HP-3-3*enemy_eyes;

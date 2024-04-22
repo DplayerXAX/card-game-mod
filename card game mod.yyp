@@ -88,6 +88,7 @@
     {"id":{"name":"obj_trueWinText","path":"objects/obj_trueWinText/obj_trueWinText.yy",},},
     {"id":{"name":"obj_winText","path":"objects/obj_winText/obj_winText.yy",},},
     {"id":{"name":"Object15","path":"objects/Object15/Object15.yy",},},
+    {"id":{"name":"obj_damage_popup","path":"objects/obj_damage_popup/obj_damage_popup.yy",},},
     {"id":{"name":"room_get_card","path":"rooms/room_get_card/room_get_card.yy",},},
     {"id":{"name":"room_instruction_test","path":"rooms/room_instruction_test/room_instruction_test.yy",},},
     {"id":{"name":"Room_instruction1","path":"rooms/Room_instruction1/Room_instruction1.yy",},},
