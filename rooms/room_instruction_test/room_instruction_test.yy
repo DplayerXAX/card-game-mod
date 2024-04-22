@@ -16,6 +16,7 @@
     {"name":"inst_60A2A060","path":"rooms/room_instruction_test/room_instruction_test.yy",},
     {"name":"inst_568AFF9A","path":"rooms/room_instruction_test/room_instruction_test.yy",},
     {"name":"inst_4BAD8BB5","path":"rooms/room_instruction_test/room_instruction_test.yy",},
+    {"name":"inst_2C1831DA","path":"rooms/room_instruction_test/room_instruction_test.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -31,6 +32,7 @@
         {"$GMRInstance":"","%Name":"inst_60A2A060","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60A2A060","objectId":{"name":"Obj_instrcutionArrow","path":"objects/Obj_instrcutionArrow/Obj_instrcutionArrow.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":992.0,},
         {"$GMRInstance":"","%Name":"inst_568AFF9A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_568AFF9A","objectId":{"name":"obj_eye_instruction","path":"objects/obj_eye_instruction/obj_eye_instruction.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.75,"scaleY":4.75,"x":992.0,"y":96.0,},
         {"$GMRInstance":"","%Name":"inst_4BAD8BB5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4BAD8BB5","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":448.0,},
+        {"$GMRInstance":"","%Name":"inst_2C1831DA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2C1831DA","objectId":{"name":"obj_cheat_button","path":"objects/obj_cheat_button/obj_cheat_button.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":928.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":"_filter_old_film","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[
         {"name":"g_OldFilmFlickerIntensity","type":0,"value":"0.2",},
