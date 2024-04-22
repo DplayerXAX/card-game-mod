@@ -17,11 +17,15 @@ else if(enemy_HP<=0){
 }*/
 
 
-if(timer_killing>0){timer_killing--;}
+if(timer_killing>0)
+{timer_killing--;}
 else{
-player_HP-=5;
-timer_killing=room_speed*4;
-shakeScreen=true;
+	if(instance_find(obj_eye,1) = true)
+	{	
+		player_HP-=5;
+		shakeScreen=true;
+	}
+	timer_killing=room_speed*4;
 
 }
 
@@ -430,7 +434,7 @@ if(timer_2>0){timer_2--;}else{
 	back_card_2.sendCardToDiscard=false;
 	littleCard--;
 	timer_2=room_speed*0.1;
-	if(littleCard<21){
+	if(littleCard<number/2){
 		littleCard=number-1;
 		send_finish=true;
 		timer_2=room_speed*0.6;
