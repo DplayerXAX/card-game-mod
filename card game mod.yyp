@@ -51,6 +51,7 @@
   },
   "name":"card game mod",
   "resources":[
+    {"id":{"name":"fnt_damage","path":"fonts/fnt_damage/fnt_damage.yy",},},
     {"id":{"name":"font_instruction","path":"fonts/font_instruction/font_instruction.yy",},},
     {"id":{"name":"font_narrative","path":"fonts/font_narrative/font_narrative.yy",},},
     {"id":{"name":"font_notice","path":"fonts/font_notice/font_notice.yy",},},
@@ -58,6 +59,7 @@
     {"id":{"name":"font_resultTitle","path":"fonts/font_resultTitle/font_resultTitle.yy",},},
     {"id":{"name":"font_score","path":"fonts/font_score/font_score.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
+    {"id":{"name":"font_eyes_insturction","path":"fonts/font_eyes_insturction/font_eyes_insturction.yy",},},
     {"id":{"name":"obj_add_card","path":"objects/obj_add_card/obj_add_card.yy",},},
     {"id":{"name":"obj_addCardManager","path":"objects/obj_addCardManager/obj_addCardManager.yy",},},
     {"id":{"name":"obj_bones","path":"objects/obj_bones/obj_bones.yy",},},

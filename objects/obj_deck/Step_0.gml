@@ -17,11 +17,15 @@ else if(enemy_HP<=0){
 }*/
 /*
 
-if(timer_killing>0){timer_killing--;}
+if(timer_killing>0)
+{timer_killing--;}
 else{
-player_HP-=5;
-timer_killing=room_speed*4;
-shakeScreen=true;
+	if(instance_find(obj_eye,1) = true)
+	{	
+		player_HP-=5;
+		shakeScreen=true;
+	}
+	timer_killing=room_speed*4;
 
 }
 */

@@ -54,13 +54,13 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			player_eyes++;
-			var inst = instance_create_layer(1200,900, "Instances", obj_num_popup);
+			var inst = instance_create_layer(1200,825, "Instances", obj_num_popup);
 			inst.myColor=c_green;
 			inst.damage_amount = "+1";
 			}
 		else if(num==1){
 			enemy_eyes++;
-			var inst = instance_create_layer(50,200, "Instances", obj_num_popup);
+			var inst = instance_create_layer(50,130, "Instances", obj_num_popup);
 			inst.myColor=c_green;
 			inst.damage_amount = "+1";
 			}
@@ -71,7 +71,7 @@ function decide_effect(card_type,num){
 		if(num==0){
 			player_HP+=5+5*player_hearts;
 			player_hearts++;
-			var inst1 = instance_create_layer(1200,1000, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(1200,925, "Instances", obj_num_popup);
 			inst1.damage_amount = "+1";
 			inst1.myColor=c_green;
 			var inst2 = instance_create_layer(100,800,"Instances", obj_num_popup);
@@ -81,7 +81,7 @@ function decide_effect(card_type,num){
 		else if(num==1){
 			enemy_HP+=5+5*enemy_hearts;
 			enemy_hearts++;
-			var inst1 = instance_create_layer(50,100, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(50,25, "Instances", obj_num_popup);
 			inst1.damage_amount = "+1";
 			var inst2 = instance_create_layer(ds_list_find_value(enemyIWillMeet,level).x,ds_list_find_value(enemyIWillMeet,level).y,"Instances", obj_num_popup);
 			inst2.myColor=c_green;
@@ -94,7 +94,7 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			enemy_HP=enemy_HP-3-3*player_eyes;
-			var inst = instance_create_layer(ds_list_find_value(enemyIWillMeet,level).x,ds_list_find_value(enemyIWillMeet,level).y, "Instances", obj_num_popup);
+			var inst = instance_create_layer(ds_list_find_value(enemyIWillMeet,level).x-75,ds_list_find_value(enemyIWillMeet,level).y+50, "Instances", obj_num_popup);
 			inst.damage_amount = -3-3*player_eyes;  // Pass the damage amount to the popup
 			}
 		else if(num==1){
