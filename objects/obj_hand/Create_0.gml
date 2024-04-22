@@ -2,7 +2,7 @@
 randomize();
 
 
-
+var hand;
 globalvar myHealthBar;
 globalvar bonus;
 globalvar heartCount;

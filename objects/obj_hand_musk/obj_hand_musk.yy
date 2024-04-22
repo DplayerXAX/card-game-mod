@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_hand_musk",
+    "path":"sprites/spr_hand_musk/spr_hand_musk.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
