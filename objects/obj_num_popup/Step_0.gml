@@ -1,7 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 y -= move_speed;
-alpha -= 1 / life_span;
+life_span--;
+if(life_span<=0)
+{
+alpha -= 0.2;
+life_span=room_speed*0.1;
+}
+
 if (alpha <= 0) 
 {
 	instance_destroy();

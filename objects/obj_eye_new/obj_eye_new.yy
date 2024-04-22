@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_heart",
+  "%Name":"obj_eye_new",
   "eventList":[],
   "managed":true,
-  "name":"obj_enemy_heart",
+  "name":"obj_eye_new",
   "overriddenProperties":[],
   "parent":{
     "name":"enemy",
     "path":"folders/物体/enemy.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_EnemyParent",
+    "path":"objects/Obj_EnemyParent/Obj_EnemyParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_heart",
-    "path":"sprites/spr_enemy_heart/spr_enemy_heart.yy",
+    "name":"spr_enemy_eye",
+    "path":"sprites/spr_enemy_eye/spr_enemy_eye.yy",
   },
   "spriteMaskId":null,
   "visible":true,

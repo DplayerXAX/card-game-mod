@@ -3,6 +3,17 @@
 
 globalvar card_deck;
 globalvar deck_type;
+globalvar level;
+globalvar enemyIWillMeet;
+
+enemyIWillMeet=ds_list_create();
+ds_list_add(enemyIWillMeet,obj_eye_instruction);
+ds_list_add(enemyIWillMeet,obj_hand);
+ds_list_add(enemyIWillMeet,obj_mouth);
+ds_list_add(enemyIWillMeet,obj_heart);
+ds_list_add(enemyIWillMeet,obj_bones);
+ds_list_add(enemyIWillMeet,obj_eye_new);
+level=0;
 
 globalvar number;
 number=0;

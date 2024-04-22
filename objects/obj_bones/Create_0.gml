@@ -12,7 +12,7 @@ globalvar attackEffect;
 globalvar enemy_HP;
 globalvar enemy_eyes;
 globalvar enemy_hearts;
-enemy_HP=100;
+enemy_HP=0;
 enemy_eyes=0;
 enemy_hearts=0;
 

@@ -10,8 +10,8 @@
   "name":"obj_eye_instruction",
   "overriddenProperties":[],
   "parent":{
-    "name":"Room_Instruction",
-    "path":"folders/物体/Room_Instruction.yy",
+    "name":"enemy",
+    "path":"folders/物体/enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

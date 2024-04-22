@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_damage_popup",
+  "%Name":"obj_mouth",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_damage_popup",
+  "name":"obj_mouth",
   "overriddenProperties":[],
   "parent":{
-    "name":"物体",
-    "path":"folders/物体.yy",
+    "name":"enemy",
+    "path":"folders/物体/enemy.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_EnemyParent",
+    "path":"objects/Obj_EnemyParent/Obj_EnemyParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_mouth",
+    "path":"sprites/spr_mouth/spr_mouth.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

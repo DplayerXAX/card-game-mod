@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bones",
+  "%Name":"obj_cheat_button",
   "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bones",
+  "name":"obj_cheat_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/物体/enemy.yy",
+    "name":"物体",
+    "path":"folders/物体.yy",
   },
-  "parentObjectId":{
-    "name":"Obj_EnemyParent",
-    "path":"objects/Obj_EnemyParent/Obj_EnemyParent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bones",
-    "path":"sprites/spr_bones/spr_bones.yy",
+    "name":"Sprite45",
+    "path":"sprites/Sprite45/Sprite45.yy",
   },
   "spriteMaskId":null,
   "visible":true,

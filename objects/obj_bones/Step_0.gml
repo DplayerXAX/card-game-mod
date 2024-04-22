@@ -9,7 +9,7 @@ if(player_HP<=0){
 	audio_stop_sound(upgrading_);
 	room_goto(Room_lose);
 	}
-else if(enemy_HP<=0){
+else if(enemy_HP==100){
 	audio_stop_sound(upgrading_);
 	current_state=state.SelectCard;
 	/*if(cheat==0){room_goto(Room_trueWin);}

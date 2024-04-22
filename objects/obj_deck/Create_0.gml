@@ -61,16 +61,12 @@ enemy_tap=false;
 globalvar player_HP;
 globalvar player_eyes;
 globalvar player_hearts;
-globalvar enemy_HP;
-globalvar enemy_eyes;
-globalvar enemy_hearts;
+
 
 player_HP=100;
 player_eyes=0;
 player_hearts=0;
-enemy_HP=100;
-enemy_eyes=0;
-enemy_hearts=0;
+
 
 globalvar enemy_card;
 globalvar enemy_card_index;

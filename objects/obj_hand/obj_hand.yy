@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bones",
+  "%Name":"obj_hand",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bones",
+  "name":"obj_hand",
   "overriddenProperties":[],
   "parent":{
     "name":"enemy",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bones",
-    "path":"sprites/spr_bones/spr_bones.yy",
+    "name":"spr_hand",
+    "path":"sprites/spr_hand/spr_hand.yy",
   },
   "spriteMaskId":null,
   "visible":true,
