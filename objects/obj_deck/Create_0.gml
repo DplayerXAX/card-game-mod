@@ -39,7 +39,7 @@ lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;
 emptyClear=false;
-
+addCardType=["eye","heart","mouth","ETH","HTE","HTM","destroy","stealHeart","stealEye"];
 globalvar player_score;
 globalvar enemy_score;
 
