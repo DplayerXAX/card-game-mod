@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_heart",
-  "eventList":[],
+  "%Name":"obj_mouth",
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_enemy_heart",
+  "name":"obj_mouth",
   "overriddenProperties":[],
   "parent":{
     "name":"enemy",
     "path":"folders/物体/enemy.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"Obj_EnemyParent",
+    "path":"objects/Obj_EnemyParent/Obj_EnemyParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_heart",
-    "path":"sprites/spr_enemy_heart/spr_enemy_heart.yy",
+    "name":"spr_mouth",
+    "path":"sprites/spr_mouth/spr_mouth.yy",
   },
   "spriteMaskId":null,
   "visible":true,

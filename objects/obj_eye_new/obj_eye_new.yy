@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bones",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_eye_new",
+  "eventList":[],
   "managed":true,
-  "name":"obj_bones",
+  "name":"obj_eye_new",
   "overriddenProperties":[],
   "parent":{
     "name":"enemy",
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bones",
-    "path":"sprites/spr_bones/spr_bones.yy",
+    "name":"spr_enemy_eye",
+    "path":"sprites/spr_enemy_eye/spr_enemy_eye.yy",
   },
   "spriteMaskId":null,
   "visible":true,

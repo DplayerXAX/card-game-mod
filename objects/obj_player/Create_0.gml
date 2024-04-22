@@ -3,6 +3,9 @@
 
 globalvar card_deck;
 globalvar deck_type;
+globalvar level;
+
+level=0;
 
 globalvar number;
 number=0;
