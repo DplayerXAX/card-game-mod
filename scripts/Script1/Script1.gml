@@ -73,6 +73,7 @@ function decide_effect(card_type,num){
 			player_hearts++;
 			var inst1 = instance_create_layer(1200,1000, "Instances", obj_num_popup);
 			inst1.damage_amount = "+1";
+			inst1.myColor=c_green;
 			var inst2 = instance_create_layer(100,800,"Instances", obj_num_popup);
 			inst2.myColor=c_green;
 			inst2.damage_amount ="+"+string(5+5*player_hearts);
@@ -254,8 +255,8 @@ function decide_effect(card_type,num){
 			inst1.myColor=c_green;
 			inst1.damage_amount = "+1";
 			player_eyes--;
-			var inst = instance_create_layer(1200,900, "Instances", obj_num_popup);
-			inst.damage_amount = "-1";
+			var inst2 = instance_create_layer(1200,900, "Instances", obj_num_popup);
+			inst2.damage_amount = "-1";
 			}
 			}
 			break;
