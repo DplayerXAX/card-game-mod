@@ -32,7 +32,8 @@ if(current_state==state.Turn && select_player=false && player_card_decide=false 
 
 }
 
-if(current_state==state.Turn && select_player=false && player_card_decide=false && (iBelong="enemy" || (iBelong="tap" && devi=1))){
+if(current_state==state.Turn && select_player=false && player_card_decide=false && (iBelong="enemy" || (iBelong="tap" && devi=1)) and instance_find(obj_eye,1) = true)
+{
 	doIt=false;
 	if(!underInstruction){doIt=true;}
 	else if(gameRound>=4){doIt=true;}
