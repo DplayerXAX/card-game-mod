@@ -18,6 +18,8 @@ else if(enemy_HP<=0){
 }
 
 
+
+
 if(player_HP==100)
 {
 real_myHealthMusk.visible=false;

@@ -407,7 +407,7 @@ case state.SpecialDealing:
 	draw_card.sendCardToDeck=false;
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToPlayer=true;
-	draw_card.isReveal=true;
+	//draw_card.isReveal=true;
 	ds_list_delete(card_deck,0);
 	timer_1=room_speed*0.2;
 	player_card_finish=true;
