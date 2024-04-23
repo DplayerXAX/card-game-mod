@@ -45,7 +45,7 @@
     {"name":"obj_deck_instruction","order":1,"path":"objects/obj_deck_instruction/obj_deck_instruction.yy",},
     {"name":"obj_deck","order":1,"path":"objects/obj_deck/obj_deck.yy",},
     {"name":"obj_easterEgg","order":4,"path":"objects/obj_easterEgg/obj_easterEgg.yy",},
-    {"name":"Obj_EnemyParent","order":16,"path":"objects/Obj_EnemyParent/Obj_EnemyParent.yy",},
+    {"name":"Obj_EnemyParent","order":7,"path":"objects/Obj_EnemyParent/Obj_EnemyParent.yy",},
     {"name":"obj_enemyRegenerator","order":24,"path":"objects/obj_enemyRegenerator/obj_enemyRegenerator.yy",},
     {"name":"obj_eye_instruction","order":6,"path":"objects/obj_eye_instruction/obj_eye_instruction.yy",},
     {"name":"obj_eye_new","order":4,"path":"objects/obj_eye_new/obj_eye_new.yy",},
