@@ -2,14 +2,13 @@
 // 你可以在此编辑器中写入代码 
 randomize();
 
-globalvar number;
 globalvar type_index;
 globalvar count;
 globalvar cheat;
 count=0;
 cheat=0;
+
 turnCount=0;
-number=42;
 type_index=3;
 all_type=["eye","heart","mouth"];
 special_type=["ETH","HTE","HTM","destroy"];
@@ -37,12 +36,11 @@ card_wait_again=0;
 iAmOne=1;
 iAmJudge=false;
 dontFlyIt=false;
-littleCard=41;
 lastTurn= false;
 foundItPlayer=false;
 foundItEnemy=false;
 emptyClear=false;
-
+addCardType=["eye","heart","mouth","ETH","HTE","HTM","destroy","stealHeart","stealEye"];
 globalvar player_score;
 globalvar enemy_score;
 
@@ -64,16 +62,12 @@ enemy_tap=false;
 globalvar player_HP;
 globalvar player_eyes;
 globalvar player_hearts;
-globalvar enemy_HP;
-globalvar enemy_eyes;
-globalvar enemy_hearts;
+
 
 player_HP=100;
 player_eyes=0;
 player_hearts=0;
-enemy_HP=100;
-enemy_eyes=0;
-enemy_hearts=0;
+
 
 globalvar enemy_card;
 globalvar enemy_card_index;
@@ -116,6 +110,8 @@ underInstruction=false;
 
 globalvar gameRound;
 globalvar selectCardCreate;
+globalvar getCardNum;
+getCardNum=4;
 gameRound=0;
 selectCardCreate=false;
 

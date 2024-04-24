@@ -19,6 +19,7 @@
   "height":355,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"55059260-6ee1-4b3a-855b-b61131b1bacc","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"55059260-6ee1-4b3a-855b-b61131b1bacc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"c752e880-3844-4006-8d8a-f22c13688216","blendMode":0,"displayName":"default","isLocked":false,"name":"c752e880-3844-4006-8d8a-f22c13688216","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_card_back_new",

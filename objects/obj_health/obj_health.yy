@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_heart",
+  "%Name":"obj_health",
   "eventList":[],
   "managed":true,
-  "name":"obj_enemy_heart",
+  "name":"obj_health",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/物体/enemy.yy",
+    "name":"物体",
+    "path":"folders/物体.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_heart",
-    "path":"sprites/spr_enemy_heart/spr_enemy_heart.yy",
+    "name":"spr_health",
+    "path":"sprites/spr_health/spr_health.yy",
   },
   "spriteMaskId":null,
   "visible":true,

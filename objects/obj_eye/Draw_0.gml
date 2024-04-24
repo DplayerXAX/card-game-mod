@@ -3,10 +3,17 @@
 
 
 draw_self();
-draw_set_font(Font2);
-draw_healthbar(300,70,930,100,enemy_HP, c_white, c_red, c_lime, 0, true, true);
-myHealthBar=draw_healthbar(300,1010,930,1040,player_HP, c_white, c_red, c_lime, 0, true, true);
+draw_set_font(font_notice);
+if(!obj_deck_instruction.enemyLose)
+{
+draw_text(300,1050,"HP: "+string(player_HP)+"/100");
+draw_text(300,110,"HP: "+string(enemy_HP)+"/100");
 
+}
+draw_set_font(Font2);
+/*draw_healthbar(300,70,930,100,enemy_HP, c_white, c_red, c_lime, 0, true, true);
+myHealthBar=draw_healthbar(300,1010,930,1040,player_HP, c_white, c_red, c_lime, 0, true, true);
+*/
 if(!eyeWideOpen){
 draw_healthbar(830,80,880,130,randomBlinkTime, c_white, c_red, c_lime, 3, true, true);
 }

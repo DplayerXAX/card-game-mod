@@ -1,6 +1,6 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
-
+/*
 if(player_HP>100){player_HP=100;}
 if(enemy_HP>100){enemy_HP=100;}
 
@@ -11,40 +11,48 @@ if(player_HP<=0){
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
 	current_state=state.SelectCard;
-	/*if(cheat==0){room_goto(Room_trueWin);}
-	else{room_goto(Room_win);}*/
+	if(cheat==0){room_goto(Room_trueWin);}
+	else{room_goto(Room_win);}
 
-}
+}*/
+/*
 
-
-if(timer_killing>0){timer_killing--;}
+if(timer_killing>0)
+{timer_killing--;}
 else{
-player_HP-=5;
-timer_killing=room_speed*4;
-shakeScreen=true;
+	if(instance_find(obj_eye,1) = true)
+	{	
+		player_HP-=5;
+		shakeScreen=true;
+	}
+	timer_killing=room_speed*4;
 
 }
-
+*/
 
 
 switch(current_state){
 	
 case state.Start:
 	//create cards, put them into list, shuffle
+	/*
 	for(var i=0;i<24;i++){create_card(all_type[i%3],i);}
 	for(var i=0;i<8;i++){create_card(special_type[i%4],i+23);}
 	create_card("destroy",i+31);
 	create_card("heart",i+32);
 	create_card("destroy",i+33);
 	create_card("heart",i+33);
-	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}
+	for(var i=0;i<6;i++){create_card(steal_type[i%2],i+35)}*/
+	littleCard=number-1;
 	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
 		
 	ds_list_shuffle(card_deck);
 	audio_play_sound(shuffle_cards_sound,1,false);
 	for(var j=0;j<number;j++){
+	show_debug_message(j);
 	var shuffle_card=ds_list_find_value(card_deck,j);
+	show_debug_message(shuffle_card._type);
 	shuffle_card.devi=j;
 	shuffle_card.depth=j;
 	shuffle_card.sendCardToDeck=true;
@@ -87,7 +95,7 @@ case state.Dealing:
 	draw_card.sendCardToDeck=false;
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToPlayer=true;
-	draw_card.isReveal=true;
+	//draw_card.isReveal=true;
 	ds_list_delete(card_deck,0);
 	timer_1=room_speed*0.2;
 	count++;
@@ -111,6 +119,7 @@ if(!dontFlyIt){
 for(var i=0;i<ds_list_size(player_deck);i++){
 var notFlyCard= ds_list_find_value(player_deck,i);
 notFlyCard.sendCardToPlayer=false;
+notFlyCard.isReveal=true;
 }
 }
 //enemy waits for some times, then select a card, it might tap a card if
@@ -398,7 +407,7 @@ case state.SpecialDealing:
 	draw_card.sendCardToDeck=false;
 	audio_play_sound(send_card_sound,1,false);
 	draw_card.sendCardToPlayer=true;
-	draw_card.isReveal=true;
+	//draw_card.isReveal=true;
 	ds_list_delete(card_deck,0);
 	timer_1=room_speed*0.2;
 	player_card_finish=true;
@@ -426,7 +435,7 @@ if(timer_2>0){timer_2--;}else{
 	back_card_2.sendCardToDiscard=false;
 	littleCard--;
 	timer_2=room_speed*0.1;
-	if(littleCard<21){
+	if(littleCard<(number/2)){
 		littleCard=number-1;
 		send_finish=true;
 		timer_2=room_speed*0.6;
@@ -476,19 +485,24 @@ time_limit=3;
 	timer=0;
 	}
 	break;
+	
 	case state_instruction.SelectCard:
 	if(!selectCardCreate){
+	if(getCardNum>0){
 	for(var i=0;i<3;i++)
 	{
-	
 	newCard=instance_create_layer(0,0,"Instances",obj_add_card);
 	newCard.devi=i;
 	newCard.selecting=true;
 	newCard.isReveal=true;
 	newCard._type=addCardType[irandom(8)];
+	}
+	}else{
+	instance_create_layer(800,800,"Instances",obj_nextButton);
+	}
 	selectCardCreate=true;
 	}
-	}
-	
 	break;
+	
+
 }

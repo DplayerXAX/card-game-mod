@@ -2,16 +2,15 @@
 // 你可以在此编辑器中写入代码 
 randomize();
 
-globalvar number;
 globalvar type_index;
 globalvar count;
 globalvar cheat;
-globalvar littleCard;
+
 count=0;
 cheat=0;
 turnCount=0;
-number=0;
-littleCard=11;
+
+
 type_index=3;
 globalvar all_type;
 globalvar special_type;

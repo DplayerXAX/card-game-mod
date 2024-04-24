@@ -3,9 +3,21 @@
 
 
 draw_self();
+draw_set_font(font_notice);
+if(!obj_deck_instruction.enemyLose)
+{
+draw_text(300,1050,"HP: "+string(player_HP)+"/100");
+draw_text(300,110,"HP: "+string(enemy_HP)+"/100");
+
+}
 draw_set_font(Font2);
+/*
+if(!obj_deck_instruction.enemyLose)
+{
 draw_healthbar(300,70,930,100,enemy_HP, c_white, c_red, c_lime, 0, true, true);
 myHealthBar=draw_healthbar(300,1010,930,1040,player_HP, c_white, c_red, c_lime, 0, true, true);
+
+}*/
 
 
 if(!eyeWideOpen){
@@ -16,6 +28,7 @@ draw_healthbar(1000,80,1050,130,randomBlinkTime, c_white, c_red, c_lime, 3, true
 //draw_text(300,80,"Lose HP in "+string(timer_killing/room_speed)+"second");
 if(room = room_instruction_test)
 {
+	draw_set_font(font_eyes_insturction);
 	draw_text_ext(x+150-1/2*sprite_width,y+sprite_height,instruction_text,50,250);
 	if(gameRound = 1)
 	{
