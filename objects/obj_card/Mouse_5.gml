@@ -3,7 +3,6 @@
 
 
 if(current_state==state.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy"){
-	if(instance_find(obj_eye,1) = true){
 		doIt=false;
 		if(!underInstruction){doIt=true;}
 		else if(gameRound>=4){doIt=true;}
@@ -17,8 +16,7 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
 		shakeHarder=true;
 		paintItRed=true;
 		shakeScreen=true;
-	    }
-	}else{	
+	    }else{	
  for(var i=0;i<3;i++){
 	 var exchange_enemy=ds_list_find_value(enemy_deck,i);
 	 var exchange_player=ds_list_find_value(player_deck,i);
@@ -38,16 +36,16 @@ if(current_state==state.Turn && select_enemy=false && player_card_decide=false &
 	 ds_list_delete(player_deck,i+1);
 	 ds_list_delete(enemy_deck,i+1);
 		break; 
+				}
 			}
- 
 		}
-	}
 	}
 	
 }
+/*
 if(current_state==state.Turn && select_enemy=false && player_card_decide=false && iBelong="enemy")
 {
-		if(instance_find(obj_eye,1) = true)
+		if(instance_find(obj_eye_instruction,1) = true)
 		{
 			show_debug_message("find")
 			doIt=false;
