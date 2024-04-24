@@ -159,6 +159,8 @@
     {"id":{"name":"spr_card_mouth","path":"sprites/spr_card_mouth/spr_card_mouth.yy",},},
     {"id":{"name":"spr_card_stealEye","path":"sprites/spr_card_stealEye/spr_card_stealEye.yy",},},
     {"id":{"name":"spr_card_stealHeart","path":"sprites/spr_card_stealHeart/spr_card_stealHeart.yy",},},
+    {"id":{"name":"spr_enemy_arm","path":"sprites/spr_enemy_arm/spr_enemy_arm.yy",},},
+    {"id":{"name":"spr_enemy_mouth","path":"sprites/spr_enemy_mouth/spr_enemy_mouth.yy",},},
     {"id":{"name":"spr_enemy_eye","path":"sprites/spr_enemy_eye/spr_enemy_eye.yy",},},
     {"id":{"name":"spr_enemy_heart","path":"sprites/spr_enemy_heart/spr_enemy_heart.yy",},},
     {"id":{"name":"spr_eye_angry","path":"sprites/spr_eye_angry/spr_eye_angry.yy",},},
