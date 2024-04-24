@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.466667,
+  "duration":0.0,
   "name":"player_get_score_sound",
   "parent":{
     "name":"声音",
