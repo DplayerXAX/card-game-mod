@@ -25,7 +25,7 @@ globalvar rage;
 globalvar eyeWideOpen;
 
 rage=false;
-eyeWideOpen=true;
+eyeWideOpen=false;
 
 randomBlinkTime=room_speed*0.2;
 randomWaitTime=room_speed*0.2;
