@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_eye_open",
-    "path":"sprites/spr_eye_open/spr_eye_open.yy",
+    "name":"spr_enemy_eye",
+    "path":"sprites/spr_enemy_eye/spr_enemy_eye.yy",
   },
   "spriteMaskId":null,
   "visible":true,
