@@ -126,8 +126,8 @@
     {"name":"spr_background_white","order":16,"path":"sprites/spr_background_white/spr_background_white.yy",},
     {"name":"spr_bones","order":1,"path":"sprites/spr_bones/spr_bones.yy",},
     {"name":"spr_card_back_new","order":3,"path":"sprites/spr_card_back_new/spr_card_back_new.yy",},
-    {"name":"spr_card_eyeToHeart","order":1,"path":"sprites/spr_card_eyeToHeart/spr_card_eyeToHeart.yy",},
     {"name":"spr_card_destroy","order":6,"path":"sprites/spr_card_destroy/spr_card_destroy.yy",},
+    {"name":"spr_card_eyeToHeart","order":1,"path":"sprites/spr_card_eyeToHeart/spr_card_eyeToHeart.yy",},
     {"name":"spr_card_heart","order":1,"path":"sprites/spr_card_heart/spr_card_heart.yy",},
     {"name":"spr_card_heartToEye","order":2,"path":"sprites/spr_card_heartToEye/spr_card_heartToEye.yy",},
     {"name":"spr_card_heartToMouth","order":3,"path":"sprites/spr_card_heartToMouth/spr_card_heartToMouth.yy",},
@@ -158,5 +158,6 @@
     {"name":"spr_startButton","order":1,"path":"sprites/spr_startButton/spr_startButton.yy",},
     {"name":"Sprite45","order":7,"path":"sprites/Sprite45/Sprite45.yy",},
     {"name":"Sprite49","order":9,"path":"sprites/Sprite49/Sprite49.yy",},
+    {"name":"spr_enemy_eye_close","order":7,"path":"sprites/spr_enemy_eye_close/spr_enemy_eye_close.yy",},
   ],
 }
