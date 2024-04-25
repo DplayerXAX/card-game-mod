@@ -66,8 +66,8 @@ else{
 }
 
 }else{
-	if(rage=true){sprite_index=spr_eye_angry;}
-	else{sprite_index=spr_eye_open;}
+	if(rage=true){sprite_index=spr_enemy_eye_angry;}
+	else{sprite_index=spr_enemy_eye;}
 }
 
 if(rage){

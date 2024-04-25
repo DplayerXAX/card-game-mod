@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hand_musk",
-    "path":"sprites/spr_hand_musk/spr_hand_musk.yy",
+    "name":"hand_musk",
+    "path":"sprites/hand_musk/hand_musk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

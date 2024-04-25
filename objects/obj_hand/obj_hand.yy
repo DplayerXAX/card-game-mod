@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hand",
-    "path":"sprites/spr_hand/spr_hand.yy",
+    "name":"spr_enemy_arm",
+    "path":"sprites/spr_enemy_arm/spr_enemy_arm.yy",
   },
   "spriteMaskId":null,
   "visible":true,

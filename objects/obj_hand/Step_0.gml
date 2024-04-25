@@ -9,7 +9,7 @@ if(current_state==state.Dealing||current_state==state.SpecialDealing)
 
 if(!handGenerated)
 {
-	hand=instance_create_layer(230+irandom(2)*200,700,"UI",obj_hand_musk);
+	hand=instance_create_layer(230+irandom(2)*175,550,"UI",obj_hand_musk);
 	handGenerated=true;
 }
 

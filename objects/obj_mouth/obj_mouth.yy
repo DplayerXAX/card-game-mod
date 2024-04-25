@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mouth",
-    "path":"sprites/spr_mouth/spr_mouth.yy",
+    "name":"spr_enemy_mouth",
+    "path":"sprites/spr_enemy_mouth/spr_enemy_mouth.yy",
   },
   "spriteMaskId":null,
   "visible":true,
