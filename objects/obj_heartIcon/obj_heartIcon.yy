@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_heart",
-    "path":"sprites/spr_heart/spr_heart.yy",
+    "name":"healIcon",
+    "path":"sprites/healIcon/healIcon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

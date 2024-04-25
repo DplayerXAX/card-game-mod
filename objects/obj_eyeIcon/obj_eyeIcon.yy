@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_eye",
-    "path":"sprites/spr_eye/spr_eye.yy",
+    "name":"atkIcon",
+    "path":"sprites/atkIcon/atkIcon.yy",
   },
   "spriteMaskId":null,
   "visible":true,

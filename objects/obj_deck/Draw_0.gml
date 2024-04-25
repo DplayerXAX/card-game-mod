@@ -5,7 +5,20 @@
 draw_set_font(font_score);
 
 
-draw_text(90,150,enemy_eyes);
-draw_text(90,250,enemy_hearts);
-draw_text(900,760,player_eyes);
-draw_text(900,860,player_hearts);
+
+draw_text(200,180,enemy_eyes);
+draw_text(200,40,enemy_hearts);
+draw_text(1100,820,player_eyes);
+draw_text(1100,955,player_hearts);
+
+if(enemyLose)
+{
+	draw_set_font(font_resultTitle);
+	draw_text(300,200,"You win, for now...");
+
+	if(current_state==state_instruction.SelectCard){
+	draw_set_font(font_narrative);
+	draw_text_ext(300,600,"Fine, my other 'friends' are waiting.Choose one of these cards to add to your deck.",50,600)
+	draw_text(300,800,"You can choose "+string(getCardNum)+" cards left.");
+	}
+}
