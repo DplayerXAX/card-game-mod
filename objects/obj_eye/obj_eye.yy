@@ -10,8 +10,8 @@
   "name":"obj_eye",
   "overriddenProperties":[],
   "parent":{
-    "name":"物体",
-    "path":"folders/物体.yy",
+    "name":"enemy",
+    "path":"folders/物体/enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

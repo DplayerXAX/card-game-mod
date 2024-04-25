@@ -19,7 +19,7 @@ if(sendCardToDeck){
 		_x=x;
 		_y=y;
 		x=lerp(_x,10,0.1);
-		y=lerp(_y,350+devi*7,0.1);
+		y=lerp(_y,250+devi*7,0.1);
 
 }
 
@@ -36,7 +36,7 @@ if(sendCardToEnemy){
 	
 		_x=x;
 		_y=y;
-		x=lerp(_x,180+devi*200,0.1);
+		x=lerp(_x,230+devi*200,0.1);
 		y=lerp(_y,70,0.1);
 
 }
@@ -46,7 +46,7 @@ if(sendCardToPlayer){
 	
 		_x=x;
 		_y=y;
-		x=lerp(_x,180+devi*200,0.1);
+		x=lerp(_x,230+devi*200,0.1);
 		y=lerp(_y,700,0.1);
 	
 }
@@ -54,20 +54,20 @@ if(sendCardToPlayer){
 if(sendCardToDiscard){
 	_x=x;
 	_y=y;
-	x=lerp(_x,750,0.1);
+	x=lerp(_x,850,0.1);
 	y=lerp(_y,500-devi*7,0.1);
 }
 
 if(select_enemy){
 	_x=x;
 	_y=y;
-	x=lerp(_x,380,0.1);
+	x=lerp(_x,430,0.1);
 	y=lerp(_y,280,0.1);
 }
 if(select_player){
 	_x=x;
 	_y=y;
-	x=lerp(_x,380,0.1);
+	x=lerp(_x,430,0.1);
 	y=lerp(_y,490,0.1);
 	
 }
@@ -76,7 +76,7 @@ if(isTap){
 	_x=x;
 	_y=y;
 	image_angle=90;
-	x=lerp(_x,40+devi*700,0.1);
+	x=lerp(_x,90+devi*700,0.1);
 	y=lerp(_y,1000+devi*100,0.1);
 
 }
