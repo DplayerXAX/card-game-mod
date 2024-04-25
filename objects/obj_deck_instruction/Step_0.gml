@@ -53,7 +53,9 @@ case state_instruction.Start:
 	//empty player and enemy card that stuck into player and enemy's list when tapping a card
 	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
-	
+	hand0=instance_create_layer(200,1100,"UI",obj_hand_musk);
+	hand1=instance_create_layer(390,1100,"UI",obj_hand_musk);
+	hand2=instance_create_layer(580,1100,"UI",obj_hand_musk);
 	//no shuffle in instruction to make sure player get the right card
 	//ds_list_shuffle(card_deck);
 	//audio_play_sound(shuffle_cards_sound,1,false);
@@ -70,6 +72,17 @@ case state_instruction.Dealing:
 	//send cards to enemy and player,player reveals his cards
 	var _x,_y;
 	//enemy get cards
+	if(!handGenerated)
+	{
+		if(gameRound==0)
+		{
+		hand0.appear=true;
+		hand2.appear=true;
+		handGenerated=true;
+		}
+
+	
+	}
 	if(!enemy_card_finish){
 	if(timer_1>0){timer_1--;}else{
 	var draw_card= ds_list_find_value(card_deck,0);
@@ -204,6 +217,14 @@ if(!player_card_decide){
 	
 case state_instruction.Discard:
 	
+	if(handGenerated)
+	{
+	hand0.appear=false;
+	hand1.appear=false;
+	hand2.appear=false;
+	handGenerated=false;
+	}
+
 	enemy_card_decide=false;
 	player_card_decide=false;
 	enemy_card_finish=false;
@@ -389,6 +410,20 @@ case state_instruction.Discard:
 	
 case state_instruction.SpecialDealing:
 
+	if(!handGenerated)
+	{
+		if(gameRound==1)
+		{
+			hand1.appear=true;
+			hand2.appear=true;
+		}else if(gameRound==2)
+		{
+			hand0.appear=true;
+			hand1.appear=true;
+		}
+		handGenerated=true;
+
+	}
 //enemy get cards
 	enemy_card.printItsEffect=false;
 	player_card.printItsEffect=false;

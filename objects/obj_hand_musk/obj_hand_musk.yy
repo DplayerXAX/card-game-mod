@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"obj_hand_musk",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_hand_musk",
   "overriddenProperties":[],
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hand_musk",
-    "path":"sprites/spr_hand_musk/spr_hand_musk.yy",
+    "name":"hand_musk",
+    "path":"sprites/hand_musk/hand_musk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

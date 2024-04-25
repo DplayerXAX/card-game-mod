@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"button",
-    "path":"folders/精灵/button.yy",
+    "path":"folders/精灵/card/button.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
