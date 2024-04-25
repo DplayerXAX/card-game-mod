@@ -86,7 +86,7 @@ player_hearts=5;
 enemy_HP=50;
 enemy_eyes=0;
 enemy_hearts=0;
-
+handGenerated=false;
 globalvar enemy_card;
 globalvar enemy_card_index;
 globalvar player_card;

@@ -47,3 +47,6 @@ real_myHealthbar.image_xscale=1.05;
 real_myHealthbar.image_yscale=1.2;
 real_enemyHealthbar.image_xscale=1.05;
 real_enemyHealthbar.image_yscale=1.2;
+	hand0=instance_create_layer(200,1100,"UI",obj_hand_musk);
+	hand1=instance_create_layer(390,1100,"UI",obj_hand_musk);
+	hand2=instance_create_layer(580,1100,"UI",obj_hand_musk);
