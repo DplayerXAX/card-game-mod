@@ -154,6 +154,7 @@ if(!enemy_card_decide){
 	enemy_card.sendCardToEnemy=false;
 	enemy_card.select_enemy=true;
 	enemy_card_decide=true;
+	enemy_card.isReveal=true;
 	enemy_card.enemyTap=true;
 	}
 	}
@@ -264,7 +265,7 @@ case state.Discard:
 		if(timer_1>0){timer_1--;}else{
 		
 			//discard enemy no use cards
-			if(!enemy_card.enemyTap){	
+			//if(!enemy_card.enemyTap){	
 		iAmOne=ds_list_size(enemy_deck)-1;
 		rest_card=ds_list_find_value(enemy_deck,iAmOne);
 		ds_list_add(discard_deck,rest_card);
@@ -276,7 +277,7 @@ case state.Discard:
 		rest_card.sendCardToDiscard=true;
 		rest_card.depth=-ds_list_size(discard_deck);
 		rest_card.devi=ds_list_size(discard_deck);
-			}
+			//}
 		timer_1=room_speed*0.2;
 		
 		if(iAmOne==0){
@@ -498,7 +499,7 @@ time_limit=3;
 	newCard._type=addCardType[irandom(8)];
 	}
 	}else{
-	instance_create_layer(800,800,"Instances",obj_nextButton);
+	instance_create_layer(800,800,"Instances",obj_playSequence);
 	}
 	selectCardCreate=true;
 	}

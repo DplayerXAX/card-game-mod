@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_nextButton",
+  "%Name":"obj_playSequence",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_nextButton",
+  "name":"obj_playSequence",
   "overriddenProperties":[],
   "parent":{
     "name":"物体",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button_gold",
-    "path":"sprites/spr_button_gold/spr_button_gold.yy",
+    "name":"spr_button_silver",
+    "path":"sprites/spr_button_silver/spr_button_silver.yy",
   },
   "spriteMaskId":null,
   "visible":true,
