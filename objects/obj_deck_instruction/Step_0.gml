@@ -556,7 +556,7 @@ time_limit=3;
 	
 	}
 	}else{
-	instance_create_layer(800,800,"Instances",obj_nextButton);
+	instance_create_layer(800,800,"Instances",obj_playSequence);
 	}
 	selectCardCreate=true;
 	}
