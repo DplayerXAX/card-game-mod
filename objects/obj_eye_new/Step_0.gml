@@ -4,7 +4,7 @@
 
 
 
-if(eyeWideOpen&&current_state=state_instruction.Turn&&player_card_decide=false){
+if(eyeWideOpen&&current_state=state.Turn&&player_card_decide=false){
 	
 for(var i=0;i<ds_list_size(enemy_deck);i++)
 {
@@ -12,13 +12,6 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	var search_card=ds_list_find_value(enemy_deck,i);
 	if(search_card.isReveal=true)
 	{
-		if(room = room_instruction_test)
-		{
-			InstructionCheat_find = true;
-			show_debug_message("Steal Find")
-			instruction_text = "Don't try to cheat under my eyes";
-			//gameRound += 100;
-		}
 	player_HP=player_HP-8;
 	rage=true;
 	attackEffect=true;
@@ -31,13 +24,6 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 if(ds_list_size(enemy_tap_deck)>0){
 	var search_card=ds_list_find_value(enemy_tap_deck,0);
 	if(search_card.isReveal=true){
-	if(room = room_instruction_test)
-		{
-			InstructionCheat_find = true;
-			show_debug_message("Steal Find")
-			instruction_text = "Don't try to cheat under my eyes";
-			//gameRound += 100;
-		}
 	player_HP=player_HP-8;
 	rage=true;
 	attackEffect=true;
@@ -120,7 +106,7 @@ real_enemyHealthMusk.visible=true;
 real_enemyHealthMusk.image_xscale=1-(enemy_HP/100);
 }
 
-if(obj_deck_instruction.enemyLose)
+if(obj_deck.enemyLose)
 {
 real_myHealthMusk.visible=false;
 real_enemyHealthMusk.visible=false;

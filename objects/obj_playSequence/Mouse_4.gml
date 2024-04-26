@@ -18,6 +18,10 @@ case 3:
 case 4:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_skull);
 	break;
+case 5:
+	layer_sequence_create("Instances",650,550,enemyIntroduce_eye);
+	break;
+	
 	
 
 }

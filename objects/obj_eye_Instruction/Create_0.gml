@@ -47,3 +47,4 @@ real_myHealthbar.image_yscale=1.2;
 real_enemyHealthbar.image_xscale=1.05;
 real_enemyHealthbar.image_yscale=1.2;
 
+textbox=instance_create_layer(950,350,"below",obj_textbox);

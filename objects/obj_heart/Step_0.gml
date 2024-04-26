@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-if(player_HP>80){player_HP=80;}
-if(enemy_HP>100){enemy_HP=100;}
+if(player_HP>100){player_HP=100;}
+if(enemy_HP>80){enemy_HP=80;}
 
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
