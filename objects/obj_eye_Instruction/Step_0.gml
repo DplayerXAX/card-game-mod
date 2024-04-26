@@ -57,7 +57,7 @@ else{
 }
 
 if(!eyeWideOpen){
-	sprite_index=spr_eye_close;
+	sprite_index=spr_enemy_eye_close;
 if(randomBlinkTime>0){randomBlinkTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
