@@ -10,6 +10,13 @@ if(player_HP<=0){
 	}
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
+	if(!playSound)
+	{
+	audio_play_sound(upgrading_depressed,0,true);
+	audio_play_sound(enemy_lose,0,false);
+	playSound=true;
+	}
+	
 	enemyLose=true;
 /*if(cheat==0){room_goto(Room_trueWin);}
 else{room_goto(Room_win);}*/
@@ -556,7 +563,7 @@ time_limit=3;
 	
 	}
 	}else{
-	instance_create_layer(800,800,"Instances",obj_playSequence);
+	instance_create_layer(1000,900,"Instances",obj_playSequence);
 	}
 	selectCardCreate=true;
 	}

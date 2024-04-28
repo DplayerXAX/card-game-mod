@@ -21,6 +21,7 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	search_card.isReveal=false;
 	}	
 }
+/*
 if(ds_list_size(enemy_tap_deck)>0){
 	var search_card=ds_list_find_value(enemy_tap_deck,0);
 	if(search_card.isReveal=true){
@@ -32,8 +33,9 @@ if(ds_list_size(enemy_tap_deck)>0){
 	search_card.paintItRed=true;
 	search_card.isReveal=false;
 	}
-}
 
+}
+*/
 if(randomWaitTime>0){randomWaitTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
@@ -52,8 +54,14 @@ else{
 }
 
 }else{
-	if(rage=true){sprite_index=spr_enemy_eye_angry;}
-	else{sprite_index=spr_enemy_eye;}
+	if(rage=true){
+		sprite_index=spr_enemy_eye_angry;
+		image_blend=c_red;
+		}
+	else{
+		sprite_index=spr_enemy_eye;
+		image_blend=c_white;
+		}
 }
 
 if(rage){

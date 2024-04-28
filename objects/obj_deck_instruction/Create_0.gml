@@ -5,7 +5,7 @@ randomize();
 globalvar type_index;
 globalvar count;
 globalvar cheat;
-
+playSound=false;
 count=0;
 cheat=0;
 turnCount=0;

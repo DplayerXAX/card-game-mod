@@ -3,6 +3,7 @@
 
 
 level++;
+audio_play_sound(enemy_introduce,0,false);
 obj_card.visible=false;
 switch(level)
 {
@@ -25,8 +26,8 @@ case 5:
 	
 
 }
-instance_create_layer(800,800,"UI",obj_nextButton);
-audio_stop_all();
+instance_create_layer(1000,900,"UI",obj_nextButton);
+audio_stop_sound(upgrading_depressed);
 instance_destroy();
 
 

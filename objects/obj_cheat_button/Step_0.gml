@@ -5,11 +5,14 @@
 
 
 if(powerful){
-player_HP=100;
+
+if(level!=3){player_HP=100;}
 enemy_eyes=0;
+
 if(!oneExe)
 {
-	enemy_HP=1;
+	if(level!=4){enemy_HP=1;}
+	else{enemy_HP=99;}
 	oneExe=true;
 }
 

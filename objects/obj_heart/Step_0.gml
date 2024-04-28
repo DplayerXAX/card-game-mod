@@ -11,6 +11,8 @@ if(player_HP<=0){
 	}
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
+	audio_play_sound(enemy_lose,0,false);
+	audio_play_sound(upgrading_depressed,0,true);
 	obj_deck.enemyLose=true;
 	/*if(cheat==0){room_goto(Room_trueWin);}
 	else{room_goto(Room_win);}*/
