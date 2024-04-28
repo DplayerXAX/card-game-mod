@@ -29,7 +29,11 @@ draw_healthbar(1000,80,1050,130,randomBlinkTime, c_white, c_red, c_lime, 3, true
 if(room = room_instruction_test)
 {
 	draw_set_font(font_eyes_insturction);
+	if(!obj_deck_instruction.enemyLose)
+	{
 	draw_text_ext(x+150-1/2*sprite_width,y+sprite_height,instruction_text,50,250);
+	}
+	
 	if(gameRound = 1)
 	{
 		instruction_text="Use Strength Card to increase your attack";

@@ -10,8 +10,8 @@
   "name":"obj_deck_instruction",
   "overriddenProperties":[],
   "parent":{
-    "name":"Room_Instruction",
-    "path":"folders/物体/Room_Instruction.yy",
+    "name":"deck",
+    "path":"folders/物体/deck.yy",
   },
   "parentObjectId":null,
   "persistent":false,

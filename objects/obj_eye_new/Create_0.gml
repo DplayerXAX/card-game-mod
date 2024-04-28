@@ -3,5 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
-
+audio_stop_sound(upgrading_);
+audio_play_sound(boss_music,0,true)
 eyeWideOpen=true;

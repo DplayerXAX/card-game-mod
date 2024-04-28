@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-if(player_HP>80){player_HP=80;}
-if(enemy_HP>100){enemy_HP=100;}
+if(player_HP>100){player_HP=100;}
+if(enemy_HP>80){enemy_HP=80;}
 
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
@@ -11,6 +11,8 @@ if(player_HP<=0){
 	}
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
+	audio_play_sound(enemy_lose,0,false);
+	audio_play_sound(upgrading_depressed,0,true);
 	obj_deck.enemyLose=true;
 	/*if(cheat==0){room_goto(Room_trueWin);}
 	else{room_goto(Room_win);}*/

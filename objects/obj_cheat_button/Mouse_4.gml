@@ -5,6 +5,7 @@
 
 
 powerful=true;
-enemy_HP=1;
+if(level!=4){enemy_HP=1;}
+	else{enemy_HP=99;}
 
 
