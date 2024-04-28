@@ -220,6 +220,7 @@
     {"id":{"name":"spr_startButton","path":"sprites/spr_startButton/spr_startButton.yy",},},
     {"id":{"name":"Sprite45","path":"sprites/Sprite45/Sprite45.yy",},},
     {"id":{"name":"Sprite49","path":"sprites/Sprite49/Sprite49.yy",},},
+    {"id":{"name":"spr_endingPuppet","path":"sprites/spr_endingPuppet/spr_endingPuppet.yy",},},
     {"id":{"name":"text_box","path":"sprites/text_box/text_box.yy",},},
   ],
   "resourceType":"GMProject",

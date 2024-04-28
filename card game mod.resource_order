@@ -68,7 +68,7 @@
     {"name":"obj_playSequence","order":24,"path":"objects/obj_playSequence/obj_playSequence.yy",},
     {"name":"obj_rebirth","order":5,"path":"objects/obj_rebirth/obj_rebirth.yy",},
     {"name":"obj_replayButton","order":8,"path":"objects/obj_replayButton/obj_replayButton.yy",},
-    {"name":"obj_start_anim","order":23,"path":"objects/obj_start_anim/obj_start_anim.yy",},
+    {"name":"obj_start_anim","order":26,"path":"objects/obj_start_anim/obj_start_anim.yy",},
     {"name":"obj_startButton","order":6,"path":"objects/obj_startButton/obj_startButton.yy",},
     {"name":"obj_textbox","order":25,"path":"objects/obj_textbox/obj_textbox.yy",},
     {"name":"obj_trueWinText","order":1,"path":"objects/obj_trueWinText/obj_trueWinText.yy",},
