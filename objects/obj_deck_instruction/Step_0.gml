@@ -60,9 +60,9 @@ case state_instruction.Start:
 	//empty player and enemy card that stuck into player and enemy's list when tapping a card
 	emptyPlayer=instance_create_layer(1500,1500,"Instances",obj_card);
 	emptyEnemy=instance_create_layer(1500,1500,"Instances",obj_card);
-	hand0=instance_create_layer(200,1100,"UI",obj_hand_musk);
-	hand1=instance_create_layer(390,1100,"UI",obj_hand_musk);
-	hand2=instance_create_layer(580,1100,"UI",obj_hand_musk);
+	hand0=instance_create_layer(400,1370,"UI",obj_hand_musk);
+	hand1=instance_create_layer(590,1370,"UI",obj_hand_musk);
+	hand2=instance_create_layer(780,1370,"UI",obj_hand_musk);
 	//no shuffle in instruction to make sure player get the right card
 	//ds_list_shuffle(card_deck);
 	//audio_play_sound(shuffle_cards_sound,1,false);
@@ -85,6 +85,7 @@ case state_instruction.Dealing:
 		{
 		hand0.appear=true;
 		hand2.appear=true;
+		hand2.image_xscale=-1;
 		handGenerated=true;
 		}
 
@@ -427,6 +428,7 @@ case state_instruction.SpecialDealing:
 		{
 			hand0.appear=true;
 			hand1.appear=true;
+			hand1.image_xscale=-1;
 		}
 		handGenerated=true;
 

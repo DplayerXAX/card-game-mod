@@ -29,13 +29,16 @@ case "HTM":
 	return "Hungry bit card: use up X your hearts to attack X times!";
 	break;
 case "destroy":
-	return "Stab card: destroy opponent's tap card!";
+	return "Stab a card: destroy opponent's tap card!";
 	break;
 case "stealHeart":
-	return "Steal-H card: steal one healing point from enemy!(if there's any)";
+	return "Steal heal: steal one healing point from enemy!(if there's any)";
 	break;
 case "stealEye":
-	return "Steal-S card: steal one strength from enemy!(if there's any)";
+	return "Steal ATP: steal one strength from enemy!(if there's any)";
+	break;
+case "eat":
+	return "Eaten card: no effect because it is eaten.";
 	break;
 }
 
@@ -259,6 +262,8 @@ function decide_effect(card_type,num){
 			inst2.damage_amount = "-1";
 			}
 			}
+			break;
+	case "eat":
 			break;
 			
 	

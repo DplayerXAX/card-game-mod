@@ -145,6 +145,7 @@
     {"name":"spr_button_silver","order":24,"path":"sprites/spr_button_silver/spr_button_silver.yy",},
     {"name":"spr_card_back_new","order":3,"path":"sprites/spr_card_back_new/spr_card_back_new.yy",},
     {"name":"spr_card_destroy","order":6,"path":"sprites/spr_card_destroy/spr_card_destroy.yy",},
+    {"name":"spr_card_eat","order":8,"path":"sprites/spr_card_eat/spr_card_eat.yy",},
     {"name":"spr_card_eyeToHeart","order":1,"path":"sprites/spr_card_eyeToHeart/spr_card_eyeToHeart.yy",},
     {"name":"spr_card_heart","order":1,"path":"sprites/spr_card_heart/spr_card_heart.yy",},
     {"name":"spr_card_heartToEye","order":2,"path":"sprites/spr_card_heartToEye/spr_card_heartToEye.yy",},
