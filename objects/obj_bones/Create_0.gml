@@ -18,7 +18,7 @@ enemy_hearts=0;
 
 attackEffect=false;
 timer_effect=room_speed*0.2;
-
+playSound=false;
 bonus=5;
 
 globalvar rage;

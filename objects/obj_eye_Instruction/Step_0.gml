@@ -122,6 +122,7 @@ real_enemyHealthMusk.image_xscale=1-(enemy_HP/100);
 
 if(obj_deck_instruction.enemyLose)
 {
+	textbox.visible=false;
 real_myHealthMusk.visible=false;
 real_enemyHealthMusk.visible=false;
 real_myHealth.visible=false;
