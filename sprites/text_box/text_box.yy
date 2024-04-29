@@ -2,8 +2,8 @@
   "$GMSprite":"",
   "%Name":"text_box",
   "bboxMode":0,
-  "bbox_bottom":199,
-  "bbox_left":0,
+  "bbox_bottom":196,
+  "bbox_left":3,
   "bbox_right":299,
   "bbox_top":0,
   "collisionKind":1,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"039ada33-47eb-444d-8217-3dd175909f1a","name":"039ada33-47eb-444d-8217-3dd175909f1a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"fdfa41b5-a372-45fc-b318-9d720b0eb883","name":"fdfa41b5-a372-45fc-b318-9d720b0eb883","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":200,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"d4e0a2e3-6760-4645-a099-c4a0c35e4dfa","blendMode":0,"displayName":"default","isLocked":false,"name":"d4e0a2e3-6760-4645-a099-c4a0c35e4dfa","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"08e8399f-d082-4d13-ab73-4746f4fe8b1a","blendMode":0,"displayName":"default","isLocked":false,"name":"08e8399f-d082-4d13-ab73-4746f4fe8b1a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"text_box",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"039ada33-47eb-444d-8217-3dd175909f1a","path":"sprites/text_box/text_box.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2270e351-f2ae-4c9b-b564-0860dcc12d78","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fdfa41b5-a372-45fc-b318-9d720b0eb883","path":"sprites/text_box/text_box.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"057845df-a6d6-446a-b6e8-e87d53b8adbf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

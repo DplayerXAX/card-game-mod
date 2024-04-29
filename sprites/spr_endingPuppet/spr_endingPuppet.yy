@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_endingPuppet",
   "bboxMode":0,
-  "bbox_bottom":2479,
+  "bbox_bottom":1099,
   "bbox_left":0,
-  "bbox_right":2929,
+  "bbox_right":1299,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -28,7 +28,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":2480,
+  "height":1100,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"130dae5a-af1e-4e48-bdde-729742b57e66","blendMode":0,"displayName":"default","isLocked":false,"name":"130dae5a-af1e-4e48-bdde-729742b57e66","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -134,5 +134,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":2930,
+  "width":1300,
 }

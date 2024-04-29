@@ -5,3 +5,4 @@ mylevel=2;
 roundCount=0;
 eatType="eat";
 oneTimeEachRound=false;
+attacked=false;

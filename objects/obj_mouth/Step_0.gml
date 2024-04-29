@@ -4,12 +4,19 @@
 // Inherit the parent event
 event_inherited();
 
+if(attacked)
+{
+	eatType="eat";
+	attacked=false;
+
+}
+
 if(current_state==state.Discard)
 {
 	if(!oneTimeEachRound)
 	{
 		roundCount++;
-		if(roundCount==2)
+		if(roundCount==4)
 		{
 			eatType=player_card._type;
 			player_card._type="eat";

@@ -29,7 +29,7 @@ case "HTM":
 	return "Hungry bit card: use up X your hearts to attack X times!";
 	break;
 case "destroy":
-	return "Stab a card: destroy opponent's tap card!";
+	return "Stab card: destroy opponent's tap card!";
 	break;
 case "stealHeart":
 	return "Steal heal: steal one healing point from enemy!(if there's any)";
@@ -50,7 +50,14 @@ case "eat":
 
 
 function decide_effect(card_type,num){
+	if(level==2&&num==1)
+	{
+		if(card_type=="mouth"||card_type="HTM")
+		{
+			obj_mouth.attacked=true;
+		}
 	
+	}
 	switch(card_type){
 		
 	case "eye":
@@ -91,7 +98,7 @@ function decide_effect(card_type,num){
 			enemy_HP+=5+5*enemy_hearts;
 			enemy_hearts++;
 			var inst1 = instance_create_layer(430,280, "Instances", obj_num_popup);
-			inst1.fly_to_player_heart = true;
+			inst1.fly_to_enemy_heart = true;
 			inst1.damage_amount = "+1";
 			var inst2 = instance_create_layer(430,280,"Instances", obj_num_popup);
 			inst2.myColor=c_green;
