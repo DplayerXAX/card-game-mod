@@ -41,8 +41,8 @@
   "tracks":[
     {"$GMTextTrack":"","%Name":"font_sequence","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AssetTextKeyframe>":"","Keyframes":[
           {"$Keyframe<AssetTextKeyframe>":"","Channels":{
-              "0":{"$AssetTextKeyframe":"","Alignment":0,"EnableEffects":false,"EnableGlow":false,"EnableOutline":false,"EnableShadow":false,"Id":{"name":"font_sequence","path":"fonts/font_sequence/font_sequence.yy",},"resourceType":"AssetTextKeyframe","resourceVersion":"2.0","Text":"Prevent you from seeing\r\n one of your cards each\r\nround.","Wrap":false,},
-            },"Disabled":false,"id":"d8f43752-90c5-47cc-8e8f-e90608b90816","IsCreationKey":false,"Key":10.0,"Length":60.0,"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              "0":{"$AssetTextKeyframe":"","Alignment":0,"EnableEffects":false,"EnableGlow":false,"EnableOutline":false,"EnableShadow":false,"Id":{"name":"font_sequence_small","path":"fonts/font_sequence_small/font_sequence_small.yy",},"resourceType":"AssetTextKeyframe","resourceVersion":"2.0","Text":"Eat your played card per 4\r\nrounds. The last eaten card \r\nserves as an additional  tap \r\ncard for Mouth. Deal damage\r\nto remove this effect.\r\n","Wrap":false,},
+            },"Disabled":false,"id":"9c02d922-d13b-49f4-a6fc-0b0cf5fb1ce5","IsCreationKey":false,"Key":10.0,"Length":60.0,"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"2.0","Stretch":false,},
         ],"resourceType":"KeyframeStore<AssetTextKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"font_sequence","resourceType":"GMTextTrack","resourceVersion":"2.0","trackColour":4288956658,"tracks":[
         {"$GMRealTrack":"","%Name":"origin","builtinName":16,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"$KeyframeStore<RealKeyframe>":"","Keyframes":[
               {"$Keyframe<RealKeyframe>":"","Channels":{
