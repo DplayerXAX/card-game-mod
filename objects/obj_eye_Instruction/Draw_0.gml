@@ -19,11 +19,12 @@ myHealthBar=draw_healthbar(300,1010,930,1040,player_HP, c_white, c_red, c_lime, 
 
 }*/
 
-
+/*
 if(!eyeWideOpen){
 draw_healthbar(1000,80,1050,130,randomBlinkTime, c_white, c_red, c_lime, 3, true, true);
-}
 
+}
+*/
  
 //draw_text(300,80,"Lose HP in "+string(timer_killing/room_speed)+"second");
 if(room = room_instruction_test)
