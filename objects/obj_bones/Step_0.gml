@@ -3,7 +3,7 @@
 
 
 if(player_HP>100){player_HP=100;}
-if(enemy_HP>100){enemy_HP=100;}
+if(enemy_HP>60){enemy_HP=60;}
 
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
