@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"card game mod",
-    "path":"card game mod.yyp",
+    "name":"精灵",
+    "path":"folders/精灵.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

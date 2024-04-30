@@ -19,11 +19,12 @@ myHealthBar=draw_healthbar(300,1010,930,1040,player_HP, c_white, c_red, c_lime, 
 
 }*/
 
-
+/*
 if(!eyeWideOpen){
 draw_healthbar(1000,80,1050,130,randomBlinkTime, c_white, c_red, c_lime, 3, true, true);
-}
 
+}
+*/
  
 //draw_text(300,80,"Lose HP in "+string(timer_killing/room_speed)+"second");
 if(room = room_instruction_test)
@@ -31,7 +32,7 @@ if(room = room_instruction_test)
 	draw_set_font(font_eyes_insturction);
 	if(!obj_deck_instruction.enemyLose)
 	{
-	draw_text_ext(x+150-1/2*sprite_width,y+sprite_height,instruction_text,50,250);
+	draw_text_ext(x+200-1/2*sprite_width,y-20+sprite_height,instruction_text,50,250);
 	}
 	
 	if(gameRound = 1)

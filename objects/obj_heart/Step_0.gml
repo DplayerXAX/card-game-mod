@@ -7,7 +7,9 @@ if(enemy_HP>80){enemy_HP=80;}
 
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
-	room_goto(Room_lose);
+	room_goto(room_ending_puppet);
+	instance_destroy(obj_player);
+	obj_card.visible=false;
 	}
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);

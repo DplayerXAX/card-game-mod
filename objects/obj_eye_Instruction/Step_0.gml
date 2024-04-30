@@ -52,6 +52,7 @@ if(randomWaitTime>0){randomWaitTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
 	 randomWaitTime=room_speed*(irandom(4)+1)*frequency*0.5;
+	 
 	}
 
 }
@@ -62,6 +63,7 @@ if(randomBlinkTime>0){randomBlinkTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
 	randomBlinkTime=room_speed*(irandom(4)+1)*frequency;
+	randomBlinkTimeMax=randomBlinkTime;
 
 }
 
@@ -130,4 +132,52 @@ real_myHealthbar.visible=false;
 real_enemyHealth.visible=false;
 real_enemyHealthbar.visible=false;
 
+}
+
+if(!eyeWideOpen)
+{
+	obj_countDown.visible=true;
+if(randomBlinkTime<randomBlinkTimeMax*0.9)
+{
+	countDown1.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.8)
+{
+	countDown10.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.7)
+{
+	countDown9.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.6)
+{
+	countDown8.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.5)
+{
+	countDown7.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.4)
+{
+	countDown6.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.3)
+{
+	countDown5.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.2)
+{
+	countDown4.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.1)
+{
+	countDown3.visible=false;
+}
+if(randomBlinkTime<0)
+{
+	countDown3.visible=false;
+}
+}else
+{
+	obj_countDown.visible=false;
 }
