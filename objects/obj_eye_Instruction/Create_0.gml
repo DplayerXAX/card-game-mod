@@ -14,6 +14,8 @@ globalvar InstructionCheat_find;
 attackEffect=false;
 timer_effect=room_speed*0.2;
 
+image_xscale=1.2;
+image_yscale=1.2;
 bonus=5;
 
 globalvar rage;
@@ -50,16 +52,16 @@ real_enemyHealthbar.image_yscale=1.2;
 
 textbox=instance_create_layer(950,350,"below",obj_textbox);
 
-countDown1=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown2=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown3=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown4=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown5=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown6=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown7=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown8=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown9=instance_create_layer(1020,100,"Instances",obj_countDown);
-countDown10=instance_create_layer(1020,100,"Instances",obj_countDown);
+countDown1=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown2=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown3=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown4=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown5=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown6=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown7=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown8=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown9=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown10=instance_create_layer(1000,100,"Instances",obj_countDown);
 
 countDown1.image_angle=0;
 countDown2.image_angle=36;

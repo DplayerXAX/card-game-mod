@@ -2,6 +2,53 @@
 // 你可以在此编辑器中写入代码 
 
 
+if(!eyeWideOpen)
+{
+	obj_countDown.visible=true;
+if(randomBlinkTime<randomBlinkTimeMax*0.9)
+{
+	countDown1.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.8)
+{
+	countDown10.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.7)
+{
+	countDown9.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.6)
+{
+	countDown8.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.5)
+{
+	countDown7.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.4)
+{
+	countDown6.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.3)
+{
+	countDown5.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.2)
+{
+	countDown4.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.1)
+{
+	countDown3.visible=false;
+}
+if(randomBlinkTime<0)
+{
+	countDown3.visible=false;
+}
+}else
+{
+	obj_countDown.visible=false;
+}
 
 
 if(eyeWideOpen&&current_state=state.Turn&&player_card_decide=false){
@@ -21,6 +68,8 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	search_card.isReveal=false;
 	}	
 }
+
+
 /*
 if(ds_list_size(enemy_tap_deck)>0){
 	var search_card=ds_list_find_value(enemy_tap_deck,0);
@@ -50,6 +99,7 @@ if(randomBlinkTime>0){randomBlinkTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
 	randomBlinkTime=room_speed*(irandom(4)+1)*frequency;
+	randomBlinkTimeMax=randomBlinkTime;
 
 }
 
