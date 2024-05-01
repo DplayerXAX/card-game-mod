@@ -132,5 +132,6 @@ var emptyEnemy;
 globalvar gameRound;
 globalvar selectCardCreate;
 gameRound=0;
+bonus=0;
 selectCardCreate=false;
 

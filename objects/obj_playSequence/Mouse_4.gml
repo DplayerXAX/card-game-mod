@@ -5,21 +5,21 @@
 level++;
 audio_play_sound(enemy_introduce,0,false);
 obj_card.visible=false;
-switch(level)
+switch(ds_list_find_value(enemyIWillMeet,level))
 {
-case 1:
+case obj_hand:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_arm);
 	break;
-case 2:
+case obj_mouth:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_mouth);
 	break;
-case 3:
+case obj_heart:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_heart);
 	break;
-case 4:
+case obj_bones:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_skull);
 	break;
-case 5:
+case obj_eye_new:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_eye);
 	break;
 	
@@ -31,3 +31,4 @@ audio_stop_sound(upgrading_depressed);
 instance_destroy();
 
 
+ds_list_find_value(enemyIWillMeet,level)
