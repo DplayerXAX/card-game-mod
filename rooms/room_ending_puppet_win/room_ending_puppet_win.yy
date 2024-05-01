@@ -9,6 +9,7 @@
     {"name":"inst_877D5F_1","path":"rooms/room_ending_puppet_win/room_ending_puppet_win.yy",},
     {"name":"inst_40B539F9","path":"rooms/room_ending_puppet_win/room_ending_puppet_win.yy",},
     {"name":"inst_72341137","path":"rooms/room_ending_puppet_win/room_ending_puppet_win.yy",},
+    {"name":"inst_6E2FA8FA","path":"rooms/room_ending_puppet_win/room_ending_puppet_win.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -16,6 +17,7 @@
         {"$GMRInstance":"","%Name":"inst_877D5F_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_877D5F_1","objectId":{"name":"obj_restartGame","path":"objects/obj_restartGame/obj_restartGame.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":896.0,},
         {"$GMRInstance":"","%Name":"inst_40B539F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_40B539F9","objectId":{"name":"obj_puppetControl_win","path":"objects/obj_puppetControl_win/obj_puppetControl_win.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":448.0,},
         {"$GMRInstance":"","%Name":"inst_72341137","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72341137","objectId":{"name":"obj_speaker","path":"objects/obj_speaker/obj_speaker.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":608.0,},
+        {"$GMRInstance":"","%Name":"inst_6E2FA8FA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E2FA8FA","objectId":{"name":"Obj_EndingSound","path":"objects/Obj_EndingSound/Obj_EndingSound.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":448.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_4E1B7CD_1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_4E1B7CD_1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_endingPuppet","path":"sprites/spr_endingPuppet/spr_endingPuppet.yy",},"x":0.0,"y":0.0,},
