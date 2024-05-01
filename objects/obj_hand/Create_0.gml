@@ -14,7 +14,7 @@ globalvar enemy_hearts;
 enemy_HP=100;
 enemy_eyes=0;
 enemy_hearts=0;
-
+playSound=false;
 attackEffect=false;
 timer_effect=room_speed*0.2;
 handGenerated=false;
@@ -47,6 +47,6 @@ real_myHealthbar.image_xscale=1.05;
 real_myHealthbar.image_yscale=1.2;
 real_enemyHealthbar.image_xscale=1.05;
 real_enemyHealthbar.image_yscale=1.2;
-	hand0=instance_create_layer(200,1100,"UI",obj_hand_musk);
-	hand1=instance_create_layer(390,1100,"UI",obj_hand_musk);
-	hand2=instance_create_layer(580,1100,"UI",obj_hand_musk);
+	hand0=instance_create_layer(400,1370,"UI",obj_hand_musk);
+	hand1=instance_create_layer(590,1370,"UI",obj_hand_musk);
+	hand2=instance_create_layer(780,1370,"UI",obj_hand_musk);

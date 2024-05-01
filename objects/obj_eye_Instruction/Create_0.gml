@@ -14,6 +14,8 @@ globalvar InstructionCheat_find;
 attackEffect=false;
 timer_effect=room_speed*0.2;
 
+image_xscale=1.2;
+image_yscale=1.2;
 bonus=5;
 
 globalvar rage;
@@ -23,6 +25,7 @@ rage=false;
 eyeWideOpen=true;
 
 randomBlinkTime=room_speed*0.2;
+randomBlinkTimeMax=room_speed*0.2;
 randomWaitTime=room_speed*0.2;
 timer_happy=room_speed*0.4;
 globalvar frequency;
@@ -47,3 +50,28 @@ real_myHealthbar.image_yscale=1.2;
 real_enemyHealthbar.image_xscale=1.05;
 real_enemyHealthbar.image_yscale=1.2;
 
+textbox=instance_create_layer(950,350,"below",obj_textbox);
+
+countDown1=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown2=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown3=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown4=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown5=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown6=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown7=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown8=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown9=instance_create_layer(1000,100,"Instances",obj_countDown);
+countDown10=instance_create_layer(1000,100,"Instances",obj_countDown);
+
+countDown1.image_angle=0;
+countDown2.image_angle=36;
+countDown3.image_angle=72;
+countDown4.image_angle=108;
+countDown5.image_angle=144;
+countDown6.image_angle=180;
+countDown7.image_angle=216;
+countDown8.image_angle=252;
+countDown9.image_angle=288;
+countDown10.image_angle=324;
+
+obj_countDown.visible=false;

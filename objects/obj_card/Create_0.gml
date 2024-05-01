@@ -9,7 +9,7 @@ sendCardToDiscard=false;
 sendCardToTap=false;
 strNotice="";
 noticeText=false;
-
+copyType="";
 code=0;
 flyMyCard=false;
 iBelong="deck";

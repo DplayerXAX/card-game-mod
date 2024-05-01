@@ -15,12 +15,12 @@ else if(enemy_HP<=0){
 	else{room_goto(Room_win);}
 
 }*/
-/*
+
 
 if(timer_killing>0)
 {timer_killing--;}
 else{
-	if(instance_find(obj_eye,1) = true)
+	if(level==5)
 	{	
 		player_HP-=5;
 		shakeScreen=true;
@@ -28,7 +28,7 @@ else{
 	timer_killing=room_speed*4;
 
 }
-*/
+
 
 
 switch(current_state){
@@ -499,7 +499,7 @@ time_limit=3;
 	newCard._type=addCardType[irandom(8)];
 	}
 	}else{
-	instance_create_layer(800,800,"Instances",obj_playSequence);
+	instance_create_layer(1000,900,"Instances",obj_playSequence);
 	}
 	selectCardCreate=true;
 	}

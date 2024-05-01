@@ -2,9 +2,56 @@
 // 你可以在此编辑器中写入代码 
 
 
+if(!eyeWideOpen)
+{
+	obj_countDown.visible=true;
+if(randomBlinkTime<randomBlinkTimeMax*0.9)
+{
+	countDown1.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.8)
+{
+	countDown10.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.7)
+{
+	countDown9.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.6)
+{
+	countDown8.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.5)
+{
+	countDown7.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.4)
+{
+	countDown6.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.3)
+{
+	countDown5.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.2)
+{
+	countDown4.visible=false;
+}
+if(randomBlinkTime<randomBlinkTimeMax*0.1)
+{
+	countDown3.visible=false;
+}
+if(randomBlinkTime<0)
+{
+	countDown3.visible=false;
+}
+}else
+{
+	obj_countDown.visible=false;
+}
 
 
-if(eyeWideOpen&&current_state=state_instruction.Turn&&player_card_decide=false){
+if(eyeWideOpen&&current_state=state.Turn&&player_card_decide=false){
 	
 for(var i=0;i<ds_list_size(enemy_deck);i++)
 {
@@ -12,13 +59,6 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	var search_card=ds_list_find_value(enemy_deck,i);
 	if(search_card.isReveal=true)
 	{
-		if(room = room_instruction_test)
-		{
-			InstructionCheat_find = true;
-			show_debug_message("Steal Find")
-			instruction_text = "Don't try to cheat under my eyes";
-			//gameRound += 100;
-		}
 	player_HP=player_HP-8;
 	rage=true;
 	attackEffect=true;
@@ -28,16 +68,12 @@ for(var i=0;i<ds_list_size(enemy_deck);i++)
 	search_card.isReveal=false;
 	}	
 }
+
+
+/*
 if(ds_list_size(enemy_tap_deck)>0){
 	var search_card=ds_list_find_value(enemy_tap_deck,0);
 	if(search_card.isReveal=true){
-	if(room = room_instruction_test)
-		{
-			InstructionCheat_find = true;
-			show_debug_message("Steal Find")
-			instruction_text = "Don't try to cheat under my eyes";
-			//gameRound += 100;
-		}
 	player_HP=player_HP-8;
 	rage=true;
 	attackEffect=true;
@@ -46,8 +82,9 @@ if(ds_list_size(enemy_tap_deck)>0){
 	search_card.paintItRed=true;
 	search_card.isReveal=false;
 	}
-}
 
+}
+*/
 if(randomWaitTime>0){randomWaitTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
@@ -62,12 +99,19 @@ if(randomBlinkTime>0){randomBlinkTime--;}
 else{
 	eyeWideOpen=!eyeWideOpen;
 	randomBlinkTime=room_speed*(irandom(4)+1)*frequency;
+	randomBlinkTimeMax=randomBlinkTime;
 
 }
 
 }else{
-	if(rage=true){sprite_index=spr_enemy_eye_angry;}
-	else{sprite_index=spr_enemy_eye;}
+	if(rage=true){
+		sprite_index=spr_enemy_eye_angry;
+		image_blend=c_red;
+		}
+	else{
+		sprite_index=spr_enemy_eye;
+		image_blend=c_white;
+		}
 }
 
 if(rage){
@@ -120,7 +164,7 @@ real_enemyHealthMusk.visible=true;
 real_enemyHealthMusk.image_xscale=1-(enemy_HP/100);
 }
 
-if(obj_deck_instruction.enemyLose)
+if(obj_deck.enemyLose)
 {
 real_myHealthMusk.visible=false;
 real_enemyHealthMusk.visible=false;

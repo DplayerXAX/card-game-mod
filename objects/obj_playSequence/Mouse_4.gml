@@ -3,6 +3,7 @@
 
 
 level++;
+audio_play_sound(enemy_introduce,0,false);
 obj_card.visible=false;
 switch(level)
 {
@@ -18,11 +19,15 @@ case 3:
 case 4:
 	layer_sequence_create("Instances",650,550,enemyIntroduce_skull);
 	break;
+case 5:
+	layer_sequence_create("Instances",650,550,enemyIntroduce_eye);
+	break;
+	
 	
 
 }
-instance_create_layer(800,800,"UI",obj_nextButton);
-audio_stop_all();
+instance_create_layer(1000,900,"UI",obj_nextButton);
+audio_stop_sound(upgrading_depressed);
 instance_destroy();
 
 

@@ -10,8 +10,8 @@
   "name":"obj_cheat_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"物体",
-    "path":"folders/物体.yy",
+    "name":"cheat",
+    "path":"folders/物体/cheat.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite45",
-    "path":"sprites/Sprite45/Sprite45.yy",
+    "name":"spr_cheatButton",
+    "path":"sprites/spr_cheatButton/spr_cheatButton.yy",
   },
   "spriteMaskId":null,
   "visible":true,

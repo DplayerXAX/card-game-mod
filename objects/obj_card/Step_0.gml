@@ -12,6 +12,7 @@ else if(_type="HTM"){sprite_index=spr_card_heartToMouth;}
 else if(_type="destroy"){sprite_index=spr_card_destroy;}
 else if(_type="stealHeart"){sprite_index=spr_card_stealHeart;}
 else if(_type="stealEye"){sprite_index=spr_card_stealEye;}
+else if(_type="eat"){sprite_index=spr_card_eat;}
 }else{sprite_index=spr_card_back;}
 
 if(sendCardToDeck){

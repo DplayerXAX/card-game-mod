@@ -32,10 +32,13 @@ case "destroy":
 	return "Stab card: destroy opponent's tap card!";
 	break;
 case "stealHeart":
-	return "Steal-H card: steal one healing point from enemy!(if there's any)";
+	return "Steal heal: steal one healing point from enemy!(if there's any)";
 	break;
 case "stealEye":
-	return "Steal-S card: steal one strength from enemy!(if there's any)";
+	return "Steal ATP: steal one strength from enemy!(if there's any)";
+	break;
+case "eat":
+	return "Eaten card: no effect because it is eaten.";
 	break;
 }
 
@@ -47,22 +50,31 @@ case "stealEye":
 
 
 function decide_effect(card_type,num){
+	if(level==2&&num==1)
+	{
+		if(card_type=="mouth"||card_type="HTM")
+		{
+			obj_mouth.attacked=true;
+		}
 	
+	}
 	switch(card_type){
 		
 	case "eye":
 	
 		if(num==0){
 			player_eyes++;
-			var inst = instance_create_layer(1200,825, "Instances", obj_num_popup);
+			var inst = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst.myColor=c_green;
 			inst.damage_amount = "+1";
+			inst.fly_to_player_eyes = true;
 			}
 		else if(num==1){
 			enemy_eyes++;
-			var inst = instance_create_layer(50,130, "Instances", obj_num_popup);
+			var inst = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst.myColor=c_green;
 			inst.damage_amount = "+1";
+			inst.fly_to_enemy_eyes = true;
 			}
 		break;
 			
@@ -71,21 +83,27 @@ function decide_effect(card_type,num){
 		if(num==0){
 			player_HP+=5+5*player_hearts;
 			player_hearts++;
-			var inst1 = instance_create_layer(1200,925, "Instances", obj_num_popup);
+			//var inst1 = instance_create_layer(1200,925, "Instances", obj_num_popup);
+			//inst1.damage_amount = "+1";
+			var inst1 = instance_create_layer(430,490, "Instances", obj_num_popup);
+			inst1.fly_to_player_heart = true;
 			inst1.damage_amount = "+1";
 			inst1.myColor=c_green;
-			var inst2 = instance_create_layer(100,800,"Instances", obj_num_popup);
+			var inst2 = instance_create_layer(430,490,"Instances", obj_num_popup);
 			inst2.myColor=c_green;
 			inst2.damage_amount ="+"+string(5+5*player_hearts);
+			inst2.fly_to_player_healthbar = true;
 			}
 		else if(num==1){
 			enemy_HP+=5+5*enemy_hearts;
 			enemy_hearts++;
-			var inst1 = instance_create_layer(50,25, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,280, "Instances", obj_num_popup);
+			inst1.fly_to_enemy_heart = true;
 			inst1.damage_amount = "+1";
-			var inst2 = instance_create_layer(ds_list_find_value(enemyIWillMeet,level).x-75,ds_list_find_value(enemyIWillMeet,level).y+50,"Instances", obj_num_popup);
+			var inst2 = instance_create_layer(430,280,"Instances", obj_num_popup);
 			inst2.myColor=c_green;
 			inst2.damage_amount ="+"+string(5+5*enemy_hearts);
+			inst2.fly_to_enemy_healthbar = true;
 			}
 			break;
 
@@ -94,13 +112,15 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			enemy_HP=enemy_HP-3-3*player_eyes;
-			var inst = instance_create_layer(ds_list_find_value(enemyIWillMeet,level).x-75,ds_list_find_value(enemyIWillMeet,level).y+50, "Instances", obj_num_popup);
-			inst.damage_amount = -3-3*player_eyes;  // Pass the damage amount to the popup
+			var inst = instance_create_layer(430,490,"Instances", obj_num_popup);
+			inst.damage_amount = -3-3*player_eyes;
+			inst.fly_to_enemy_healthbar = true;
 			}
 		else if(num==1){
 			player_HP=player_HP-3-3*enemy_eyes;
-			var inst = instance_create_layer(100,800, "Instances", obj_num_popup);
+			var inst = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst.damage_amount = -3-3*enemy_eyes;
+			inst.fly_to_player_healthbar = true;
 			attackEffect=true;
 			shakeHarder=true;
 			}
@@ -110,20 +130,24 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			player_hearts+=player_eyes;
-			var inst1 = instance_create_layer(1200,1000, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst1.myColor=c_green;
 			inst1.damage_amount = "+"+string(player_eyes);
-			var inst2 = instance_create_layer(1200,900, "Instances", obj_num_popup);
+			inst1.fly_to_player_heart = true;
+			var inst2 = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst2.damage_amount = "-"+string(player_eyes);
+			inst2.fly_to_player_eyes = true;
 			player_eyes=0;
 			}
 		else if(num==1){
 			enemy_hearts+=enemy_eyes;
-			var inst1 = instance_create_layer(50,200, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst1.damage_amount = "-"+string(enemy_eyes);
-			var inst2 = instance_create_layer(50,100, "Instances", obj_num_popup);
+			inst1.fly_to_enemy_eyes = true;
+			var inst2 = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst2.myColor=c_green;
 			inst2.damage_amount = "+"+string(enemy_eyes);
+			inst2.fly_to_enemy_heart = true;
 			enemy_eyes=0;
 			}
 			break;
@@ -134,20 +158,24 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			player_eyes+=player_hearts;
-			var inst1 = instance_create_layer(1200,1000, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst1.damage_amount = "-"+string(player_hearts);
-			var inst2 = instance_create_layer(1200,900, "Instances", obj_num_popup);
+			inst1.fly_to_player_heart = true;
+			var inst2 = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst2.myColor=c_green;
 			inst2.damage_amount = "+"+string(player_hearts);
+			inst2.fly_to_player_eyes = true;
 			player_hearts=0;
 			}
 		else if(num==1){
 			enemy_eyes+=enemy_hearts;
-			var inst1 = instance_create_layer(50,200, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst1.myColor=c_green;
 			inst1.damage_amount = "+"+string(enemy_hearts);
-			var inst2 = instance_create_layer(50,100, "Instances", obj_num_popup);
+			inst1.fly_to_enemy_eyes = true;
+			var inst2 = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst2.damage_amount = "-"+string(enemy_hearts);
+			inst2.fly_to_enemy_heart = true;
 			enemy_hearts=0;
 			}
 			break;
@@ -156,18 +184,22 @@ function decide_effect(card_type,num){
 	
 		if(num==0){
 			enemy_HP-=3*player_hearts*player_eyes;
-			var inst1 = instance_create_layer(ds_list_find_value(enemyIWillMeet,level).x,ds_list_find_value(enemyIWillMeet,level).y, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst1.damage_amount = "-"+string(player_hearts)+"*"+string(player_eyes);
-			var inst2 = instance_create_layer(1200,1000, "Instances", obj_num_popup);
+			inst1.fly_to_enemy_healthbar = true;
+			var inst2 = instance_create_layer(430,490, "Instances", obj_num_popup);
 			inst2.damage_amount = "-"+string(player_hearts);
+			inst2.fly_to_player_heart = true;
 			player_hearts=0;
 			}
 		else if(num==1){
 			player_HP-=3*enemy_hearts*enemy_eyes;
-			var inst1 = instance_create_layer(100,800, "Instances", obj_num_popup);
+			var inst1 = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst1.damage_amount = "-"+string(enemy_hearts)+"*"+string(enemy_eyes);
-			var inst2 = instance_create_layer(50,100, "Instances", obj_num_popup);
+			inst1.fly_to_player_healthbar = true;
+			var inst2 = instance_create_layer(430,280, "Instances", obj_num_popup);
 			inst2.damage_amount = "-"+string(enemy_hearts);
+			inst2.fly_to_enemy_heart = true;
 			enemy_hearts=0;
 			attackEffect=true;
 			shakeHarder=true;
@@ -259,6 +291,8 @@ function decide_effect(card_type,num){
 			inst2.damage_amount = "-1";
 			}
 			}
+			break;
+	case "eat":
 			break;
 			
 	

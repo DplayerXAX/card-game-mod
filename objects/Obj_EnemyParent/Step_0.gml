@@ -7,10 +7,19 @@ if(enemy_HP>100){enemy_HP=100;}
 
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
-	room_goto(Room_lose);
+	room_goto(room_ending_puppet);
+	instance_destroy(obj_player);
+	obj_card.visible=false;
+	//instance_destroy(obj_player);
 	}
 else if(enemy_HP<=0){
 	audio_stop_sound(upgrading_);
+	if(!playSound)
+	{
+	audio_play_sound(upgrading_depressed,0,true);
+	audio_play_sound(enemy_lose,0,false);
+	playSound=true;
+	}
 	obj_deck.enemyLose=true;
 	/*if(cheat==0){room_goto(Room_trueWin);}
 	else{room_goto(Room_win);}*/

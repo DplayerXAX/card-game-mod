@@ -5,6 +5,16 @@
 
 
 powerful=true;
-enemy_HP=1;
+if(level!=4){enemy_HP=1;}
+	else{enemy_HP=99;}
 
-
+/*
+if(!created)
+{
+	warningBox=instance_create_layer(300,300,"UI",obj_warning);
+	warningBox.image_xscale=3;
+	warningBox.image_yscale=3;
+	warningBox.depth=obj_hand_musk.depth-1;
+	created=true;
+}
+*/
