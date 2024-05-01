@@ -5,6 +5,9 @@ globalvar card_deck;
 globalvar deck_type;
 globalvar level;
 globalvar enemyIWillMeet;
+globalvar cheated;
+
+cheated=false;
 
 enemyIWillMeet=ds_list_create();
 ds_list_add(enemyIWillMeet,obj_eye_instruction);

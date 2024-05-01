@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cheat_button",
+  "%Name":"obj_warning",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cheat_button",
+  "name":"obj_warning",
   "overriddenProperties":[],
   "parent":{
     "name":"cheat",
@@ -32,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cheatButton",
-    "path":"sprites/spr_cheatButton/spr_cheatButton.yy",
+    "name":"text_box",
+    "path":"sprites/text_box/text_box.yy",
   },
   "spriteMaskId":null,
   "visible":true,
