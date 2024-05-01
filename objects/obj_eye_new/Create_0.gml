@@ -22,7 +22,7 @@ globalvar eyeWideOpen;
 
 rage=false;
 eyeWideOpen=true;
-
+enemy_HP=100;
 randomBlinkTime=room_speed*0.2;
 randomBlinkTimeMax=room_speed*0.2;
 randomWaitTime=room_speed*0.2;

@@ -41,6 +41,12 @@ shakeScreen=true;
 switch(current_state){
 	
 case state_instruction.Start:
+
+
+	if(room == room_chooseEnemy)
+	{
+		break;
+	}
 	//create cards, put them into list, shuffle
 	/*
 	for(var i=0;i<6;i++){
