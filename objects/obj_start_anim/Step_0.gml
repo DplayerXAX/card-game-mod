@@ -24,3 +24,10 @@ timer_sound=room_speed*3.5;
 soundProgress++;
 
 }
+
+timer_total++;
+if(timer_total>room_speed*15)
+{
+		audio_stop_all();
+	room_goto(room_instruction_test);
+}

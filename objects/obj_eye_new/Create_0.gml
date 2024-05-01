@@ -1,71 +1,49 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
-
-// Inherit the parent event
-/// @description Insert description here
-// You can write your code in this editor
-
-
-if(player_HP>100){player_HP=100;}
-if(enemy_HP>100){enemy_HP=100;}
-
-if(player_HP<=0){
-	audio_stop_all();
-	room_goto(room_ending_puppet);
-	instance_destroy(obj_player);
-	obj_card.visible=false;
-	}
-else if(enemy_HP<=0){
-	audio_stop_all();
-	if(cheat==0){room_goto(room_ending_win);}
-	else{room_goto(room_ending_puppet);}
-	/*
-	if(!playSound)
-	{
-	audio_play_sound(upgrading_depressed,0,true);
-	audio_play_sound(enemy_lose,0,false);
-	playSound=true;
-	}
-	obj_deck.enemyLose=true;
-	*/
-
-}
+randomize();
 
 
 
+globalvar myHealthBar;
+globalvar bonus;
+globalvar heartCount;
+globalvar eyeCount;
+globalvar attackEffect;
 
-if(player_HP==100)
-{
-real_myHealthMusk.visible=false;
-}else
-{
-real_myHealthMusk.visible=true;
-real_myHealthMusk.image_xscale=1-(player_HP/100);
-}
+attackEffect=false;
+timer_effect=room_speed*0.2;
 
-if(enemy_HP==100)
-{
-real_enemyHealthMusk.visible=false;
-}else
-{
-real_enemyHealthMusk.visible=true;
-real_enemyHealthMusk.image_xscale=1-(enemy_HP/100);
-}
+image_xscale=1.2;
+image_yscale=1.2;
+bonus=5;
 
-if(obj_deck.enemyLose)
-{
-real_myHealthMusk.visible=false;
-real_enemyHealthMusk.visible=false;
-real_myHealth.visible=false;
-real_myHealthbar.visible=false;
-real_enemyHealth.visible=false;
-real_enemyHealthbar.visible=false;
+globalvar rage;
+globalvar eyeWideOpen;
 
-}
-audio_stop_sound(upgrading_);
-audio_play_sound(boss_music,0,true)
+rage=false;
 eyeWideOpen=true;
-randomBlinkTimeMax=randomBlinkTime;
+
+randomBlinkTime=room_speed*0.2;
+randomBlinkTimeMax=room_speed*0.2;
+randomWaitTime=room_speed*0.2;
+timer_happy=room_speed*0.4;
+globalvar frequency;
+frequency=0.7;
+
+audio_play_sound(boss_music,0,true);
+
+real_myHealthMusk=instance_create_layer(913,1025,"UI",obj_health_musk);
+real_enemyHealthMusk=instance_create_layer(913,85,"UI",obj_health_musk);
+real_myHealth=instance_create_layer(615,1025,"UI",obj_health);
+real_myHealthbar=instance_create_layer(615,1025,"UI",obj_health_bar);
+real_enemyHealth=instance_create_layer(615,85,"UI",obj_health);
+real_enemyHealthbar=instance_create_layer(615,85,"UI",obj_health_bar);
+real_myHealthbar.image_xscale=1.05;
+real_myHealthbar.image_yscale=1.2;
+real_enemyHealthbar.image_xscale=1.05;
+real_enemyHealthbar.image_yscale=1.2;
+
+//textbox=instance_create_layer(950,350,"below",obj_textbox);
 
 countDown1=instance_create_layer(1000,100,"Instances",obj_countDown);
 countDown2=instance_create_layer(1000,100,"Instances",obj_countDown);
