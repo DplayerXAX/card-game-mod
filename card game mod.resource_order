@@ -165,5 +165,6 @@
     {"name":"spr_startButton","order":1,"path":"sprites/spr_startButton/spr_startButton.yy",},
     {"name":"Sprite45","order":7,"path":"sprites/Sprite45/Sprite45.yy",},
     {"name":"Sprite49","order":9,"path":"sprites/Sprite49/Sprite49.yy",},
+    {"name":"spr_girl","order":24,"path":"sprites/spr_girl/spr_girl.yy",},
   ],
 }
