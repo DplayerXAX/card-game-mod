@@ -111,6 +111,7 @@
     {"id":{"name":"obj_trueWinText","path":"objects/obj_trueWinText/obj_trueWinText.yy",},},
     {"id":{"name":"obj_winText","path":"objects/obj_winText/obj_winText.yy",},},
     {"id":{"name":"obj_warning","path":"objects/obj_warning/obj_warning.yy",},},
+    {"id":{"name":"obj_winpopup","path":"objects/obj_winpopup/obj_winpopup.yy",},},
     {"id":{"name":"room_countDownTest","path":"rooms/room_countDownTest/room_countDownTest.yy",},},
     {"id":{"name":"room_ending_puppet","path":"rooms/room_ending_puppet/room_ending_puppet.yy",},},
     {"id":{"name":"room_ending_win","path":"rooms/room_ending_win/room_ending_win.yy",},},

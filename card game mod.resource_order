@@ -80,6 +80,7 @@
     {"name":"obj_trueWinText","order":1,"path":"objects/obj_trueWinText/obj_trueWinText.yy",},
     {"name":"obj_winText","order":2,"path":"objects/obj_winText/obj_winText.yy",},
     {"name":"obj_warning","order":1,"path":"objects/obj_warning/obj_warning.yy",},
+    {"name":"obj_winpopup","order":33,"path":"objects/obj_winpopup/obj_winpopup.yy",},
     {"name":"room_countDownTest","order":15,"path":"rooms/room_countDownTest/room_countDownTest.yy",},
     {"name":"room_ending_puppet","order":13,"path":"rooms/room_ending_puppet/room_ending_puppet.yy",},
     {"name":"room_ending_win","order":16,"path":"rooms/room_ending_win/room_ending_win.yy",},
