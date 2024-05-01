@@ -20,7 +20,7 @@ else if(enemy_HP<=0){
 if(timer_killing>0)
 {timer_killing--;}
 else{
-	if(level==5)
+	if(ds_list_find_value(enemyIWillMeet,level)==obj_eye_new)
 	{	
 		player_HP-=5;
 		shakeScreen=true;

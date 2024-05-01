@@ -4,7 +4,7 @@
 
 draw_set_font(font_score);
 
-if(!enemyLose){
+if(!enemyLose&&room!=room_chooseEnemy){
 draw_text(200,180,enemy_eyes);
 draw_text(200,40,enemy_hearts);
 draw_text(1100,820,player_eyes);

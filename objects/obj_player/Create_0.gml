@@ -17,7 +17,7 @@ ds_list_add(enemyIWillMeet,obj_heart);
 ds_list_add(enemyIWillMeet,obj_bones);
 ds_list_add(enemyIWillMeet,obj_eye_new);
 level=0;
-
+all_type=["eye","heart","mouth"];
 globalvar number;
 number=0;
 globalvar littleCard;
