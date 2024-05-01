@@ -6,8 +6,8 @@
   "name":"obj_health_bar",
   "overriddenProperties":[],
   "parent":{
-    "name":"房间",
-    "path":"folders/房间.yy",
+    "name":"物体",
+    "path":"folders/物体.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -3,14 +3,14 @@
 
 
 if(player_HP>100){player_HP=100;}
-if(enemy_HP>100){enemy_HP=100;}
+if(enemy_HP>60){enemy_HP=60;}
 
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
 	room_goto(room_ending_puppet);
 	instance_destroy(obj_player);
 	}
-else if(enemy_HP==100){
+else if(enemy_HP==60){
 	audio_stop_sound(upgrading_);
 	if(!playSound)
 	{
@@ -52,10 +52,4 @@ real_myHealthbar.visible=false;
 real_enemyHealth.visible=false;
 real_enemyHealthbar.visible=false;
 
-}
-
-if(obj_deck.enemyLose)
-{
-	image_blend=c_black;
-	image_alpha-=0.01;
 }

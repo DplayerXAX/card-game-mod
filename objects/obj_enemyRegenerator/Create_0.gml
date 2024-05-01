@@ -5,3 +5,4 @@
 thisEnemy=instance_create_layer(935,50,"Instances",ds_list_find_value(enemyIWillMeet,level));
 thisEnemy.image_xscale=1.2;
 thisEnemy.image_yscale=1.2;
+//obj_deck.enemyLose = false;

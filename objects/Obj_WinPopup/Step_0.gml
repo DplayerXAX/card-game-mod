@@ -1,23 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (keyboard_check_pressed(ord("O"))) {
+if (room = Room_play and obj_deck.enemyLose = true) {
+    visible = true;
+}
+if (room = room_instruction_test and obj_deck_instruction.enemyLose = true) {
     visible = true;
 }
 
 if (visible) 
 {
-    alpha += 0.05;  
-    scale += 0.05;  
+    alpha += 0.15;  
+    scale += 0.15;  
     if (alpha >= 1) 
  {
         alpha = 1;  
-        if (scale > 1) 
+        if (scale > 2) 
   {
-   scale = 1;
+   scale = 2;
   }
     }
 
-    if (scale == 1) 
+    if (scale == 2) 
  {
        destory_timer --;
     }

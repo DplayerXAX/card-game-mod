@@ -12,7 +12,6 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-
     {"$GMSpriteFrame":"","%Name":"64719ad9-44d6-4e5c-bcd2-4a4fe4047f91","name":"64719ad9-44d6-4e5c-bcd2-4a4fe4047f91","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"0e20b176-fdce-4083-b854-b4b0c8270e57","name":"0e20b176-fdce-4083-b854-b4b0c8270e57","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"45f4d3ab-d9f5-4f9c-b264-0076af293fb3","name":"45f4d3ab-d9f5-4f9c-b264-0076af293fb3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -25,13 +24,11 @@
   "height":300,
   "HTile":false,
   "layers":[
-
     {"$GMImageLayer":"","%Name":"00dd923b-5788-41a6-9226-baced538c1fe","blendMode":0,"displayName":"default","isLocked":false,"name":"00dd923b-5788-41a6-9226-baced538c1fe","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-
   ],
   "name":"spr_girl",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"精灵",
     "path":"folders/精灵.yy",
@@ -98,8 +95,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":150,
+    "yorigin":150,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
