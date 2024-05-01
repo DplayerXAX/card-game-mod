@@ -1,6 +1,7 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
-
+if(player_HP>100){player_HP=100;}
+if(enemy_HP>100){enemy_HP=100;}
 
 if(!eyeWideOpen)
 {
@@ -106,7 +107,7 @@ else{
 }else{
 	if(rage=true){
 		sprite_index=spr_enemy_eye_angry;
-		image_blend=c_red;
+
 		}
 	else{
 		sprite_index=spr_enemy_eye;
@@ -173,4 +174,18 @@ real_myHealthbar.visible=false;
 real_enemyHealth.visible=false;
 real_enemyHealthbar.visible=false;
 
+}
+
+if(obj_deck.enemyLose)
+{
+	image_blend=c_black;
+	image_alpha-=0.01;
+}
+
+if(rage)
+{
+	image_blend=c_red;
+}else
+{
+	image_blend=c_white;
 }
