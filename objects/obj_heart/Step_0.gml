@@ -69,3 +69,9 @@ real_enemyHealth.visible=false;
 real_enemyHealthbar.visible=false;
 
 }
+
+if(obj_deck.enemyLose)
+{
+	image_blend=c_black;
+	image_alpha-=0.01;
+}
