@@ -2,6 +2,32 @@
 // 你可以在此编辑器中写入代码 
 if(player_HP>100){player_HP=100;}
 if(enemy_HP>100){enemy_HP=100;}
+if(player_HP<=0){
+	audio_stop_all();
+	
+	room_goto(room_ending_puppet);
+	instance_destroy(obj_player);
+	instance_destroy(obj_girlsprite);
+	obj_card.visible=false;
+	//room_goto(Room_lose);
+	}
+else if(enemy_HP<=0){
+	audio_stop_all();
+	if(cheat!=0){
+	room_goto(room_ending_puppet_win);
+	}else{
+	room_goto(room_ending_true_win);
+	}
+	instance_destroy(obj_player);
+	instance_destroy(obj_girlsprite);
+	obj_card.visible=false;
+
+	
+	enemyLose=true;
+/*if(cheat==0){room_goto(Room_trueWin);}
+else{room_goto(Room_win);}*/
+
+}
 
 if(!eyeWideOpen)
 {
