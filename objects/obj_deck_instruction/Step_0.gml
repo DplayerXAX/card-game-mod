@@ -7,6 +7,7 @@ if(enemy_HP>100){enemy_HP=100;}
 if(player_HP<=0){
 	audio_stop_sound(upgrading_);
 	room_goto(room_ending_puppet);
+	instance_destroy(obj_girlsprite);
 	instance_destroy(obj_player);
 	obj_card.visible=false;
 	//room_goto(Room_lose);
@@ -41,6 +42,12 @@ shakeScreen=true;
 switch(current_state){
 	
 case state_instruction.Start:
+
+
+	if(room == room_chooseEnemy)
+	{
+		break;
+	}
 	//create cards, put them into list, shuffle
 	/*
 	for(var i=0;i<6;i++){

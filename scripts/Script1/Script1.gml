@@ -52,7 +52,7 @@ case "eat":
 function decide_effect(card_type,num){
 	if(level==2&&num==1)
 	{
-		if(card_type=="mouth"||card_type="HTM")
+		if((card_type=="mouth"||card_type="HTM")&&ds_list_find_value(enemyIWillMeet,level)==obj_mouth)
 		{
 			obj_mouth.attacked=true;
 		}

@@ -9,6 +9,7 @@ if(player_HP<=0){
 	audio_stop_sound(upgrading_);
 	room_goto(room_ending_puppet);
 	instance_destroy(obj_player);
+	instance_destroy(obj_girlsprite);
 	}
 else if(enemy_HP==60){
 	audio_stop_sound(upgrading_);

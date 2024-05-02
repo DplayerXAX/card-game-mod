@@ -1,10 +1,6 @@
 /// @description 在此处插入描述 
 // 你可以在此编辑器中写入代码 
 
+myEnemy="";
 
-audio_play_sound(start_music,0,true);
-
-
-
-
-
+isSelect=false;
