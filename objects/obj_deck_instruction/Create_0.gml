@@ -135,3 +135,6 @@ gameRound=0;
 bonus=0;
 selectCardCreate=false;
 
+winCreated=false;
+timer_win=room_speed*1;
+var win;

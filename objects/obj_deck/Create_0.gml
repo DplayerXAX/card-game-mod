@@ -118,3 +118,5 @@ selectCardCreate=false;
 
 var emptyPlayer;
 var emptyEnemy;
+winCreated=false;
+timer_win=room_speed*1;
