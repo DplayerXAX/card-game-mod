@@ -26,7 +26,7 @@ soundProgress++;
 }
 
 timer_total++;
-if(timer_total>room_speed*15)
+if(timer_total>room_speed*19)
 {
 		audio_stop_all();
 	room_goto(room_instruction_test);

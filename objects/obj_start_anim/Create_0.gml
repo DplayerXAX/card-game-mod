@@ -1,4 +1,4 @@
-video_open("eyestone intro anim.mp4");
+video_open("final eyestone intro.mp4");
 
 audio_play_sound(intro_music,0,false);
 
