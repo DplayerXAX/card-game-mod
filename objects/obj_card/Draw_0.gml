@@ -4,7 +4,7 @@
 draw_self();
 draw_set_font(font_notice);
 
-if(current_state=state.Discard){
+if(current_state==state.Discard){
 	
 timer_text=room_speed*1;
 noticeText=false;
@@ -13,7 +13,7 @@ noticeText=false;
 
 
 if(timer_text>0){
-	if(room = room_instruction_test and obj_deck_instruction.enemyLose = false)
+	if(room = room_instruction_test)
 	{
 		draw_text_ext(700,620,"YOU use " + decide_print(player_card._type),-1,190);
 		draw_text_ext(330,370,"ENEMY uses " + decide_print(enemy_card._type),-1,190);
@@ -24,8 +24,12 @@ if(timer_text>0){
 		draw_text_ext(700,370,"ENEMY's tap " + decide_print(ds_list_find_value(enemy_tap_deck,0)._type),-1,190);
 		}
 		timer_text--;
+		if(obj_deck_instruction.enemyLose)
+		{
+		timer_text-=room_speed*1;
+		}
 	}
-		if(room = Room_play and obj_deck.enemyLose = false)
+		if(room = Room_play)
 	{
 		draw_text_ext(700,620,"YOU use " + decide_print(player_card._type),-1,190);
 		draw_text_ext(330,370,"ENEMY uses " + decide_print(enemy_card._type),-1,190);
@@ -36,6 +40,10 @@ if(timer_text>0){
 		draw_text_ext(700,370,"ENEMY's tap " + decide_print(ds_list_find_value(enemy_tap_deck,0)._type),-1,190);
 		}
 		timer_text--;
+			if(obj_deck.enemyLose)
+		{
+		timer_text-=room_speed*1;
+		}
 	}
 }
 
