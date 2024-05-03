@@ -15,3 +15,4 @@ if (playing == 0)
 	}
 }
 
+draw_text(20,1050,"Press 'space' to skip");

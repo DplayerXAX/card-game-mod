@@ -9,18 +9,18 @@ if (room = room_instruction_test and obj_deck_instruction.enemyLose = true) {
 
 if (visible) 
 {
-    alpha += 0.07;  
-    scale += 0.07;  
-    if (alpha >= 1) 
+    //alpha += 0.07;  
+    scale -= 0.1;  
+    if (image_alpha >= 1) 
  {
-        alpha = 1;  
-        if (scale > 1.7) 
+        image_alpha = 1;  
+        if (scale < 1.7) 
   {
    scale = 1.7;
   }
     }
 
-    if (scale == 1.7) 
+    if (scale <= 1.7) 
  {
        destory_timer --;
     }
