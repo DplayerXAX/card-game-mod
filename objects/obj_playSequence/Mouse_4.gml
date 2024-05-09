@@ -5,28 +5,29 @@
 level++;
 audio_play_sound(enemy_introduce,0,false);
 obj_card.visible=false;
+instance_create_layer(1000,900,"UI",obj_nextButton);
 switch(ds_list_find_value(enemyIWillMeet,level))
 {
 case obj_hand:
-	layer_sequence_create("Instances",650,550,enemyIntroduce_arm);
+	layer_sequence_create("UI",650,550,enemyIntroduce_arm);
 	break;
 case obj_mouth:
-	layer_sequence_create("Instances",650,550,enemyIntroduce_mouth);
+	layer_sequence_create("UI",650,550,enemyIntroduce_mouth);
 	break;
 case obj_heart:
-	layer_sequence_create("Instances",650,550,enemyIntroduce_heart);
+	layer_sequence_create("UI",650,550,enemyIntroduce_heart);
 	break;
 case obj_bones:
-	layer_sequence_create("Instances",650,550,enemyIntroduce_skull);
+	layer_sequence_create("UI",650,550,enemyIntroduce_skull);
 	break;
 case obj_eye_new:
-	layer_sequence_create("Instances",650,550,enemyIntroduce_eye);
+	layer_sequence_create("UI",650,550,enemyIntroduce_eye);
 	break;
 	
 	
 
 }
-instance_create_layer(1000,900,"UI",obj_nextButton);
+
 audio_stop_sound(upgrading_depressed);
 instance_destroy();
 

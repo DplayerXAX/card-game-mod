@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"图块集",
-    "path":"folders/图块集.yy",
+    "path":"folders/声音/图块集.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
